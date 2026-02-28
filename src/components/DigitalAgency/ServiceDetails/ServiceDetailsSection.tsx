@@ -30,9 +30,10 @@ const ServiceDetailsSection:React.FC<ServiceDetailsProps> = ({data:serviceDetail
 
         {serviceDetailsData?.video?.src && (
           <div className="video-box fade-anim">
-            <video loop muted autoPlay playsInline>
-              <source src={serviceDetailsData?.video.src} type={serviceDetailsData?.video?.type || "video/mp4"} />
-            </video>
+            {/*<video loop muted autoPlay playsInline>*/}
+            {/*  <source src={serviceDetailsData?.video.src} type={serviceDetailsData?.video?.type || "video/mp4"} />*/}
+            {/*</video>*/}
+              <img src={serviceDetailsData?.video.src} alt={"service video"} />
           </div>
         )}
 

@@ -25,7 +25,7 @@ const serviceData = {
     {
       id: 1,
       title: "Web Design",
-      number: "(02)",
+      number: "(01)",
       image: "/assets/imgs/shape/symbol6.svg",
       description: "Modern, responsive websites that convert visitors into customers.",
       detailsLink: "/services/web-design",
@@ -39,7 +39,7 @@ const serviceData = {
     {
       id: 2,
       title: "Social Media Solutions",
-      number: "(03)",
+      number: "(02)",
       image: "/assets/imgs/shape/symbol2.svg",
       description: "Build a strong brand and turn followers into customers across platforms.",
       detailsLink: "/services/social-media",
@@ -53,7 +53,7 @@ const serviceData = {
     {
       id: 3,
       title: "Branding",
-      number: "(05)",
+      number: "(03)",
       image: "/assets/imgs/shape/symbol4.svg",
       description: "Build a brand people recognize, trust, and remember.",
       detailsLink: "/services/branding",
@@ -67,7 +67,7 @@ const serviceData = {
     {
       id: 4,
       title: "SEO Optimization",
-      number: "(01)",
+      number: "(04)",
       image: "/assets/imgs/shape/symbol1.svg",
       description: "Be found by the right customers at the right time with strategic SEO.",
       detailsLink: "/services/seo",

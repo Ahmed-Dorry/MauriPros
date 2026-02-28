@@ -5,15 +5,19 @@ import React from "react";
 
 interface FaqProps {
   type?: number;
-  imageSrc?: number;
-  data: IFaq[];
+  data: {
+    faqs: IFaq[];
+    image: {
+      src: string;
+      alt: string;
+    };
+  };
 }
 
-const FaqSection:React.FC<FaqProps> = ({ type, imageSrc: img,data:faqData }) => {
-  // const imageSrc1 = "/assets/imgs/gallery/image-21.webp";
-  // const imageSrc2 = "/assets/imgs/gallery/image-22.webp";
-  // const imageSrc = img === 2 ? imageSrc2 : imageSrc1;
-  const imageSrc = "/assets/imgs/gallery/faq-image.webp";
+const FaqSection: React.FC<FaqProps> = ({ type, data }) => {
+  const imageSrc = data?.image?.src || "/assets/imgs/gallery/image-21.webp";
+  const imageAlt = data?.image?.alt || "FAQ Image";
+  const faqData = data?.faqs || [];
 
   return (
     <section className={`${type === 2 ? "faq-area-2" : "faq-area"} `}>
@@ -28,7 +32,7 @@ const FaqSection:React.FC<FaqProps> = ({ type, imageSrc: img,data:faqData }) => 
               className={`faq-thumb fade-anim order-${type === 2 ? 1 : 0}`}
               data-direction={type === 2 ? "right" : "left"}
             >
-              <img src={imageSrc} alt="FAQ Image" />
+              <img src={imageSrc} alt={imageAlt} />
             </div>
             <div
               className={`section-content fade-anim order-${
@@ -41,7 +45,7 @@ const FaqSection:React.FC<FaqProps> = ({ type, imageSrc: img,data:faqData }) => 
                   <span className="section-subtitle">Have any questions?</span>
                 </div>
                 <div className="title-wrapper">
-                  <h2 className="section-title">Discover answers in FAQ’s</h2>
+                  <h2 className="section-title">Discover answers in FAQ's</h2>
                 </div>
               </div>
 

@@ -31,7 +31,13 @@ export interface ServicePageData {
     description: string;
     points: string[];
   };
-  faqs: IFaq[];
+  faqsData: {
+    faqs: IFaq[];
+    image: {
+      src: string;
+      alt: string;
+    };
+  };
   finalCTA: {
     title: string;
     description: string;
@@ -97,11 +103,11 @@ export const allServicesData: ServicePageData[] = [
       ],
       gallery: [
         {
-          src: "/assets/imgs/gallery/service-details-1.jpg",
+          src: "/assets/images/services/web-design/1.webp",
           alt: "Web Design Example 1",
         },
         {
-          src: "/assets/imgs/gallery/service-details-2.webp",
+          src: "/assets/images/services/web-design/2.webp",
           alt: "Web Design Example 2",
         },
       ],
@@ -122,7 +128,7 @@ export const allServicesData: ServicePageData[] = [
         title: "Our Approach to Web Design",
       },
       video: {
-        src: "/videos/Business_People.mp4",
+        src: "/assets/images/services/web-design/3.webp",
         type: "video/mp4",
       },
       content: {
@@ -234,20 +240,26 @@ export const allServicesData: ServicePageData[] = [
         "Are looking for sustainable growth through design",
       ],
     },
-    faqs: [
-      {
-        question: "How long does a website take to launch?",
-        answer: "Most sites take 6–12 weeks depending on complexity.",
-      },
-      {
-        question: "Do you offer redesigns only?",
-        answer: "We do both new websites and redesigns for existing sites.",
-      },
-      {
-        question: "Is web design better than SEO or ads?",
-        answer: "Design creates the foundation for all marketing. A great website + SEO + ads works best.",
-      },
-    ],
+    faqsData: {
+      faqs: [
+        {
+          question: "How long does a website take to launch?",
+          answer: "Most sites take 6–12 weeks depending on complexity.",
+        },
+        {
+          question: "Do you offer redesigns only?",
+          answer: "We do both new websites and redesigns for existing sites.",
+        },
+        {
+          question: "Is web design better than SEO or ads?",
+          answer: "Design creates the foundation for all marketing. A great website + SEO + ads works best.",
+        }
+      ],
+      image: {
+        src: "/assets/images/services/web-design/3.webp",
+        alt: "Web Design Process",
+      }
+    },
     finalCTA: {
       title: "Let's Build Your Website",
       description: "Turn your website into a powerful tool that impresses visitors and drives results.",
@@ -292,11 +304,11 @@ export const allServicesData: ServicePageData[] = [
       ],
       gallery: [
         {
-          src: "/assets/imgs/gallery/service-details-1.jpg",
+          src: "/assets/images/services/seo/1.webp",
           alt: "SEO Strategy",
         },
         {
-          src: "/assets/imgs/gallery/service-details-2.webp",
+          src: "/assets/images/services/seo/2.webp",
           alt: "SEO Results",
         },
       ],
@@ -317,7 +329,7 @@ export const allServicesData: ServicePageData[] = [
         title: "Our Approach to SEO",
       },
       video: {
-        src: "/videos/Business_People.mp4",
+        src: "/assets/images/services/seo/3.webp",
         type: "video/mp4",
       },
       content: {
@@ -429,20 +441,26 @@ export const allServicesData: ServicePageData[] = [
         "Are looking for sustainable growth",
       ],
     },
-    faqs: [
-      {
-        question: "How long does SEO take?",
-        answer: "SEO is a long-term investment. Most clients see progress within a few months, with steady growth over time.",
-      },
-      {
-        question: "Do you offer local SEO only?",
-        answer: "We provide both local and broader SEO strategies depending on your needs.",
-      },
-      {
-        question: "Is SEO better than paid ads?",
-        answer: "SEO builds long-term visibility, while ads provide immediate traffic. Many businesses benefit from both.",
-      },
-    ],
+    faqsData: {
+      faqs: [
+        {
+          question: "How long does SEO take?",
+          answer: "SEO is a long-term investment. Most clients see progress within a few months, with steady growth over time.",
+        },
+        {
+          question: "Do you offer local SEO only?",
+          answer: "We provide both local and broader SEO strategies depending on your needs.",
+        },
+        {
+          question: "Is SEO better than paid ads?",
+          answer: "SEO builds long-term visibility, while ads provide immediate traffic. Many businesses benefit from both.",
+        },
+      ],
+      image: {
+        src: "/assets/images/services/seo/3.webp",
+        alt: "SEO Strategy",
+      }
+    },
     finalCTA: {
       title: "Let's Improve Your Search Visibility",
       description: "Turn your website into a reliable source of qualified leads.",
@@ -487,11 +505,11 @@ export const allServicesData: ServicePageData[] = [
       ],
       gallery: [
         {
-          src: "/assets/imgs/gallery/service-details-1.jpg",
+          src: "/assets/images/services/social-media/1.webp",
           alt: "Social Media Content",
         },
         {
-          src: "/assets/imgs/gallery/service-details-2.webp",
+          src: "/assets/images/services/social-media/2.webp",
           alt: "Social Media Strategy",
         },
       ],
@@ -513,7 +531,7 @@ export const allServicesData: ServicePageData[] = [
         title: "Our Approach to Social Media",
       },
       video: {
-        src: "/videos/Business_People.mp4",
+        src: "/assets/images/services/social-media/3.webp",
         type: "video/mp4",
       },
       content: {
@@ -620,20 +638,26 @@ export const allServicesData: ServicePageData[] = [
         "Want social media to support real business growth",
       ],
     },
-    faqs: [
-      {
-        question: "How often do you post?",
-        answer: "Posting frequency depends on your goals and platforms, typically 3–5 times per week.",
-      },
-      {
-        question: "Do you create both designs and captions?",
-        answer: "Yes. We handle visuals, copy, and strategy together for consistency.",
-      },
-      {
-        question: "Can social media really drive sales?",
-        answer: "Yes — when done strategically. Social media supports awareness, trust, and conversions when aligned with your funnel.",
-      },
-    ],
+    faqsData: {
+      faqs: [
+        {
+          question: "How often do you post?",
+          answer: "Posting frequency depends on your goals and platforms, typically 3–5 times per week.",
+        },
+        {
+          question: "Do you create both designs and captions?",
+          answer: "Yes. We handle visuals, copy, and strategy together for consistency.",
+        },
+        {
+          question: "Can social media really drive sales?",
+          answer: "Yes — when done strategically. Social media supports awareness, trust, and conversions when aligned with your funnel.",
+        },
+      ],
+      image: {
+        src: "/assets/images/services/social-media/3.webp",
+        alt: "Social Media Management",
+      }
+    },
     finalCTA: {
       title: "Let's Grow Your Social Media Presence",
       description: "Turn your social media into a powerful brand and growth channel — not just another task on your list.",
@@ -678,11 +702,11 @@ export const allServicesData: ServicePageData[] = [
       ],
       gallery: [
         {
-          src: "/assets/imgs/gallery/service-details-1.jpg",
+          src: "/assets/images/services/ppc/1.webp",
           alt: "PPC Campaigns",
         },
         {
-          src: "/assets/imgs/gallery/service-details-2.webp",
+          src: "/assets/images/services/ppc/2.webp",
           alt: "Ad Performance",
         },
       ],
@@ -704,7 +728,7 @@ export const allServicesData: ServicePageData[] = [
         title: "Our Approach to PPC Advertising",
       },
       video: {
-        src: "/videos/Business_People.mp4",
+        src: "/assets/images/services/ppc/3.webp",
         type: "video/mp4",
       },
       content: {
@@ -812,20 +836,26 @@ export const allServicesData: ServicePageData[] = [
         "Want clear data and measurable outcomes",
       ],
     },
-    faqs: [
-      {
-        question: "How fast can I see results from PPC?",
-        answer: "You can start seeing traffic immediately, with meaningful results typically within the first 2–4 weeks.",
-      },
-      {
-        question: "Do you manage ad spend as well?",
-        answer: "Yes. We manage budgets, bids, and optimization, while you pay ad spend directly to the platforms.",
-      },
-      {
-        question: "Is PPC better than SEO?",
-        answer: "PPC delivers immediate results. SEO builds long-term growth. Together, they work best.",
-      },
-    ],
+    faqsData: {
+      faqs: [
+        {
+          question: "How fast can I see results from PPC?",
+          answer: "You can start seeing traffic immediately, with meaningful results typically within the first 2–4 weeks.",
+        },
+        {
+          question: "Do you manage ad spend as well?",
+          answer: "Yes. We manage budgets, bids, and optimization, while you pay ad spend directly to the platforms.",
+        },
+        {
+          question: "Is PPC better than SEO?",
+          answer: "PPC delivers immediate results. SEO builds long-term growth. Together, they work best.",
+        },
+      ],
+      image: {
+        src: "/assets/images/services/ppc/3.webp",
+        alt: "PPC Advertising",
+      }
+    },
     finalCTA: {
       title: "Let's Turn Clicks Into Customers",
       description: "Stop wasting ad spend and start running campaigns built to convert.",
@@ -870,11 +900,11 @@ export const allServicesData: ServicePageData[] = [
       ],
       gallery: [
         {
-          src: "/assets/imgs/gallery/service-details-1.jpg",
+          src: "/assets/images/services/review-marketing/1.webp",
           alt: "Customer Reviews",
         },
         {
-          src: "/assets/imgs/gallery/service-details-2.webp",
+          src: "/assets/images/services/review-marketing/2.webp",
           alt: "Review Management",
         },
       ],
@@ -1003,20 +1033,26 @@ export const allServicesData: ServicePageData[] = [
         "Want better visibility in local search results",
       ],
     },
-    faqs: [
-      {
-        question: "Is review marketing allowed by Google?",
-        answer: "Yes — when done ethically. We follow all platform policies and best practices.",
-      },
-      {
-        question: "Can you remove negative reviews?",
-        answer: "We can't remove legitimate reviews, but we help manage responses and improve overall sentiment.",
-      },
-      {
-        question: "Do reviews help SEO?",
-        answer: "Absolutely. Reviews strongly influence local rankings and click-through rates.",
-      },
-    ],
+    faqsData: {
+      faqs: [
+        {
+          question: "Is review marketing allowed by Google?",
+          answer: "Yes — when done ethically. We follow all platform policies and best practices.",
+        },
+        {
+          question: "Can you remove negative reviews?",
+          answer: "We can't remove legitimate reviews, but we help manage responses and improve overall sentiment.",
+        },
+        {
+          question: "Do reviews help SEO?",
+          answer: "Absolutely. Reviews strongly influence local rankings and click-through rates.",
+        },
+      ],
+      image: {
+        src: "/assets/images/services/review-marketing/3.webp",
+        alt: "Review Marketing",
+      }
+    },
     finalCTA: {
       title: "Turn Reviews Into a Competitive Advantage",
       description: "Build trust, improve visibility, and convert more customers with a strong online reputation.",
@@ -1061,11 +1097,11 @@ export const allServicesData: ServicePageData[] = [
       ],
       gallery: [
         {
-          src: "/assets/imgs/gallery/service-details-1.jpg",
+          src: "/assets/images/services/graphic-design/1.webp",
           alt: "Graphic Design Work",
         },
         {
-          src: "/assets/imgs/gallery/service-details-2.webp",
+          src: "/assets/images/services/graphic-design/2.webp",
           alt: "Design Examples",
         },
       ],
@@ -1087,7 +1123,7 @@ export const allServicesData: ServicePageData[] = [
         title: "Our Approach to Graphic Design",
       },
       video: {
-        src: "/videos/Business_People.mp4",
+        src: "/images/services/graphic-design/3.webp",
         type: "video/mp4",
       },
       content: {
@@ -1194,20 +1230,26 @@ export const allServicesData: ServicePageData[] = [
         "Want design that supports business goals",
       ],
     },
-    faqs: [
-      {
-        question: "Do you work with existing brand guidelines?",
-        answer: "Yes. We can follow, refine, or help build them if needed.",
-      },
-      {
-        question: "Do you offer ongoing design support?",
-        answer: "Yes. We offer both project-based and ongoing design services.",
-      },
-      {
-        question: "Is graphic design important if I already have a logo?",
-        answer: "Absolutely. Design consistency across all touchpoints builds trust and recognition.",
-      },
-    ],
+    faqsData: {
+      faqs: [
+        {
+          question: "Do you work with existing brand guidelines?",
+          answer: "Yes. We can follow, refine, or help build them if needed.",
+        },
+        {
+          question: "Do you offer ongoing design support?",
+          answer: "Yes. We offer both project-based and ongoing design services.",
+        },
+        {
+          question: "Is graphic design important if I already have a logo?",
+          answer: "Absolutely. Design consistency across all touchpoints builds trust and recognition.",
+        },
+      ],
+      image: {
+        src: "/assets/images/services/graphic-design/3.webp",
+        alt: "Graphic Design",
+      }
+    },
     finalCTA: {
       title: "Let's Design Your Brand the Right Way",
       description: "Turn your visuals into a powerful brand asset — not an afterthought.",
@@ -1252,11 +1294,11 @@ export const allServicesData: ServicePageData[] = [
       ],
       gallery: [
         {
-          src: "/assets/imgs/gallery/service-details-1.jpg",
+          src: "/assets/images/services/branding/1.webp",
           alt: "Branding Work",
         },
         {
-          src: "/assets/imgs/gallery/service-details-2.webp",
+          src: "/assets/images/services/branding/2.webp",
           alt: "Brand Identity",
         },
       ],
@@ -1278,7 +1320,7 @@ export const allServicesData: ServicePageData[] = [
         title: "Our Approach to Branding",
       },
       video: {
-        src: "/videos/Business_People.mp4",
+        src: "/assets/images/services/branding/3.webp",
         type: "video/mp4",
       },
       content: {
@@ -1387,20 +1429,26 @@ export const allServicesData: ServicePageData[] = [
         "Need consistency across all touchpoints",
       ],
     },
-    faqs: [
-      {
-        question: "Do you only design logos?",
-        answer: "No. Logos are just one part of a complete brand system.",
-      },
-      {
-        question: "Can you rebrand an existing business?",
-        answer: "Yes. We handle both full rebrands and brand refreshes.",
-      },
-      {
-        question: "How long does branding take?",
-        answer: "Most branding projects take 4–8 weeks depending on scope.",
-      },
-    ],
+    faqsData: {
+      faqs: [
+        {
+          question: "Do you only design logos?",
+          answer: "No. Logos are just one part of a complete brand system.",
+        },
+        {
+          question: "Can you rebrand an existing business?",
+          answer: "Yes. We handle both full rebrands and brand refreshes.",
+        },
+        {
+          question: "How long does branding take?",
+          answer: "Most branding projects take 4–8 weeks depending on scope.",
+        },
+      ],
+      image: {
+        src: "/assets/images/services/branding/3.webp",
+        alt: "Branding Services",
+      }
+    },
     finalCTA: {
       title: "Let's Build a Brand That Lasts",
       description: "Create a brand that reflects who you are and where your business is going.",
@@ -1445,11 +1493,11 @@ export const allServicesData: ServicePageData[] = [
       ],
       gallery: [
         {
-          src: "/assets/imgs/gallery/service-details-1.jpg",
+          src: "/assets/images/services/email-marketing/1.webp",
           alt: "Email Campaigns",
         },
         {
-          src: "/assets/imgs/gallery/service-details-2.webp",
+          src: "/assets/images/services/email-marketing/2.webp",
           alt: "Email Marketing",
         },
       ],
@@ -1471,7 +1519,7 @@ export const allServicesData: ServicePageData[] = [
         title: "Our Approach to Email Marketing",
       },
       video: {
-        src: "/videos/Business_People.mp4",
+        src: "/assets/images/services/email-marketing/3.webp",
         type: "video/mp4",
       },
       content: {
@@ -1580,20 +1628,26 @@ export const allServicesData: ServicePageData[] = [
         "Want predictable, measurable results",
       ],
     },
-    faqs: [
-      {
-        question: "How often should emails be sent?",
-        answer: "It depends on your audience and goals, but consistency matters more than volume.",
-      },
-      {
-        question: "Do you work with platforms like Mailchimp or Klaviyo?",
-        answer: "Yes. We work with major email marketing platforms and tools.",
-      },
-      {
-        question: "Is email marketing still effective?",
-        answer: "Absolutely. Email consistently delivers one of the highest ROI across digital channels.",
-      },
-    ],
+    faqsData: {
+      faqs: [
+        {
+          question: "How often should emails be sent?",
+          answer: "It depends on your audience and goals, but consistency matters more than volume.",
+        },
+        {
+          question: "Do you work with platforms like Mailchimp or Klaviyo?",
+          answer: "Yes. We work with major email marketing platforms and tools.",
+        },
+        {
+          question: "Is email marketing still effective?",
+          answer: "Absolutely. Email consistently delivers one of the highest ROI across digital channels.",
+        },
+      ],
+      image: {
+        src: "/assets/images/services/email-marketing/3.webp",
+        alt: "Email Marketing",
+      }
+    },
     finalCTA: {
       title: "Let's Make Email Work for Your Business",
       description: "Turn your email list into a powerful revenue and relationship channel.",
@@ -1637,11 +1691,11 @@ export const allServicesData: ServicePageData[] = [
       ],
       gallery: [
         {
-          src: "/assets/images/Pricing/18.png",
+          src: "/assets/images/services/restaurant-platform/1.webp",
           alt: "Restaurant Platform Dashboard",
         },
         {
-          src: "/assets/images/Pricing/22.png",
+          src: "/assets/images/services/restaurant-platform/2.webp",
           alt: "Mobile Ordering App",
         },
       ],
@@ -1662,7 +1716,7 @@ export const allServicesData: ServicePageData[] = [
         title: "Supporting Restaurants to Grow",
       },
       video: {
-        src: "/videos/Business_People.mp4",
+        src: "/assets/images/services/restaurant-platform/3.webp",
         type: "video/mp4",
       },
       content: {
@@ -1763,20 +1817,26 @@ export const allServicesData: ServicePageData[] = [
         "Cafes & Bars",
       ],
     },
-    faqs: [
-      {
-        question: "Is there really no commission?",
-        answer: "Yes, we charge a flat monthly fee. You keep 100% of your sales revenue.",
-      },
-      {
-        question: "Can I use my own drivers?",
-        answer: "Absolutely. Our delivery management system lets you track your own drivers or connect with third-party couriers.",
-      },
-      {
-        question: "Do I need a developer?",
-        answer: "No. Our website builder and setup process are completely code-free.",
-      },
-    ],
+    faqsData: {
+      faqs: [
+        {
+          question: "Is there really no commission?",
+          answer: "Yes, we charge a flat monthly fee. You keep 100% of your sales revenue.",
+        },
+        {
+          question: "Can I use my own drivers?",
+          answer: "Absolutely. Our delivery management system lets you track your own drivers or connect with third-party couriers.",
+        },
+        {
+          question: "Do I need a developer?",
+          answer: "No. Our website builder and setup process are completely code-free.",
+        },
+      ],
+      image: {
+        src: "/assets/images/services/restaurant-platform/3.webp",
+        alt: "Restaurant Platform",
+      }
+    },
     finalCTA: {
       title: "Ready to Scale Your Restaurant?",
       description: "Join thousands of restaurants saving money and growing faster.",

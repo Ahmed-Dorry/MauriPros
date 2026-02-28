@@ -24,7 +24,7 @@ const FooterSection = () => {
                       <a href={`mailto:${widget.email}`} className="contact-link">
                         {widget.email}
                       </a>
-                      <p className="location">{widget.location}</p>
+                      {/*<p className="location">{widget.location}</p>*/}
                       {widget.cta && (
                         <Link href={widget.cta.href} className="t-btn-primary">
                           {widget.cta.label}

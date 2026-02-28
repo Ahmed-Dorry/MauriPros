@@ -80,14 +80,14 @@ const ServicePage = async ({ params }: ServicePageProps): Promise<ReactElement> 
                     />
                     <ServiceSection data={serviceData.heroSection} />
                     <ProblemSection data={serviceData.problemSection} />
-                    <ServiceDetailsSection data={serviceData.approachSection} />
+                    {/*<ServiceDetailsSection data={serviceData.approachSection} />*/}
                     <WhatsIncludedSection data={serviceData.whatsIncluded} />
                     <ProcessSection className="page-services" data={serviceData.processSection} />
                     {/*<WhyWorkWithUsSection data={serviceData.whyWorkWithUs} />*/}
                     {serviceData.pricingSection && <PricingSection data={serviceData.pricingSection} />}
                     {serviceData.addonsSection && <AddonsSection data={serviceData.addonsSection} />}
                     <IdealClientsSection data={serviceData.idealClients} />
-                    <FaqSection type={2} data={serviceData.faqs} />
+                    <FaqSection type={2} data={serviceData.faqsData} />
                     <FinalCTASection data={serviceData.finalCTA} />
                 </main>
                 <FooterSection />
