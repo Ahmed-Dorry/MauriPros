@@ -31,7 +31,7 @@ const blogData:BlogData = {
       image: "/assets/imgs/blog/blog1.jpeg",
       date: "Growing Businesses",
       title: "Companies ready to scale their marketing efforts.",
-      url: "/digital-agency/blog-details",
+      url: "/contact",
     },
     {
       id: 2,

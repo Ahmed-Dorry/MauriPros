@@ -52,21 +52,21 @@ export const whatWeDoData: WhatWeDoData = {
             title: "Digital Marketing",
             image: "/assets/imgs/about/digital-marketing.webp",
             description: "We drive growth through targeted campaigns, SEO, and social media strategies that connect you with your ideal audience.",
-            detailLink: "/services/digital-marketing",
+            detailLink: "/services/social-media",
         },
         {
             id: "development",
             title: "Web Development",
             image: "/assets/imgs/about/web-development.webp",
             description: "We build fast, responsive, and user-friendly websites that convert visitors into customers. Technology that works for you.",
-            detailLink: "/services/web-development",
+            detailLink: "/services/web-design",
         },
         {
             id: "strategy",
             title: "Strategic Consulting",
             image: "/assets/imgs/about/strategic-consulting.webp",
             description: "We don't just execute; we plan. Our strategic consulting ensures your marketing efforts are aligned with your business goals.",
-            detailLink: "/services/consulting",
+            detailLink: "/services/review-marketing",
         }
     ]
 };

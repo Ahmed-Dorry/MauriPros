@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import counterUp from "counterup2";
 import { AboutData } from "@/constant/DigitalAgency/about";
+import {usePathname} from "next/navigation";
 
 interface AboutProps {
   className?: string;
@@ -10,6 +11,8 @@ interface AboutProps {
 }
 
 const AboutSection:React.FC<AboutProps> = ({className:updateClass,data:aboutData}) => {
+  const currentPath = usePathname();
+  console.log("Current Path:", currentPath);
   useEffect(() => {
     const counters = document.querySelectorAll(".t-counter-value");
 
@@ -54,13 +57,16 @@ const AboutSection:React.FC<AboutProps> = ({className:updateClass,data:aboutData
 
               <div className="btn-wrapper fade-anim">
                 <div className="t-btn-group">
-                  <Link className="t-btn t-btn-circle" href={aboutData?.ctaLink || "#"}>
+                  <Link className="t-btn t-btn-circle"
+                        href={currentPath === "/about" ? "/contact" : aboutData?.ctaLink || "#"}>
                     <i className="fa-solid fa-arrow-right"></i>
                   </Link>
-                  <Link className="t-btn t-btn-primary" href={aboutData?.ctaLink || "#"}>
+                  <Link className="t-btn t-btn-primary"
+                        href={currentPath === "/about" ? "/contact" : aboutData?.ctaLink || "#"}>
                     {aboutData?.ctaText}
                   </Link>
-                  <Link className="t-btn t-btn-circle" href={aboutData?.ctaLink || "#"}>
+                  <Link className="t-btn t-btn-circle"
+                        href={currentPath === "/about" ? "/contact" : aboutData?.ctaLink || "#"}>
                     <i className="fa-solid fa-arrow-right"></i>
                   </Link>
                 </div>
