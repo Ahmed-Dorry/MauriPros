@@ -32,7 +32,7 @@ const workData: WorkData = {
         "No-code & custom builds",
       ],
       ctaText: "Explore Web Design",
-      ctaLink: "/digital-agency/web-design-details", // Example link
+      ctaLink: "/services/web-design",
       image: "/assets/imgs/project/project-3.png", // Reusing existing image
     },
     {
@@ -48,7 +48,7 @@ const workData: WorkData = {
         "Performance optimization",
       ],
       ctaText: "Explore Marketing",
-      ctaLink: "/digital-agency/marketing-details", // Example link
+      ctaLink: "/services/review-marketing", // Example link
       image: "/assets/imgs/project/project-2.png", // Reusing existing image
     },
     {
@@ -64,7 +64,7 @@ const workData: WorkData = {
         "Brand assets",
       ],
       ctaText: "Explore Creative",
-      ctaLink: "/digital-agency/creative-details", // Example link
+      ctaLink: "/services/graphic-design", // Example link
       image: "/assets/imgs/project/project-4.png", // Reusing existing image
     },
     {
@@ -80,7 +80,7 @@ const workData: WorkData = {
         "Tone of voice",
       ],
       ctaText: "Explore Branding",
-      ctaLink: "/digital-agency/branding-details", // Example link
+      ctaLink: "/services/branding", // Example linka
       image: "/assets/imgs/project/project-1.png", // Reusing existing image
     },
   ],

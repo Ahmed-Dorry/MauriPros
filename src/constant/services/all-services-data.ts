@@ -1868,12 +1868,12 @@ export const allServicesData: ServicePageData[] = [
           period: "/month",
           subtitle: "per 1 location",
           features: [
+            "All in Standard plus:",
             "Unlimited orders",
             "Marketing Automation",
             "Gift Cards",
             "Item Recommendations",
             "Multiple Menus",
-            "All in Standard plus:",
           ],
         },
       ],
