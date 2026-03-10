@@ -30,11 +30,11 @@ const PricingSection: React.FC<PricingSectionProps> = ({ data }) => {
                         <div key={index} className="col-lg-5 col-md-6 fade_up_anim" data-delay={`${0.2 * (index + 1)}`}>
                             <div className="pricing-card h-100 p-5 bg-white rounded-4 shadow-sm">
                                 <div className="pricing-header mb-4">
-                                    <div className="d-flex align-items-baseline mb-2">
-                                        <span className="h1 fw-bold text-success mb-0">{plan.price}</span>
-                                        <span className="text-muted ms-2">{plan.period}</span>
-                                    </div>
-                                    <p className="text-muted mb-3">{plan.subtitle}</p>
+                                    {/*<div className="d-flex align-items-baseline mb-2">*/}
+                                    {/*    <span className="h1 fw-bold text-success mb-0">{plan.price}</span>*/}
+                                    {/*    <span className="text-muted ms-2">{plan.period}</span>*/}
+                                    {/*</div>*/}
+                                    {/*<p className="text-muted mb-3">{plan.subtitle}</p>*/}
                                     <h3 className="h4 fw-bold mb-0">{plan.name}</h3>
                                 </div>
                                 <div className="pricing-features">

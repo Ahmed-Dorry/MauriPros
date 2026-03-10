@@ -29,10 +29,10 @@ const AddonsSection: React.FC<AddonsSectionProps> = ({ data }) => {
                         <div key={index} className="col-lg-4 col-md-6 fade_up_anim" data-delay={`${0.1 * (index + 1)}`}>
                             <div className="addon-card h-100 p-4 bg-white rounded-3 shadow-sm">
                                 <h3 className="h5 fw-bold mb-2">{item.title}</h3>
-                                <div className="d-flex align-items-baseline mb-3">
-                                    <span className="h4 fw-bold text-success mb-0">{item.price}</span>
-                                    <span className="text-muted ms-2 small">{item.period}</span>
-                                </div>
+                                {/*<div className="d-flex align-items-baseline mb-3">*/}
+                                {/*    <span className="h4 fw-bold text-success mb-0">{item.price}</span>*/}
+                                {/*    <span className="text-muted ms-2 small">{item.period}</span>*/}
+                                {/*</div>*/}
                                 <p className="text-muted mb-0 small">{item.description}</p>
                             </div>
                         </div>
