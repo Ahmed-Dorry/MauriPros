@@ -84,7 +84,7 @@ const ServicePage = async ({ params }: ServicePageProps): Promise<ReactElement> 
                     <WhatsIncludedSection data={serviceData.whatsIncluded} />
                     <ProcessSection className="page-services" data={serviceData.processSection} />
                     {/*<WhyWorkWithUsSection data={serviceData.whyWorkWithUs} />*/}
-                    {serviceData.pricingSection && <PricingSection data={serviceData.pricingSection} />}
+                    {/*{serviceData.pricingSection && <PricingSection data={serviceData.pricingSection} />}*/}
                     {serviceData.addonsSection && <AddonsSection data={serviceData.addonsSection} />}
                     <IdealClientsSection data={serviceData.idealClients} />
                     <FaqSection type={2} data={serviceData.faqsData} />
