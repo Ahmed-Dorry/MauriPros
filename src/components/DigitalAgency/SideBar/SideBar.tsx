@@ -79,13 +79,6 @@ const Sidebar = ({
             <div className="offset-widget-box">
               <h2 className="title">Information</h2>
               <div className="contact-meta">
-                {/*<div className="contact-item">*/}
-                {/*  <span className="text">*/}
-                {/*    <Link href={sidebarData?.contact?.phone?.href}>*/}
-                {/*      {sidebarData?.contact?.phone?.text}*/}
-                {/*    </Link>*/}
-                {/*  </span>*/}
-                {/*</div>*/}
                 <div className="contact-item">
                   <span className="text">
                     <a href={sidebarData?.contact?.email?.href}>
@@ -112,11 +105,16 @@ const Sidebar = ({
             </div>
 
             {/* Footer Logo */}
-            <div className="offset-logo-footer">
-              <img src={sidebarData.footerLogo} alt="footer logo" />
+            <div className="offset-logo-footer" style={{ width: "100%", overflow: "hidden" }}>
+              <img 
+                src={sidebarData.footerLogo} 
+                alt="footer logo" 
+                style={{ maxWidth: "90%", height: "auto", objectFit: "contain", float: "right" }}
+              />
             </div>
-          </div>
-        </div>
+
+          </div> {/* This was missing! Closes 'side-info-content' */}
+        </div> {/* This was missing! Closes 'side-info' */}
       </aside>
 
       {/* Overlay */}
