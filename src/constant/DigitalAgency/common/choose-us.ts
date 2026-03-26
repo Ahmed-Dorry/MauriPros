@@ -15,7 +15,7 @@ export interface IChooseUs {
 
 const chooseUsData:IChooseUs = {
   subtitle: "Why Choose Us",
-  title: "Why Businesses Work With 222Medias",
+  title: "Why Businesses Work With MauriPros",
   image: "/assets/imgs/gallery/about-home.jpg",
   features: [
     {

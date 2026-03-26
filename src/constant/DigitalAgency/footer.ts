@@ -36,7 +36,7 @@ const footerData: FooterData = {
     {
       type: "contact",
       title: "Get in Touch",
-      email: "hello@222medias.com",
+      email: "hello@MauriPros.com",
       location: "Serving clients worldwide",
       cta: { label: "Contact Us", href: "/contact" },
     },
@@ -52,7 +52,7 @@ const footerData: FooterData = {
       type: "links",
       title: "Company",
       links: [
-        { label: "About 222Medias", href: "/about" },
+        { label: "About MauriPros", href: "/about" },
         { label: "Our Approach", href: "/about" },
         { label: "Contact", href: "/contact" },
         { label: "Privacy Policy", href: "#" },
@@ -72,10 +72,10 @@ const footerData: FooterData = {
   ],
   preCopyrightText:
     "We help brands look better, communicate clearer, and grow faster.",
-  copyrightText: "© 2026 222Medias. All rights reserved.",
+  copyrightText: "© 2026 MauriPros. All rights reserved.",
   logo: {
     src: "/assets/imgs/logo/logo-colors-white.svg",
-    alt: "222Medias Logo",
+    alt: "MauriPros Logo",
     href: "/",
   },
 };

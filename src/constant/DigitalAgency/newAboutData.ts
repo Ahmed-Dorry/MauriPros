@@ -10,7 +10,7 @@ import { MissionVisionData } from "../../components/DigitalAgency/MissionVisionS
 export const aboutIntroData: DigitalAboutData = {
     subtitle: "About Us",
     title: "We Build Brands That Grow",
-    description: "222Medias is a creative and digital marketing agency focused on helping businesses stand out, connect with their audience, and grow with purpose. We combine strategy, design, and performance to deliver work that drives real results.",
+    description: "MauriPros is a creative and digital marketing agency focused on helping businesses stand out, connect with their audience, and grow with purpose. We combine strategy, design, and performance to deliver work that drives real results.",
     ctaText: "Learn More",
     ctaLink: "/service",
     circleImages: {
@@ -30,7 +30,7 @@ export const aboutIntroData: DigitalAboutData = {
 // Our Story Data (Using new OurStoryVideoSection schema)
 export const ourStoryData: OurStoryVideoData = {
     subtitle: "Our Story",
-    text: "222Medias was founded to help businesses move beyond scattered marketing efforts and unclear brand messaging. We saw the need for a smarter, more focused approach — one that aligns creativity with business goals. Today, we work with brands that want clarity, consistency, and measurable growth.",
+    text: "MauriPros was founded to help businesses move beyond scattered marketing efforts and unclear brand messaging. We saw the need for a smarter, more focused approach — one that aligns creativity with business goals. Today, we work with brands that want clarity, consistency, and measurable growth.",
     videoUrl: "/assets/video/home2video.mp4", // Using existing video asset
 };
 
@@ -123,9 +123,9 @@ export const processData: ProcessData = {
     ],
 };
 
-// Why 222Medias (Using IdealClientsSection schema)
+// Why MauriPros (Using IdealClientsSection schema)
 export const whyChooseUsData = {
-    title: "Why 222Medias",
+    title: "Why MauriPros",
     description: "Clear strategy, not guesswork.",
     points: [
         "Strong creative direction",

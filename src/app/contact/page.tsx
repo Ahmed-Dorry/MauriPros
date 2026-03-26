@@ -14,9 +14,9 @@ import chooseUsData from "@/constant/DigitalAgency/common/choose-us";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Ready to start a project or have a question? Contact 222Medias today. Fill out our form, send us an email, or book a call. Let's build something great together.",
+    "Ready to start a project or have a question? Contact MauriPros today. Fill out our form, send us an email, or book a call. Let's build something great together.",
   keywords: [
-    "contact 222Medias",
+    "contact MauriPros",
     "get a quote",
     "Contact us",
     "digital agency contact",

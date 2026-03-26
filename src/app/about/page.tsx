@@ -24,11 +24,11 @@ import {
 } from "@/constant/DigitalAgency/newAboutData";
 
 export const metadata: Metadata = {
-    title: "About 222Medias",
+    title: "About MauriPros",
     description:
-        "Learn about 222Medias, a creative digital agency dedicated to helping brands grow. Discover our mission, our approach, and the team that makes it all happen.",
+        "Learn about MauriPros, a creative digital agency dedicated to helping brands grow. Discover our mission, our approach, and the team that makes it all happen.",
     keywords: [
-        "about 222Medias",
+        "about MauriPros",
         "digital agency mission",
         "creative agency team",
         "brand strategy experts",
@@ -42,7 +42,7 @@ const AboutPage = (): ReactElement => {
             <Header />
             <SmoothScroll>
                 <main>
-                    <Breadcrumb title="ABOUT" subTitle="222Medias" pageName="ABOUT 222Medias" />
+                    <Breadcrumb title="ABOUT" subTitle="MauriPros" pageName="ABOUT MauriPros" />
                     <AboutSection className="page-about" data={aboutIntroData} />
                     <OurStoryVideoSection data={ourStoryData} />
                     <WhatWeDoSection data={whatWeDoData} />

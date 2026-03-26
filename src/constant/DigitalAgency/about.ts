@@ -25,7 +25,7 @@ export const aboutData: AboutData = {
   subtitle: "Who We Are",
   title: "We Help Businesses Grow",
   description:
-    "222Medias is a B2B marketing and web solutions agency helping businesses grow through strategy, creativity, and performance-driven execution.",
+    "MauriPros is a B2B marketing and web solutions agency helping businesses grow through strategy, creativity, and performance-driven execution.",
   ctaText: "Learn More",
   ctaLink: "/about",
   circleImages: {

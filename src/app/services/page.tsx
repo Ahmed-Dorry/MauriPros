@@ -17,7 +17,7 @@ import chooseUsData from "@/constant/DigitalAgency/common/choose-us";
 export const metadata: Metadata = {
   title: "Our Services",
   description:
-    "Explore the services offered by 222Medias. We specialize in Brand Strategy & Identity, Web & UI Experience, and Marketing & Growth to help your business succeed.",
+    "Explore the services offered by MauriPros. We specialize in Brand Strategy & Identity, Web & UI Experience, and Marketing & Growth to help your business succeed.",
   keywords: [
     "brand strategy services",
     "web design and development",

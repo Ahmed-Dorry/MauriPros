@@ -25,7 +25,7 @@ const headerData: HeaderData = {
   logo: {
     href: "/",
     src: "/assets/imgs/logo/logo-colors-white.svg",
-    alt: "Site Logo",
+    alt: "MauriPros Logo",
   },
   menuItems: [
     { title: "Home", href: "/" },

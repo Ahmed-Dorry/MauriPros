@@ -79,7 +79,7 @@ const sidebar: SidebarData = {
     "/assets/imgs/gallery/footer-image4.webp",
   ],
   contact: {
-    email: { text: "hello@222media.com", href: "mailto:hello@222media.com" },
+    email: { text: "hello@mauripros.com", href: "mailto:hello@mauripros.com" },
     address: "Louisville, KY",
   },
   social: [

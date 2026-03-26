@@ -31,8 +31,8 @@ const contactData: IContact = {
   contactInfo: [
     {
       icon: "/assets/imgs/icon/icon-17.webp",
-      label: "hello@222media.com",
-      link: "mailto:hello@222media.com",
+      label: "hello@mauripros.com",
+      link: "mailto:hello@mauripros.com",
     },
     // {
     //   icon: "/assets/imgs/icon/icon-18.webp",

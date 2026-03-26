@@ -43,18 +43,18 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     }
 
     return {
-        title: `${serviceData.name} || 222Medias - Digital Marketing Agency`,
+        title: `${serviceData.name} || MauriPros - Digital Marketing Agency`,
         description: serviceData.heroSection.description,
         keywords: [
             serviceData.name,
             "digital marketing",
-            "222Medias",
+            "MauriPros",
             serviceData.heroSection.subtitle,
             ...serviceData.heroSection.services,
         ],
-        creator: "222Medias",
+        creator: "MauriPros",
         other: {
-            developer: "222Medias",
+            developer: "MauriPros",
             section: `${serviceData.name} Service Page`,
         },
     };

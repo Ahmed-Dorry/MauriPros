@@ -34,11 +34,11 @@ import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: {
-    default: "222medias - Marketing & Web Solutions",
-    template: "%s | 222Medias",
+    default: "MauriPros - Marketing & Web Solutions",
+    template: "%s | MauriPros",
   },
   description:
-    "222Medias is a creative digital agency specializing in brand strategy, web design, and marketing solutions. We help brands look better, communicate clearer, and grow faster.",
+    "MauriPros is a creative digital agency specializing in brand strategy, web design, and marketing solutions. We help brands look better, communicate clearer, and grow faster.",
   keywords: [
     "digital agency",
     "brand strategy",
@@ -48,15 +48,15 @@ export const metadata: Metadata = {
     "UI/UX design",
     "SEO",
     "performance marketing",
-    "222Medias",
+    "MauriPros",
   ],
-  creator: "222Medias",
+  creator: "MauriPros",
   openGraph: {
-    title: "222medias - Marketing & Web Solutions",
+    title: "MauriPros - Marketing & Web Solutions",
     description:
       "We help brands look better, communicate clearer, and grow faster through strategic branding, web design, and marketing.",
-    url: "https://www.222medias.com", // Replace with your actual domain
-    siteName: "222Medias",
+    url: "https://www.mauripros.com", // Replace with your actual domain
+    siteName: "MauriPros",
     images: [
       {
         url: "/og-image.png", // Create and place this image in your /public folder
@@ -69,10 +69,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "222medias - Marketing & Web Solutions",
+    title: "MauriPros - Marketing & Web Solutions",
     description:
       "Transform your brand with our expert strategy, design, and marketing services.",
-    creator: "@222Medias", // Replace with your Twitter handle
+    creator: "@MauriPros", // Replace with your Twitter handle
     images: ["/og-image.png"], // Must be an absolute URL in production
   },
 };
