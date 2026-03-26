@@ -23,7 +23,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({ data }) => {
         <section className="pricing-area section-spacing">
             <div className="container">
                 <div className="section-header text-center mb-5">
-                    <h2 className="section-title">{data.title}</h2>
+                    <h2 className="section-title">Features</h2>
                 </div>
                 <div className="row justify-content-center g-4">
                     {data.plans.map((plan, index) => (
