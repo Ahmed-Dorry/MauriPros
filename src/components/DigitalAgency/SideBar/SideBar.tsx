@@ -109,7 +109,7 @@ const Sidebar = ({
               <img 
                 src={sidebarData.footerLogo} 
                 alt="footer logo" 
-                style={{ maxWidth: "90%", height: "auto", objectFit: "contain", float: "right" }}
+                style={{ maxWidth: "50%", height: "auto", objectFit: "contain", float: "right" }}
               />
             </div>
 
