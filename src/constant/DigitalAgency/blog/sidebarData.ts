@@ -1,94 +1,62 @@
-export interface SidebarMenu {
-  label: string;
-  href?: string;
-  children?: SidebarMenu[];
+export interface ISocialLink {
+  icon: string;
+  url: string;
 }
 
-export interface SidebarCTA {
+export interface IAuthorInfo {
+  name: string;
+  designation: string;
+  image: string;
   text: string;
-  href: string;
+  socialLinks: ISocialLink[];
 }
 
-export interface SidebarContactItem {
-  text: string;
-  href: string;
-}
-
-export interface SidebarContact {
-  email: SidebarContactItem;
-  address: string;
-}
-
-export interface SidebarSocial {
-  label: string;
-  href: string;
-}
-
-export interface SidebarData {
-  logo: string;
-  menus: SidebarMenu[];
-  closeIcon: string;
+export interface IRecentBlog {
   title: string;
-  description: string;
-  cta: SidebarCTA;
-  ctaIcon: string;
-  gallery: string[];
-  contact: SidebarContact;
-  social: SidebarSocial[];
-  footerLogo: string;
+  date: string;
+  image: string;
+  url: string;
 }
 
-const sidebar: SidebarData = {
-  logo: "/assets/imgs/logo/logo-colors-black.svg",
-  menus: [
-    {
-      label: "Home",
-      href: "/",
-    },
-    {
-      label: "Services",
-      href: "/services",
-      children: [
-        { label: "Web Design", href: "/services/web-design" },
-        {label: "All-in-one Restaurant Platform", href: "/services/restaurant-platform"},
-        { label: "Social Media Solutions", href: "/services/social-media" },
-        { label: "Review Marketing", href: "/services/review-marketing" },
-        { label: "Logo + Graphic Design", href: "/services/graphic-design" },
-        { label: "Branding", href: "/services/branding" },
-        { label: "Email Marketing", href: "/services/email-marketing" },
-        { label: "SEO", href: "/services/seo" },
-        { label: "Pay-Per-Click (PPC) Ads", href: "/services/ppc" },
-      ],
-    },
-    { label: "About Us", href: "/about" },
-    { label: "Contact Us", href: "/contact" },
+export const authorInfo: IAuthorInfo = {
+  name: "Sarah Thompson",
+  designation: "Artist/blogger",
+  image: "/assets/imgs/gallery/image-23.webp",
+  text: "Sarah Thomson is a passionate artist and blogger, blending creativity with storytelling.",
+  socialLinks: [
+    { icon: "fa-facebook-f", url: "#" },
+    { icon: "fa-twitter", url: "#" },
+    { icon: "fa-linkedin-in", url: "#" },
+    { icon: "fa-instagram", url: "#" },
   ],
-  closeIcon: "fas fa-times",
-  title: "Hello There!",
-  description:
-    "We offer comprehensive range of services to help your business thrive.",
-  cta: {
-    text: "Let’s Connect",
-    href: "/contact",
-  },
-  ctaIcon: "fa-solid fa-arrow-right",
-  gallery: [
-    "/assets/imgs/gallery/footer-image1.webp",
-    "/assets/imgs/gallery/footer-image2.webp",
-    "/assets/imgs/gallery/footer-image3.webp",
-    "/assets/imgs/gallery/footer-image4.webp",
-  ],
-  contact: {
-    email: { text: "hello@mauripros.com", href: "mailto:hello@mauripros.com" },
-    address: "Louisville, KY",
-  },
-  social: [
-    { label: "FB", href: "#" },
-    { label: "LN", href: "#" },
-    { label: "IN", href: "#" },
-    { label: "BE", href: "#" },
-  ],
-  footerLogo: "/assets/imgs/logo/logo-colors-black.svg",
 };
 
-export default sidebar;
+export const recentBlogs: IRecentBlog[] = [
+  {
+    title: "Our most recent updates and announcements",
+    date: "February 12, 2025",
+    image: "/assets/imgs/blog/blog-3.webp",
+    url: "/digital-agency/blog-details",
+  },
+  {
+    title: "The Art of Creative Storytelling at Averto",
+    date: "February 12, 2025",
+    image: "/assets/imgs/blog/blog-16.webp",
+    url: "/digital-agency/blog-details",
+  },
+  {
+    title: "Elevating Your Identity with our studio",
+    date: "February 12, 2025",
+    image: "/assets/imgs/blog/blog-18.webp",
+    url: "/digital-agency/blog-details",
+  },
+];
+
+export const popularTags: string[] = [
+  "Corporate",
+  "Design Care",
+  "Studio",
+  "Industry",
+  "UI/UX",
+  "Graphics",
+];
