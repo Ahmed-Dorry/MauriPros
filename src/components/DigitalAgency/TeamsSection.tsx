@@ -58,12 +58,12 @@ const TeamsSection: React.FC<TeamsSectionProps> = ({ all, data: teamData }) => {
           {/* Team Members */}
           <div className="team-wrapper-box fade-anim" suppressHydrationWarning={true}>
             <div className="container">
-              {/* REMOVED 'team-hover-active' FROM THE DIV BELOW */}
               <div className="team-wrapper">
                 {totalMembers?.map((member:ITeam, index:number) => (
                     <div
                         key={member?.id}
-                        className={`team-box-1 ${hoveredIndex === index ? "" : "active"}`}
+                        /* Lock them all to active so the layout stays perfectly wide */
+                        className="team-box-1 active"
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
@@ -72,7 +72,16 @@ const TeamsSection: React.FC<TeamsSectionProps> = ({ all, data: teamData }) => {
                           <img src={member?.shape} alt="shape" />
                         </div>
                         <span className="post">{member?.post}</span>
-                        <img src={member?.image} alt={member?.name} />
+                        {/* THIS IS THE MAGIC FIX: Force the image to hide via inline styles */}
+                        <img 
+                          src={member?.image} 
+                          alt={member?.name} 
+                          style={{ 
+                            opacity: hoveredIndex === index ? 0 : 1,
+                            visibility: hoveredIndex === index ? "hidden" : "visible",
+                            transition: "all 0.3s ease-in-out" 
+                          }}
+                        />
                       </div>
                       <div className="content">
                         <h3 className="name">{member?.name}</h3>
