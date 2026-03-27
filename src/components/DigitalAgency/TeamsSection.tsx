@@ -66,39 +66,26 @@ const TeamsSection: React.FC<TeamsSectionProps> = ({ all, data: teamData }) => {
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
-                      {/* We make sure the container clips anything outside of it */}
-                      <div className="thumb" style={{ position: "relative", overflow: "hidden" }}>
-                        
-                        {/* THE ANIMATED CURTAIN: Slides up from the bottom on hover */}
-                        <div style={{
-                          position: "absolute",
-                          bottom: 0,
-                          left: 0,
-                          width: "100%",
-                          height: "100%",
-                          backgroundColor: "#39b54a",
-                          transform: hoveredIndex === index ? "translateY(0)" : "translateY(100%)",
-                          transition: "transform 0.4s ease-in-out",
-                          zIndex: 1
-                        }}></div>
-
-                        {/* TEXT & ICON: We use zIndex to keep them floating ON TOP of the green curtain */}
-                        <div className="icon" style={{ position: "relative", zIndex: 2 }}>
+                      {/* MAGIC FIX: We force the green background color directly onto the square box on hover */}
+                      <div 
+                        className="thumb"
+                        style={{ 
+                          backgroundColor: hoveredIndex === index ? "#39b54a" : "transparent",
+                          transition: "background-color 0.3s ease-in-out"
+                        }}
+                      >
+                        <div className="icon">
                           <img src={member?.shape} alt="shape" />
                         </div>
-                        <span className="post" style={{ position: "relative", zIndex: 2 }}>
-                          {member?.post}
-                        </span>
-                        
-                        {/* BACKGROUND IMAGE: Sits in the back and gently zooms in */}
+                        <span className="post">{member?.post}</span>
+                        {/* MAGIC FIX: Image fades out on hover to reveal the green box underneath */}
                         <img 
                           src={member?.image} 
                           alt={member?.name} 
                           style={{ 
-                            position: "relative",
-                            zIndex: 0,
-                            transform: hoveredIndex === index ? "scale(1.1)" : "scale(1)",
-                            transition: "transform 0.5s ease-in-out" 
+                            opacity: hoveredIndex === index ? 0 : 1,
+                            visibility: hoveredIndex === index ? "hidden" : "visible",
+                            transition: "all 0.3s ease-in-out" 
                           }}
                         />
                       </div>
