@@ -43,7 +43,8 @@ const ServiceSection:React.FC<ServiceProps> = ({data:serviceData}) => {
               <div className="service-box-1 item" key={srv?.id}>
                 <div className="container">
                   <div className="header">
-                    {/* The number div has been removed from here! */}
+                    {/* We put the box back, but made it empty to fix the alignment! */}
+                    <div className="number"></div> 
                     <h3 className="title">
                       {srv?.title}
                       <span>
