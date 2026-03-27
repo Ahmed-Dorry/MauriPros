@@ -43,7 +43,7 @@ const ServiceSection:React.FC<ServiceProps> = ({data:serviceData}) => {
               <div className="service-box-1 item" key={srv?.id}>
                 <div className="container">
                   <div className="header">
-                    <div className="number">{srv?.number}</div>
+                    {/* The number div has been removed from here! */}
                     <h3 className="title">
                       {srv?.title}
                       <span>
