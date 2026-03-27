@@ -67,15 +67,12 @@ const TeamsSection: React.FC<TeamsSectionProps> = ({ all, data: teamData }) => {
                         onMouseEnter={() => setActiveIndex(index)}
                     >
                       <div className="thumb">
-                        <span className="number">{member?.number}</span>
+                        {/* The number span has been removed! */}
                         <div className="icon">
                           <img src={member?.shape} alt="shape" />
                         </div>
                         <span className="post">{member?.post}</span>
                         <img src={member?.image} alt={member?.name} />
-                      </div>
-                      <div className="content">
-                        <h3 className="name">{member?.name}</h3>
                       </div>
                     </div>
                 ))}
