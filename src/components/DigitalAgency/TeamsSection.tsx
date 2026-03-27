@@ -62,8 +62,8 @@ const TeamsSection: React.FC<TeamsSectionProps> = ({ all, data: teamData }) => {
                 {totalMembers?.map((member:ITeam, index:number) => (
                     <div
                         key={member?.id}
-                        /* Lock them all to active so the layout stays perfectly wide */
-                        className="team-box-1 active"
+                        /* THIS RESTORES THE GREEN BACKGROUND ON HOVER by removing the active class */
+                        className={`team-box-1 ${hoveredIndex === index ? "" : "active"}`}
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
@@ -72,7 +72,7 @@ const TeamsSection: React.FC<TeamsSectionProps> = ({ all, data: teamData }) => {
                           <img src={member?.shape} alt="shape" />
                         </div>
                         <span className="post">{member?.post}</span>
-                        {/* THIS IS THE MAGIC FIX: Force the image to hide via inline styles */}
+                        {/* THIS FORCES THE IMAGE TO HIDE ON HOVER */}
                         <img 
                           src={member?.image} 
                           alt={member?.name} 
