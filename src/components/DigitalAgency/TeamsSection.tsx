@@ -62,17 +62,23 @@ const TeamsSection: React.FC<TeamsSectionProps> = ({ all, data: teamData }) => {
                 {totalMembers?.map((member:ITeam, index:number) => (
                     <div
                         key={member?.id}
-                        /* THIS RESTORES THE GREEN BACKGROUND ON HOVER by removing the active class */
-                        className={`team-box-1 ${hoveredIndex === index ? "" : "active"}`}
+                        className="team-box-1 active"
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
-                      <div className="thumb">
+                      {/* MAGIC FIX: We force the green background color directly onto the square box on hover */}
+                      <div 
+                        className="thumb"
+                        style={{ 
+                          backgroundColor: hoveredIndex === index ? "#39b54a" : "transparent",
+                          transition: "background-color 0.3s ease-in-out"
+                        }}
+                      >
                         <div className="icon">
                           <img src={member?.shape} alt="shape" />
                         </div>
                         <span className="post">{member?.post}</span>
-                        {/* THIS FORCES THE IMAGE TO HIDE ON HOVER */}
+                        {/* MAGIC FIX: Image fades out on hover to reveal the green box underneath */}
                         <img 
                           src={member?.image} 
                           alt={member?.name} 
