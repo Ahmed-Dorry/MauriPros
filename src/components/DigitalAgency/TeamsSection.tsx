@@ -10,8 +10,10 @@ interface TeamsSectionProps {
 }
 
 const TeamsSection: React.FC<TeamsSectionProps> = ({ all, data: teamData }) => {
-  const [activeIndex, setActiveIndex] = useState(1);
+  // We changed this to track which card is hovered (default is null so all show images)
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const totalMembers = all ? teamData?.members : teamData?.members?.slice(0, 3);
+  
   return (
       <section className="team-area">
         <div className="team-area-inner section-spacing">
@@ -61,18 +63,20 @@ const TeamsSection: React.FC<TeamsSectionProps> = ({ all, data: teamData }) => {
                 {totalMembers?.map((member:ITeam, index:number) => (
                     <div
                         key={member?.id}
-                        className={`team-box-1 ${
-                            activeIndex === index ? "active" : ""
-                        }`}
-                        onMouseEnter={() => setActiveIndex(index)}
+                        /* Here is the flipped logic: If hovered, remove active class (turns green). Otherwise, keep active (shows image). */
+                        className={`team-box-1 ${hoveredIndex === index ? "" : "active"}`}
+                        onMouseEnter={() => setHoveredIndex(index)}
+                        onMouseLeave={() => setHoveredIndex(null)}
                     >
                       <div className="thumb">
-                        {/* The number span has been removed! */}
                         <div className="icon">
                           <img src={member?.shape} alt="shape" />
                         </div>
                         <span className="post">{member?.post}</span>
                         <img src={member?.image} alt={member?.name} />
+                      </div>
+                      <div className="content">
+                        <h3 className="name">{member?.name}</h3>
                       </div>
                     </div>
                 ))}
