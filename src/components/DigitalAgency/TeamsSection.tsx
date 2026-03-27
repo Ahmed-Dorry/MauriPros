@@ -10,7 +10,6 @@ interface TeamsSectionProps {
 }
 
 const TeamsSection: React.FC<TeamsSectionProps> = ({ all, data: teamData }) => {
-  // We changed this to track which card is hovered (default is null so all show images)
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const totalMembers = all ? teamData?.members : teamData?.members?.slice(0, 3);
   
@@ -59,11 +58,11 @@ const TeamsSection: React.FC<TeamsSectionProps> = ({ all, data: teamData }) => {
           {/* Team Members */}
           <div className="team-wrapper-box fade-anim" suppressHydrationWarning={true}>
             <div className="container">
-              <div className="team-wrapper team-hover-active">
+              {/* REMOVED 'team-hover-active' FROM THE DIV BELOW */}
+              <div className="team-wrapper">
                 {totalMembers?.map((member:ITeam, index:number) => (
                     <div
                         key={member?.id}
-                        /* Here is the flipped logic: If hovered, remove active class (turns green). Otherwise, keep active (shows image). */
                         className={`team-box-1 ${hoveredIndex === index ? "" : "active"}`}
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
