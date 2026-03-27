@@ -43,7 +43,7 @@ const blogData:BlogData = {
     },
     {
       id: 3,
-      tag: "Marketing",
+      tag: "MARKETING",
       image: "/assets/imgs/blog/blog3-new.jpg",
       date: "Marketing Teams",
       title: "Teams that need a reliable execution partner.",
