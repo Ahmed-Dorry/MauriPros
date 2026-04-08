@@ -1,4 +1,4 @@
-/* ----------------------------
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');/* ----------------------------
  Font Family
  --------------------------- */
 
@@ -45,4 +45,88 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+/* Privacy Policy Styles */
+.terms-wrapper {
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+}
+.terms-title {
+  font-size: 36px;
+  color: #3bb54a;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+.effective-date {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 40px;
+}
+.terms-content {
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.8;
+}
+.terms-content h2 {
+  margin-top: 35px;
+  font-size: 22px;
+  color: #3bb54a;
+  font-weight: 600;
+}
+.terms-content h3 {
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+.terms-content ul {
+  margin: 10px 0 20px 20px;
+}
+.terms-content ul li {
+  margin-bottom: 10px;
+}
+.terms-content a {
+  color: #3bb54a;
+  text-decoration: underline;
+}
+
+/* Contact Info Card Style */
+.contact-box {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.contact-item {
+  flex: 1 1 250px;
+  background: #f9fdf9;
+  border: 2px solid #3bb54a;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+.contact-item i {
+  font-size: 28px;
+  color: #3bb54a;
+  margin-bottom: 12px;
+}
+.contact-item h3 {
+  font-size: 20px;
+  color: #3bb54a;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.contact-item p {
+  font-size: 15px;
+  margin: 0;
 }
