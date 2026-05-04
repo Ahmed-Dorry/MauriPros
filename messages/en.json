@@ -1,0 +1,505 @@
+{
+  "Hero": {
+    "subtitle": "WE CREATE",
+    "title": "DIGITAL SOLUTIONS"
+  },
+  "VideoSection": {
+    "subtitle": "WE CREATE",
+    "typewriterStrings": [
+      "B2B MARKETING",
+      "DIGITAL SOLUTIONS",
+      "BRAND STRATEGY"
+    ],
+    "description": "We help businesses drive measurable growth through strategic marketing and innovative web design.",
+    "buttonText": "Contact Us"
+  },
+  "Header": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contacts": "Contacts",
+    "contactUs": "Contact Us",
+    "servicesOverview": "Services Overview",
+    "viewAllServices": "View All Services",
+    "scheduleConsultation": "Schedule a Consultation",
+    "scheduleNow": "Schedule now",
+    "menu": {
+      "webDesign": "Website Design",
+      "webDesignDesc": "Keep your online presence looking fresh and professional!",
+      "restaurant": "All-in-one Restaurant Platform",
+      "restaurantDesc": "Streamline your restaurant's online presence with our all-in-one platform.",
+      "social": "Social Media Solutions",
+      "socialDesc": "Facebook, Instagram, and Google Business Profile.",
+      "review": "Review Marketing",
+      "reviewDesc": "Maintain your presence online with review marketing.",
+      "graphic": "Logo + Graphic Design",
+      "graphicDesc": "Stay top of mind with a memorable logo.",
+      "branding": "Branding",
+      "brandingDesc": "Stay consistent with your style and messaging.",
+      "email": "Email Marketing",
+      "emailDesc": "Connect with your customers through email.",
+      "seo": "Search Engine Optimization (SEO)",
+      "seoDesc": "Want to rank your business on Google? We can help!",
+      "ppc": "Pay-Per-Click (PPC) Ads",
+      "ppcDesc": "Make the most of your advertising budget."
+    }
+  },
+  "AboutSection": {
+    "subtitle": "ABOUT US",
+    "title": "A Full-Service Digital Agency for Your Growth",
+    "description": "We provide innovative solutions combining creativity and technology to help brands stand out in the digital world and achieve measurable results.",
+    "ctaText": "Discover More"
+  },
+  "ProcessSection": {
+    "subtitle": "Our Strategy",
+    "title": "Our work process",
+    "ctaText": "Contact Us",
+    "steps": {
+      "step1": {
+        "title": "Discover",
+        "description": "Understand business, market, and objectives."
+      },
+      "step2": {
+        "title": "Plan",
+        "description": "Define strategy, messaging, and execution roadmap."
+      },
+      "step3": {
+        "title": "Build",
+        "description": "Design, content, and development aligned to goals."
+      },
+      "step4": {
+        "title": "Launch & Optimize",
+        "description": "Deploy with confidence, measure, and refine."
+      }
+    }
+  },
+  "ServiceSection": {
+    "subtitle": "Our Services",
+    "title": "What we offer to you",
+    "viewAllText": "Explore All Services",
+    "showDetails": "Show Details",
+    "services": {
+      "1": {
+        "title": "Web Design",
+        "description": "Modern, responsive websites that convert visitors into customers.",
+        "items": {
+          "0": "1. UX/UI & Website Design",
+          "1": "2. Mobile-First Development",
+          "2": "3. Performance Optimization"
+        }
+      },
+      "2": {
+        "title": "Social Media Solutions",
+        "description": "Build a strong brand and turn followers into customers across platforms.",
+        "items": {
+          "0": "1. Content Strategy & Planning",
+          "1": "2. Branded Post Designs",
+          "2": "3. Community Management"
+        }
+      },
+      "3": {
+        "title": "Branding",
+        "description": "Build a brand people recognize, trust, and remember.",
+        "items": {
+          "0": "1. Brand Strategy & Positioning",
+          "1": "2. Logo & Visual Identity",
+          "2": "3. Brand Guidelines"
+        }
+      },
+      "4": {
+        "title": "SEO Optimization",
+        "description": "Be found by the right customers at the right time with strategic SEO.",
+        "items": {
+          "0": "1. Keyword Research & Strategy",
+          "1": "2. On-Page & Technical SEO",
+          "2": "3. Local SEO & Google Business"
+        }
+      }
+    }
+  },
+  "WorkSection": {
+    "sectionSubtitle": "Our Capabilities",
+    "sectionTitle": "What We Help Brands Achieve",
+    "includesTitle": "Includes:",
+    "capabilities": [
+      {
+        "id": 1,
+        "number": "03/",
+        "title": "Web & UI Experience",
+        "description": "Conversion-focused websites and interfaces designed to look premium and perform across all devices.",
+        "includes": [
+          "Website design",
+          "Landing pages",
+          "UX/UI design",
+          "No-code & custom builds"
+        ],
+        "ctaText": "Explore Web Design",
+        "ctaLink": "/services/web-design",
+        "image": "/assets/imgs/project/project-3.png"
+      },
+      {
+        "id": 2,
+        "number": "02/",
+        "title": "Marketing & Growth",
+        "description": "Strategic marketing solutions built to attract, convert, and scale — not just look good.",
+        "includes": [
+          "Digital campaigns",
+          "Content strategy",
+          "Funnel design",
+          "Performance optimization"
+        ],
+        "ctaText": "Explore Marketing",
+        "ctaLink": "/services/review-marketing",
+        "image": "/assets/imgs/project/project-2.png"
+      },
+      {
+        "id": 3,
+        "number": "04/",
+        "title": "Creative Direction & Content",
+        "description": "Strong visuals and clear direction that keep brands consistent across every touchpoint.",
+        "includes": [
+          "Creative direction",
+          "Social content systems",
+          "Ad creatives",
+          "Brand assets"
+        ],
+        "ctaText": "Explore Creative",
+        "ctaLink": "/services/graphic-design",
+        "image": "/assets/imgs/project/project-4.png"
+      },
+      {
+        "id": 4,
+        "number": "01/",
+        "title": "Brand Identity & Strategy",
+        "description": "We build clear, scalable brand systems — from positioning and messaging to visual identity and guidelines.",
+        "includes": [
+          "Brand positioning",
+          "Logo & visual systems",
+          "Brand guidelines",
+          "Tone of voice"
+        ],
+        "ctaText": "Explore Branding",
+        "ctaLink": "/services/branding",
+        "image": "/assets/imgs/project/project-1.png"
+      }
+    ]
+  },
+  "TeamsSection": {
+    "section": {
+      "subtitle": "Our Approach",
+      "title": "How We Create Impact",
+      "buttonText": "Learn More About Us",
+      "buttonUrl": "/contact"
+    },
+    "members": [
+      {
+        "id": 1,
+        "number": "01",
+        "name": "Every project starts with understanding your business, market, and goals.",
+        "post": "Strategy First",
+        "image": "/assets/imgs/team/team1.jpg",
+        "shape": "/assets/imgs/shape/shape-9.webp",
+        "isActive": false
+      },
+      {
+        "id": 2,
+        "number": "02",
+        "name": "Design, development, and marketing aligned to drive real outcomes.",
+        "post": "Execution with Purpose",
+        "image": "/assets/imgs/team/team2.jpg",
+        "shape": "/assets/imgs/shape/shape-9.webp",
+        "isActive": true
+      },
+      {
+        "id": 3,
+        "number": "03",
+        "name": "We track performance, refine continuously, and scale what works.",
+        "post": "Optimize & Scale",
+        "image": "/assets/imgs/team/team3.jpg",
+        "shape": "/assets/imgs/shape/shape-9.webp",
+        "isActive": false
+      },
+      {
+        "id": 4,
+        "number": "04",
+        "name": "Noah Bennett",
+        "post": "Creative Director",
+        "image": "/assets/imgs/team/team-18.webp",
+        "shape": "/assets/imgs/shape/shape-9.webp",
+        "isActive": false
+      },
+      {
+        "id": 5,
+        "number": "05",
+        "name": "Sophia Martinez",
+        "post": "Web Developer",
+        "image": "/assets/imgs/team/team-19.webp",
+        "shape": "/assets/imgs/shape/shape-9.webp",
+        "isActive": true
+      },
+      {
+        "id": 6,
+        "number": "06",
+        "name": "Liam Nguyen",
+        "post": "Project Manager",
+        "image": "/assets/imgs/team/team-20.webp",
+        "shape": "/assets/imgs/shape/shape-9.webp",
+        "isActive": false
+      }
+    ]
+  },
+  "TextSliderSection": {
+    "slides": [
+      {
+        "id": 1,
+        "text": "LET’S CONNECT",
+        "href": "/contact",
+        "img": "/assets/imgs/logo/logo-icon-green.svg"
+      },
+      {
+        "id": 2,
+        "text": "LET’S CONNECT",
+        "href": "/contact",
+        "img": "/assets/imgs/logo/logo-icon-green.svg"
+      },
+      {
+        "id": 3,
+        "text": "LET’S CONNECT",
+        "href": "/contact",
+        "img": "/assets/imgs/logo/logo-icon-green.svg"
+      },
+      {
+        "id": 4,
+        "text": "LET’S CONNECT",
+        "href": "/contact",
+        "img": "/assets/imgs/logo/logo-icon-green.svg"
+      },
+      {
+        "id": 5,
+        "text": "LET’S CONNECT",
+        "href": "/contact",
+        "img": "/assets/imgs/logo/logo-icon-green.svg"
+      }
+    ]
+  },
+  "BlogSection": {
+    "section": {
+      "subtitle": "Our Clients",
+      "title": "Who We Work With",
+      "buttonText": "Contact Us",
+      "buttonUrl": "/contact"
+    },
+    "posts": [
+      {
+        "id": 1,
+        "tag": "BRANDING",
+        "image": "/assets/imgs/blog/blog1.jpeg",
+        "date": "Growing Businesses",
+        "title": "Companies ready to scale their marketing efforts.",
+        "url": "/contact"
+      },
+      {
+        "id": 2,
+        "tag": "DESIGN",
+        "image": "/assets/imgs/blog/blog2.jpeg",
+        "date": "Service-Based Brands",
+        "title": "Professional services that rely on trust and visibility.",
+        "url": "/contact"
+      },
+      {
+        "id": 3,
+        "tag": "MARKETING",
+        "image": "/assets/imgs/blog/blog3-new.jpg",
+        "date": "Marketing Teams",
+        "title": "Teams that need a reliable execution partner.",
+        "url": "/contact"
+      }
+    ]
+  },
+  "FooterSection": {
+    "bgImage": "/assets/imgs/gallery/footer.webp",
+    "widgets": [
+      {
+        "type": "contact",
+        "title": "Get in Touch",
+        "email": "hello@MauriPros.com",
+        "location": "Serving clients worldwide",
+        "cta": { "label": "Contact Us", "href": "/contact" }
+      },
+      {
+        "type": "subscription",
+        "title": "Stay in the Loop",
+        "description": "Insights on branding, design, and marketing — straight to your inbox. No spam. Unsubscribe anytime.",
+        "placeholder": "Enter your email",
+        "buttonText": "Subscribe"
+      },
+      {
+        "type": "links",
+        "title": "Company",
+        "links": [
+          { "label": "About MauriPros", "href": "/about" },
+          { "label": "Our Approach", "href": "/about" },
+          { "label": "Contact", "href": "/contact" },
+          { "label": "Privacy Policy", "href": "/privacy" },
+          { "label": "Terms of Service", "href": "/terms" }
+        ]
+      },
+      {
+        "type": "links",
+        "title": "Solutions",
+        "links": [
+          { "label": "Brand Strategy & Identity", "href": "/services" },
+          { "label": "Digital Experience Design", "href": "/services" },
+          { "label": "Marketing & Growth Strategy", "href": "/services" },
+          { "label": "Creative & Content Systems", "href": "/services" }
+        ]
+      }
+    ],
+    "preCopyrightText": "We help brands look better, communicate clearer, and grow faster.",
+    "copyrightText": "© 2026 MauriPros. All rights reserved.",
+    "logo": {
+      "src": "/assets/imgs/logo/logo-colors-white.svg",
+      "alt": "MauriPros Logo",
+      "href": "/"
+    }
+  },
+  "Breadcrumb": {
+    "aboutTitle": "ABOUT",
+    "aboutSubTitle": "MauriPros",
+    "aboutPageName": "ABOUT MauriPros"
+  },
+  "OurStoryVideoSection": {
+    "subtitle": "Our Story",
+    "text": "MauriPros was founded to help businesses move beyond scattered marketing efforts and unclear brand messaging. We saw the need for a smarter, more focused approach — one that aligns creativity with business goals. Today, we work with brands that want clarity, consistency, and measurable growth."
+  },
+  "WhatWeDoSection": {
+    "subtitle": "What We Do",
+    "title": "Marketing Systems for Long-Term Success",
+    "viewDetails": "View Details",
+    "tabs": {
+      "branding": {
+        "title": "Branding & Design",
+        "description": "From logos to visual identity systems, we create brands that leave a lasting impression. Our design philosophy is rooted in purpose and strategy."
+      },
+      "marketing": {
+        "title": "Digital Marketing",
+        "description": "We drive growth through targeted campaigns, SEO, and social media strategies that connect you with your ideal audience."
+      },
+      "development": {
+        "title": "Web Development",
+        "description": "We build fast, responsive, and user-friendly websites that convert visitors into customers. Technology that works for you."
+      },
+      "strategy": {
+        "title": "Strategic Consulting",
+        "description": "We don't just execute; we plan. Our strategic consulting ensures your marketing efforts are aligned with your business goals."
+      }
+    }
+  },
+  "MissionVisionSection": {
+    "missionTitle": "Our Mission",
+    "missionDesc": "To help businesses grow through clear strategy and effective creative execution. We focus on delivering work that is simple, impactful, and aligned with real business objectives.",
+    "visionTitle": "Our Vision",
+    "visionDesc": "To become a trusted creative and marketing partner for brands ready to scale. We believe strong brands are built through clarity, consistency, and smart decisions."
+  },
+  "IdealClientsSection": {
+    "title": "Why MauriPros",
+    "description": "Clear strategy, not guesswork.",
+    "subtitle": "Perfect Fit",
+    "buttonText": "Get Started Today",
+    "points": {
+      "0": "Strong creative direction",
+      "1": "Transparent communication",
+      "2": "Results-focused mindset",
+      "3": "We work as an extension of your team."
+    }
+  },
+  "FinalCTASection": {
+    "title": "Let’s Work Together",
+    "description": "Ready to build a stronger brand and better results?",
+    "buttonText": "Contact Us"
+  },
+  "Breadcrumb": {
+    "aboutTitle": "ABOUT",
+    "aboutSubTitle": "MauriPros",
+    "aboutPageName": "ABOUT MauriPros",
+    "homeLink": "HOME",
+    "contactTitle": "CONTACT",
+    "contactSubTitle": "Get in Touch",
+    "contactPageName": "CONTACT US",
+    "servicesTitle": "SERVICES",
+    "servicesSubTitle": "What We Do",
+    "servicesPageName": "OUR SERVICES"
+  },
+  "Header": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "contacts": "Contact",
+    "contactUs": "Let's Connect",
+    "servicesOverview": "Services Overview",
+    "viewAllServices": "View All Services",
+    "scheduleConsultation": "Schedule a Consultation",
+    "scheduleNow": "Schedule Now",
+    "menu": {
+      "webDesign": "Web Design",
+      "webDesignDesc": "Modern & responsive websites",
+      "restaurant": "Restaurant Platform",
+      "restaurantDesc": "Complete solutions for restaurants",
+      "social": "Social Media",
+      "socialDesc": "Manage & grow your accounts",
+      "review": "Review Marketing",
+      "reviewDesc": "Improve your digital reputation",
+      "graphic": "Graphic Design",
+      "graphicDesc": "Creative & attractive designs",
+      "branding": "Branding",
+      "brandingDesc": "Build a strong brand",
+      "email": "Email Marketing",
+      "emailDesc": "Effective email campaigns",
+      "seo": "SEO",
+      "seoDesc": "Rank higher in search results",
+      "ppc": "PPC Ads",
+      "ppcDesc": "Profitable ad campaigns"
+    }
+  },
+  "ContactSection": {
+    "subtitle": "Contact us",
+    "title": "Let's create something great together!",
+    "description": "Tell us about your business and goals. Our team will review your request and get back to you shortly.",
+    "followUs": "Follow us:",
+    "successTitle": "Thanks for your message!",
+    "successDesc": "We'll be in touch soon.",
+    "buttonText": "Send Message",
+    "formFields": {
+      "fullName": { "label": "Full Name", "placeholder": "Your Full Name" },
+      "companyName": { "label": "Company Name", "placeholder": "Your Company Name" },
+      "email": { "label": "Email Address", "placeholder": "Your Email Address" },
+      "projectType": { "label": "Project Type", "placeholder": "e.g., Web Design, SEO" },
+      "estimatedBudget": { "label": "Estimated Budget", "placeholder": "Your Estimated Budget" },
+      "message": { "label": "Message", "placeholder": "Your Message" }
+    }
+  },
+  "ChooseUsSection": {
+    "subtitle": "Why Choose Us",
+    "title": "Why Businesses Work With MauriPros",
+    "features": {
+      "0": { "title": "Outcome Focused", "text": "Focused on business outcomes, not vanity metrics" },
+      "1": { "title": "Structured Delivery", "text": "Clear communication and structured delivery" },
+      "2": { "title": "Scalable Solutions", "text": "Scalable solutions that grow with your business." },
+      "3": { "title": "Long-term Partnership", "text": "Long-term partnership mindset" }
+    }
+  },
+  "Sidebar": {
+    "title": "Hello There!",
+    "description": "We offer comprehensive range of services to help your business thrive.",
+    "information": "Information",
+    "location": "Louisville, KY"
+  },
+  "Sidebar": {
+    "title": "Hello There!",
+    "description": "We offer comprehensive range of services to help your business thrive.",
+    "information": "Information",
+    "location": "Louisville, KY",
+    "connectUs": "Connect Us On",
+    "ctaText": "Book Now"
+  }
+}

@@ -1,0 +1,469 @@
+{
+  "Hero": {
+    "subtitle": "NOUS CRÉONS",
+    "title": "SOLUTIONS NUMÉRIQUES"
+  },
+  "VideoSection": {
+    "subtitle": "NOUS CRÉONS",
+    "typewriterStrings": [
+      "MARKETING B2B",
+      "SOLUTIONS LOGICIELLES",
+      "STRATÉGIE DE MARQUE"
+    ],
+    "description": "Nous aidons les entreprises à générer une croissance mesurable grâce à un marketing stratégique et une conception web innovante.",
+    "buttonText": "Obtenir une consultation"
+  },
+  "AboutSection": {
+    "subtitle": "À PROPOS DE NOUS",
+    "title": "Une Agence Digitale Complète pour Votre Croissance",
+    "description": "Nous proposons des solutions innovantes alliant créativité et technologie pour aider les marques à se démarquer dans le monde numérique et obtenir des résultats mesurables.",
+    "ctaText": "Découvrir Plus"
+  },
+  "ProcessSection": {
+    "subtitle": "Notre Stratégie",
+    "title": "Notre processus de travail",
+    "ctaText": "Contactez-nous",
+    "steps": {
+      "step1": {
+        "title": "Découverte",
+        "description": "Comprendre l'entreprise, le marché et les objectifs."
+      },
+      "step2": {
+        "title": "Planification",
+        "description": "Définir la stratégie, le message et la feuille de route."
+      },
+      "step3": {
+        "title": "Construction",
+        "description": "Conception, contenu et développement alignés sur les objectifs."
+      },
+      "step4": {
+        "title": "Lancement & Optimisation",
+        "description": "Déployer avec confiance, mesurer et affiner."
+      }
+    }
+  },
+  "ServiceSection": {
+    "subtitle": "Nos Services",
+    "title": "Ce que nous vous offrons",
+    "viewAllText": "Découvrir tous les services",
+    "showDetails": "Voir les détails",
+    "services": {
+      "1": {
+        "title": "Conception Web",
+        "description": "Des sites web modernes et réactifs qui convertissent les visiteurs en clients.",
+        "items": {
+          "0": "1. UX/UI et conception web",
+          "1": "2. Développement axé sur le mobile",
+          "2": "3. Optimisation des performances"
+        }
+      },
+      "2": {
+        "title": "Réseaux Sociaux",
+        "description": "Développez une marque forte et transformez vos abonnés en clients.",
+        "items": {
+          "0": "1. Stratégie et planification de contenu",
+          "1": "2. Création de publications de marque",
+          "2": "3. Gestion de communauté"
+        }
+      },
+      "3": {
+        "title": "Image de marque",
+        "description": "Créez une marque que les gens reconnaissent, en qui ils ont confiance et dont ils se souviennent.",
+        "items": {
+          "0": "1. Stratégie et positionnement de marque",
+          "1": "2. Logo et identité visuelle",
+          "2": "3. Lignes directrices de la marque"
+        }
+      },
+      "4": {
+        "title": "Optimisation SEO",
+        "description": "Soyez trouvé par les bons clients au bon moment grâce à un SEO stratégique.",
+        "items": {
+          "0": "1. Recherche de mots-clés",
+          "1": "2. SEO technique et On-Page",
+          "2": "3. SEO local et Google Business"
+        }
+      }
+    }
+  },
+  "WorkSection": {
+    "sectionSubtitle": "Nos Compétences",
+    "sectionTitle": "Ce que nous aidons les marques à accomplir",
+    "includesTitle": "Inclus :",
+    "capabilities": [
+      {
+        "id": 1,
+        "number": "03/",
+        "title": "Expérience Web et Interface Utilisateur",
+        "description": "Des sites et des interfaces axés sur la conversion, conçus pour être premium et performants sur tous les appareils.",
+        "includes": [
+          "Conception de sites web",
+          "Pages de destination",
+          "Design UX/UI",
+          "Création sans code et sur mesure"
+        ],
+        "ctaText": "Explorer le Web Design",
+        "ctaLink": "/services/web-design",
+        "image": "/assets/imgs/project/project-3.png"
+      },
+      {
+        "id": 2,
+        "number": "02/",
+        "title": "Marketing et Croissance",
+        "description": "Des solutions marketing stratégiques conçues pour attirer, convertir et évoluer — pas seulement pour être attrayantes.",
+        "includes": [
+          "Campagnes numériques",
+          "Stratégie de contenu",
+          "Conception d'entonnoirs",
+          "Optimisation des performances"
+        ],
+        "ctaText": "Explorer le Marketing",
+        "ctaLink": "/services/review-marketing",
+        "image": "/assets/imgs/project/project-2.png"
+      },
+      {
+        "id": 3,
+        "number": "04/",
+        "title": "Direction Créative et Contenu",
+        "description": "Des visuels forts et une direction claire qui maintiennent la cohérence des marques sur chaque point de contact.",
+        "includes": [
+          "Direction créative",
+          "Systèmes de contenu social",
+          "Créations publicitaires",
+          "Actifs de la marque"
+        ],
+        "ctaText": "Explorer la Création",
+        "ctaLink": "/services/graphic-design",
+        "image": "/assets/imgs/project/project-4.png"
+      },
+      {
+        "id": 4,
+        "number": "01/",
+        "title": "Identité de Marque et Stratégie",
+        "description": "Nous construisons des systèmes de marque clairs et évolutifs — du positionnement au message, en passant par l'identité visuelle.",
+        "includes": [
+          "Positionnement de la marque",
+          "Logos et systèmes visuels",
+          "Directives de marque",
+          "Ton de la voix"
+        ],
+        "ctaText": "Explorer le Branding",
+        "ctaLink": "/services/branding",
+        "image": "/assets/imgs/project/project-1.png"
+      }
+    ]
+  },
+  "TeamsSection": {
+    "section": {
+      "subtitle": "Notre Approche",
+      "title": "Comment Nous Créons de l'Impact",
+      "buttonText": "En Savoir Plus Sur Nous",
+      "buttonUrl": "/contact"
+    },
+    "members": [
+      {
+        "id": 1,
+        "number": "01",
+        "name": "Chaque projet commence par la compréhension de votre entreprise, de votre marché et de vos objectifs.",
+        "post": "La Stratégie d'Abord",
+        "image": "/assets/imgs/team/team1.jpg",
+        "shape": "/assets/imgs/shape/shape-9.webp",
+        "isActive": false
+      },
+      {
+        "id": 2,
+        "number": "02",
+        "name": "Conception, développement et marketing alignés pour générer de vrais résultats.",
+        "post": "Exécution Ciblée",
+        "image": "/assets/imgs/team/team2.jpg",
+        "shape": "/assets/imgs/shape/shape-9.webp",
+        "isActive": true
+      },
+      {
+        "id": 3,
+        "number": "03",
+        "name": "Nous suivons les performances, affinons continuellement et mettons à l'échelle ce qui fonctionne.",
+        "post": "Optimiser et Développer",
+        "image": "/assets/imgs/team/team3.jpg",
+        "shape": "/assets/imgs/shape/shape-9.webp",
+        "isActive": false
+      },
+      {
+        "id": 4,
+        "number": "04",
+        "name": "Noah Bennett",
+        "post": "Directeur Créatif",
+        "image": "/assets/imgs/team/team-18.webp",
+        "shape": "/assets/imgs/shape/shape-9.webp",
+        "isActive": false
+      },
+      {
+        "id": 5,
+        "number": "05",
+        "name": "Sophia Martinez",
+        "post": "Développeur Web",
+        "image": "/assets/imgs/team/team-19.webp",
+        "shape": "/assets/imgs/shape/shape-9.webp",
+        "isActive": true
+      },
+      {
+        "id": 6,
+        "number": "06",
+        "name": "Liam Nguyen",
+        "post": "Chef de Projet",
+        "image": "/assets/imgs/team/team-20.webp",
+        "shape": "/assets/imgs/shape/shape-9.webp",
+        "isActive": false
+      }
+    ]
+  },
+  "TextSliderSection": {
+    "slides": [
+      {
+        "id": 1,
+        "text": "CONNECTONS-NOUS",
+        "href": "/contact",
+        "img": "/assets/imgs/logo/logo-icon-green.svg"
+      },
+      {
+        "id": 2,
+        "text": "CONNECTONS-NOUS",
+        "href": "/contact",
+        "img": "/assets/imgs/logo/logo-icon-green.svg"
+      },
+      {
+        "id": 3,
+        "text": "CONNECTONS-NOUS",
+        "href": "/contact",
+        "img": "/assets/imgs/logo/logo-icon-green.svg"
+      },
+      {
+        "id": 4,
+        "text": "CONNECTONS-NOUS",
+        "href": "/contact",
+        "img": "/assets/imgs/logo/logo-icon-green.svg"
+      },
+      {
+        "id": 5,
+        "text": "CONNECTONS-NOUS",
+        "href": "/contact",
+        "img": "/assets/imgs/logo/logo-icon-green.svg"
+      }
+    ]
+  },
+  "BlogSection": {
+    "section": {
+      "subtitle": "Nos Clients",
+      "title": "Avec Qui Nous Travaillons",
+      "buttonText": "Contactez-nous",
+      "buttonUrl": "/contact"
+    },
+    "posts": [
+      {
+        "id": 1,
+        "tag": "BRANDING",
+        "image": "/assets/imgs/blog/blog1.jpeg",
+        "date": "Entreprises en Croissance",
+        "title": "Les entreprises prêtes à développer leurs efforts marketing.",
+        "url": "/contact"
+      },
+      {
+        "id": 2,
+        "tag": "DESIGN",
+        "image": "/assets/imgs/blog/blog2.jpeg",
+        "date": "Marques de Services",
+        "title": "Les services professionnels qui reposent sur la confiance et la visibilité.",
+        "url": "/contact"
+      },
+      {
+        "id": 3,
+        "tag": "MARKETING",
+        "image": "/assets/imgs/blog/blog3-new.jpg",
+        "date": "Équipes Marketing",
+        "title": "Les équipes qui ont besoin d'un partenaire d'exécution fiable.",
+        "url": "/contact"
+      }
+    ]
+  },
+  "FooterSection": {
+    "bgImage": "/assets/imgs/gallery/footer.webp",
+    "widgets": [
+      {
+        "type": "contact",
+        "title": "Contactez-nous",
+        "email": "hello@MauriPros.com",
+        "location": "Au service des clients du monde entier",
+        "cta": { "label": "Nous contacter", "href": "/contact" }
+      },
+      {
+        "type": "subscription",
+        "title": "Restez Informé",
+        "description": "Des informations sur l'image de marque, le design et le marketing — directement dans votre boîte de réception. Pas de spam. Désabonnement à tout moment.",
+        "placeholder": "Entrez votre email",
+        "buttonText": "S'abonner"
+      },
+      {
+        "type": "links",
+        "title": "Entreprise",
+        "links": [
+          { "label": "À propos de MauriPros", "href": "/about" },
+          { "label": "Notre Approche", "href": "/about" },
+          { "label": "Contact", "href": "/contact" },
+          { "label": "Politique de confidentialité", "href": "/privacy" },
+          { "label": "Conditions d'utilisation", "href": "/terms" }
+        ]
+      },
+      {
+        "type": "links",
+        "title": "Solutions",
+        "links": [
+          { "label": "Stratégie & Identité de Marque", "href": "/services" },
+          { "label": "Conception d'Expériences Numériques", "href": "/services" },
+          { "label": "Stratégie Marketing & Croissance", "href": "/services" },
+          { "label": "Systèmes Créatifs & de Contenu", "href": "/services" }
+        ]
+      }
+    ],
+    "preCopyrightText": "Nous aidons les marques à paraître meilleures, à communiquer plus clairement et à croître plus rapidement.",
+    "copyrightText": "© 2026 MauriPros. Tous droits réservés.",
+    "logo": {
+      "src": "/assets/imgs/logo/logo-colors-white.svg",
+      "alt": "MauriPros Logo",
+      "href": "/"
+    }
+  },
+  "OurStoryVideoSection": {
+    "subtitle": "Notre Histoire",
+    "text": "MauriPros a été fondée pour aider les entreprises à dépasser les efforts marketing dispersés et les messages de marque flous. Nous avons vu le besoin d'une approche plus intelligente et ciblée — une approche qui aligne la créativité sur les objectifs commerciaux. Aujourd'hui, nous travaillons avec des marques qui recherchent clarté, cohérence et croissance mesurable."
+  },
+  "WhatWeDoSection": {
+    "subtitle": "Ce que nous faisons",
+    "title": "Des systèmes marketing pour un succès à long terme",
+    "viewDetails": "Voir les détails",
+    "tabs": {
+      "branding": {
+        "title": "Stratégie de marque et Design",
+        "description": "Des logos aux systèmes d'identité visuelle, nous créons des marques qui laissent une impression durable. Notre philosophie de conception est enracinée dans le but et la stratégie."
+      },
+      "marketing": {
+        "title": "Marketing Digital",
+        "description": "Nous stimulons la croissance grâce à des campagnes ciblées, au référencement et à des stratégies de médias sociaux qui vous connectent avec votre public idéal."
+      },
+      "development": {
+        "title": "Développement Web",
+        "description": "Nous concevons des sites web rapides, réactifs et conviviaux qui convertissent les visiteurs en clients. Une technologie qui travaille pour vous."
+      },
+      "strategy": {
+        "title": "Conseil Stratégique",
+        "description": "Nous ne nous contentons pas d'exécuter ; nous planifions. Nos conseils stratégiques garantissent que vos efforts de marketing sont alignés sur vos objectifs commerciaux."
+      }
+    }
+  },
+  "MissionVisionSection": {
+    "missionTitle": "Notre Mission",
+    "missionDesc": "Aider les entreprises à se développer grâce à une stratégie claire et une exécution créative efficace. Nous nous concentrons sur la livraison d'un travail simple, percutant et aligné sur les véritables objectifs de l'entreprise.",
+    "visionTitle": "Notre Vision",
+    "visionDesc": "Devenir un partenaire créatif et marketing de confiance pour les marques prêtes à évoluer. Nous pensons que les marques fortes se construisent grâce à la clarté, la cohérence et des décisions intelligentes."
+  },
+  "IdealClientsSection": {
+    "title": "Pourquoi MauriPros",
+    "description": "Une stratégie claire, pas de conjectures.",
+    "subtitle": "Le Choix Idéal",
+    "buttonText": "Commencez Aujourd'hui",
+    "points": {
+      "0": "Direction créative forte",
+      "1": "Communication transparente",
+      "2": "Esprit axé sur les résultats",
+      "3": "Nous travaillons comme une extension de votre équipe."
+    }
+  },
+  "FinalCTASection": {
+    "title": "Travaillons Ensemble",
+    "description": "Prêt à bâtir une marque plus forte et de meilleurs résultats ?",
+    "buttonText": "Obtenir une consultation"
+  },
+  "Breadcrumb": {
+    "aboutTitle": "À PROPOS",
+    "aboutSubTitle": "MauriPros",
+    "aboutPageName": "À PROPOS DE MauriPros",
+    "homeLink": "ACCUEIL",
+    "contactTitle": "CONTACT",
+    "contactSubTitle": "Entrer en contact",
+    "contactPageName": "NOUS CONTACTER",
+    "servicesTitle": "SERVICES",
+    "servicesSubTitle": "Ce que nous faisons",
+    "servicesPageName": "NOS SERVICES"
+  },
+  "Header": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "services": "Services",
+    "contacts": "Contact",
+    "contactUs": "Connectons-nous",
+    "servicesOverview": "Aperçu des Services",
+    "viewAllServices": "Voir Tous Les Services",
+    "scheduleConsultation": "Planifier une Consultation",
+    "scheduleNow": "Planifier Maintenant",
+    "menu": {
+      "webDesign": "Conception Web",
+      "webDesignDesc": "Sites web modernes et réactifs",
+      "restaurant": "Plateforme Restaurant",
+      "restaurantDesc": "Solutions complètes pour restaurants",
+      "social": "Réseaux Sociaux",
+      "socialDesc": "Gérez et développez vos comptes",
+      "review": "Marketing des Avis",
+      "reviewDesc": "Améliorez votre réputation",
+      "graphic": "Design Graphique",
+      "graphicDesc": "Designs créatifs et attractifs",
+      "branding": "Identité Visuelle",
+      "brandingDesc": "Bâtissez une marque forte",
+      "email": "Marketing par E-mail",
+      "emailDesc": "Campagnes d'e-mailing efficaces",
+      "seo": "SEO",
+      "seoDesc": "Meilleur classement dans les recherches",
+      "ppc": "Publicité PPC",
+      "ppcDesc": "Campagnes publicitaires rentables"
+    }
+  },
+  "ContactSection": {
+    "subtitle": "Contactez-nous",
+    "title": "Créons ensemble quelque chose de grand !",
+    "description": "Parlez-nous de votre entreprise et de vos objectifs. Notre équipe examinera votre demande et vous contactera sous peu.",
+    "followUs": "Suivez-nous :",
+    "successTitle": "Merci pour votre message !",
+    "successDesc": "Nous vous contacterons bientôt.",
+    "buttonText": "Envoyer le message",
+    "formFields": {
+      "fullName": { "label": "Nom Complet", "placeholder": "Votre Nom Complet" },
+      "companyName": { "label": "Nom de l'entreprise", "placeholder": "Votre entreprise" },
+      "email": { "label": "Adresse E-mail", "placeholder": "Votre E-mail" },
+      "projectType": { "label": "Type de projet", "placeholder": "ex: Création de site, SEO" },
+      "estimatedBudget": { "label": "Budget estimé", "placeholder": "Votre budget estimé" },
+      "message": { "label": "Message", "placeholder": "Votre Message" }
+    }
+  },
+  "ChooseUsSection": {
+    "subtitle": "Pourquoi Nous Choisir",
+    "title": "Pourquoi les entreprises travaillent avec MauriPros",
+    "features": {
+      "0": { "title": "Axé sur les résultats", "text": "Concentré sur les résultats commerciaux, pas sur des mesures vaniteuses" },
+      "1": { "title": "Livraison Structurée", "text": "Communication claire et livraison structurée" },
+      "2": { "title": "Solutions Évolutives", "text": "Des solutions évolutives qui grandissent avec votre entreprise." },
+      "3": { "title": "Partenariat à Long Terme", "text": "Mentalité de partenariat à long terme" }
+    }
+  },
+  "Sidebar": {
+    "title": "Bonjour !",
+    "description": "Nous offrons une gamme complète de services pour aider votre entreprise à prospérer.",
+    "information": "Informations",
+    "location": "Louisville, KY"
+  },
+  "Sidebar": {
+    "title": "Bonjour !",
+    "description": "Nous offrons une gamme complète de services pour aider votre entreprise à prospérer.",
+    "information": "Informations",
+    "location": "Louisville, KY",
+    "connectUs": "Rejoignez-nous sur",
+    "ctaText": "Réservez"
+  }
+}
