@@ -8,7 +8,7 @@ import Header from "@/components/DigitalAgency/Header";
 import Link from "@/components/CustomLink";
 import { useTranslations } from "next-intl";
 
-import heroBg from "@/assets/images/hero/hero-bg1.jpg";
+import heroBg from "@/assets/images/hero/hero-bg2.jpg";
 
 interface VideoProps {
   data: IVideoData;
