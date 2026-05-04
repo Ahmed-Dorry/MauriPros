@@ -30,7 +30,7 @@ const VideoSection = ({ data: videoData }: VideoProps) => {
           playsInline 
           preload="auto"
           // حط مسار صورة شيك من عندك هنا عشان لو الفيديو معلق تظهر هي 
-          poster="/assets/imgs/hero/hero-bg.jpg" 
+          poster="222Medias-main\src\assets\images\hero\hero-bg.jpg" 
         >
           <source src={videoUrl} type="video/mp4" />
           <p>Your browser does not support the video tag.</p>
