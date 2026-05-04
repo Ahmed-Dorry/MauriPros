@@ -8,7 +8,6 @@ import Header from "@/components/DigitalAgency/Header";
 import Link from "@/components/CustomLink";
 import { useTranslations } from "next-intl";
 
-// 👇 1. اللمسة السحرية: عملنا استدعاء للصورة من مسارها الحقيقي في الـ src 👇
 import heroBg from "@/assets/images/hero/hero-bg.jpg";
 
 interface VideoProps {
@@ -37,15 +36,14 @@ const VideoSection = ({ data: videoData }: VideoProps) => {
       <Header />
 
       <div className="area-bg">
+        {/* 👇 شيلنا كلمة defaultMuted من هنا عشان رياكت ميزعلش 👇 */}
         <video 
           ref={videoRef}
           loop 
           muted 
-          defaultMuted
           autoPlay 
           playsInline 
           preload="auto"
-          // 👇 2. هنا بنقوله استخدم مسار الصورة اللي عملنالها Import 👇
           poster={heroBg.src} 
         >
           <source src={videoUrl} type="video/mp4" />
