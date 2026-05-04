@@ -22,8 +22,18 @@ const VideoSection = ({ data: videoData }: VideoProps) => {
       <Header />
 
       <div className="area-bg">
-        <video loop muted autoPlay playsInline>
+        {/* 👇 التعديل السحري هنا 👇 */}
+        <video 
+          loop 
+          muted 
+          autoPlay 
+          playsInline 
+          preload="auto"
+          // حط مسار صورة شيك من عندك هنا عشان لو الفيديو معلق تظهر هي 
+          poster="/assets/imgs/hero/hero-bg.jpg" 
+        >
           <source src={videoUrl} type="video/mp4" />
+          <p>Your browser does not support the video tag.</p>
         </video>
       </div>
       
@@ -33,7 +43,6 @@ const VideoSection = ({ data: videoData }: VideoProps) => {
             <div className="section-header">
               <div className="section-title-wrapper">
                 
-                {/* التعديل هنا: غيرنا char-anim لـ fade-anim عشان الحروف تمسك في بعض */}
                 <div className="subtitle-wrapper">
                   <span
                     className="section-subtitle fade-anim"
@@ -70,7 +79,6 @@ const VideoSection = ({ data: videoData }: VideoProps) => {
             </div>
 
             <div className="hero-content">
-              {/* التعديل هنا: شلنا word-anim وخليناها fade-anim لنفس السبب */}
               <div className="text-wrapper">
                 <p className="text fade-anim" data-delay="0.5" suppressHydrationWarning={true}>
                   {t("description")}
