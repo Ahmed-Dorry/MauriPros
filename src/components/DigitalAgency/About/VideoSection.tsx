@@ -1,12 +1,15 @@
 "use client";
 
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { IVideoData } from "@/constant/DigitalAgency/About/video";
 import Typewriter from "typewriter-effect";
 import heroData from "@/constant/DigitalAgency/hero";
 import Header from "@/components/DigitalAgency/Header";
 import Link from "@/components/CustomLink";
 import { useTranslations } from "next-intl";
+
+// 👇 1. اللمسة السحرية: عملنا استدعاء للصورة من مسارها الحقيقي في الـ src 👇
+import heroBg from "@/assets/images/hero/hero-bg.jpg";
 
 interface VideoProps {
   data: IVideoData;
@@ -17,20 +20,33 @@ const VideoSection = ({ data: videoData }: VideoProps) => {
   const t = useTranslations("VideoSection");
   const typewriterStrings = t.raw("typewriterStrings");
 
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      videoRef.current.play().catch((error) => {
+        console.log("متصفح الموبايل منع التشغيل التلقائي:", error);
+      });
+    }
+  }, []);
+
   return (
     <section className="video-area fade-anim">
       <Header />
 
       <div className="area-bg">
-        {/* 👇 التعديل السحري هنا 👇 */}
         <video 
+          ref={videoRef}
           loop 
           muted 
+          defaultMuted
           autoPlay 
           playsInline 
           preload="auto"
-          // حط مسار صورة شيك من عندك هنا عشان لو الفيديو معلق تظهر هي 
-          poster="222Medias-main\src\assets\images\hero\hero-bg.jpg" 
+          // 👇 2. هنا بنقوله استخدم مسار الصورة اللي عملنالها Import 👇
+          poster={heroBg.src} 
         >
           <source src={videoUrl} type="video/mp4" />
           <p>Your browser does not support the video tag.</p>
