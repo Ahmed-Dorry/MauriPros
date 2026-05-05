@@ -2273,14 +2273,409 @@ const frServices: ServicePageData[] = [
   },
   // 👈 هتحط هنا باقي الخدمات بالفرنساوي
 ];
-
-// 4. الدالة السحرية اللي بتختار الداتا بناءً على اللغة
+// 4. الداتا الإسباني (مترجمة بالكامل لجميع الخدمات)
+const esServices: ServicePageData[] = [
+  {
+    slug: "web-design",
+    name: "Diseño Web",
+    heroSection: {
+      subtitle: "Diseño Web", title: "Diseña Sitios Web que Conviertan e Impresionen",
+      description: "Tu sitio web suele ser la primera impresión que los clientes tienen de tu empresa. Creamos sitios web modernos y responsivos que no solo se ven geniales, sino que generan resultados reales.",
+      buttons: [
+        { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" },
+        { href: "/contact", style: "t-btn t-btn-primary", label: "Contáctanos" },
+        { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" },
+      ],
+      services: ["Estrategia y Planificación Web", "Diseño y Desarrollo", "Optimización Técnica", "Diseño Mobile-First", "Contenido y Branding", "Analítica y Soporte", "Diseño de Experiencia de Usuario", "Optimización de Rendimiento", "Estructura SEO"],
+      gallery: [{ src: "/assets/images/services/web-design/1.webp", alt: "Ejemplo de Diseño Web 1" }, { src: "/assets/images/services/web-design/2.webp", alt: "Ejemplo de Diseño Web 2" }],
+    },
+    problemSection: { title: "¿Qué está frenando tu sitio web?", description: "Muchas empresas luchan con su sitio web porque:", painPoints: ["Su sitio se ve obsoleto o poco profesional", "Los visitantes no pueden encontrar información fácilmente", "El rendimiento móvil es pobre o lento", "La identidad de marca no es consistente en las páginas"] },
+    approachSection: {
+      sectionHeader: { subtitle: "Nuestro Enfoque", title: "Nuestro Enfoque para el Diseño Web" },
+      video: { src: "/assets/images/services/web-design/3.webp", type: "video/mp4" },
+      content: { title: "Creamos sitios web diseñados estratégicamente para tu audiencia", paragraphs: ["Nuestro trabajo de diseño web se centra en el diseño centrado en el usuario que convierte visitantes, rendimiento rápido y optimizado para móviles, y mensajes claros en todas las páginas.", "Todo lo que hacemos está construido para apoyar el crecimiento a largo plazo con diseños escalables que crecen con tu negocio."] },
+    },
+    whatsIncluded: {
+      title: "Qué Incluye",
+      categories: [
+        { title: "Estrategia y Planificación Web", items: ["Investigación de audiencia", "Planificación de mapa del sitio", "Tableros de inspiración de diseño"] },
+        { title: "Diseño y Desarrollo", items: ["Diseños de página personalizados", "Diseño responsivo mobile-first", "Elementos interactivos y llamadas a la acción"] },
+        { title: "Optimización Técnica", items: ["Tiempos de carga rápidos", "Estructura amigable para SEO", "Compatibilidad entre navegadores"] },
+        { title: "Contenido y Branding", items: ["Alineación de mensajes y textos", "Integración de marca visual", "Optimización de imágenes"] },
+        { title: "Reportes y Soporte", items: ["Configuración de seguimiento analítico", "Soporte posterior al lanzamiento", "Actualizaciones de rendimiento claras"] },
+      ],
+    },
+    processSection: {
+      sectionSubtitle: "Nuestro Proceso", sectionTitle: "Cómo Construimos tu Sitio Web", ctaText: "Empezar", ctaLink: "/contact",
+      steps: [
+        { id: 1, number: "01", title: "Auditoría y Descubrimiento", description: "Analizamos tu sitio web actual, competidores y objetivos.", image: "/assets/imgs/icon/icon1.png" },
+        { id: 2, number: "02", title: "Estrategia y Planificación", description: "Definimos la estructura del sitio y la dirección del diseño.", image: "/assets/imgs/icon/icon2.png" },
+        { id: 3, number: "03", title: "Diseño y Construcción", description: "Creamos páginas responsivas, optimizadas y atractivas.", image: "/assets/imgs/icon/icon3.png" },
+        { id: 4, number: "04", title: "Lanzamiento y Crecimiento", description: "Monitoreamos el rendimiento, recopilamos comentarios y refinamos.", image: "/assets/imgs/icon/icon4.png" },
+      ],
+    },
+    whyWorkWithUs: { title: "¿Por Qué Trabajar Con Nosotros?", points: ["Diseño web basado en estrategia (sin adivinanzas)", "Comunicación clara y plazos realistas", "Diseño y marketing trabajando juntos", "Construido para empresas reales, no solo sitios bonitos"], footer: "Nos enfocamos en resultados medibles que respaldan tus objetivos comerciales." },
+    idealClients: { title: "¿Es Esto Adecuado Para Ti?", description: "Este servicio es ideal si:", points: ["Quieres un sitio web moderno y profesional", "Sirves a un mercado local, regional o en línea", "Tienes un sitio web pero tiene un bajo rendimiento", "Buscas un crecimiento sostenible a través del diseño"] },
+    faqsData: {
+      faqs: [{ question: "¿Cuánto tiempo tarda en lanzarse un sitio web?", answer: "La mayoría de los sitios tardan de 6 a 12 semanas dependiendo de la complejidad." }, { question: "¿Solo ofrecen rediseños?", answer: "Hacemos tanto sitios web nuevos como rediseños de sitios existentes." }, { question: "¿El diseño web es mejor que el SEO o los anuncios?", answer: "El diseño crea la base para todo el marketing. Un gran sitio web + SEO + anuncios funciona mejor." }],
+      image: { src: "/assets/images/services/web-design/3.webp", alt: "Proceso de Diseño Web" },
+    },
+    finalCTA: { title: "Construyamos tu Sitio Web", description: "Convierte tu sitio web en una herramienta poderosa que impresione a los visitantes y genere resultados.", buttonText: "Obtén una consulta gratuita" },
+  },
+  {
+    slug: "seo",
+    name: "Optimización SEO",
+    heroSection: {
+      subtitle: "Optimización en Motores de Búsqueda (SEO)", title: "Sé Encontrado por los Clientes Adecuados en el Momento Adecuado",
+      description: "El SEO ayuda a tu empresa a aparecer cuando las personas buscan activamente tus servicios. Nos enfocamos en construir una visibilidad a largo plazo que impulse tráfico calificado, no solo clasificaciones.",
+      buttons: [ { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" }, { href: "/contact", style: "t-btn t-btn-primary", label: "Contáctanos" }, { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" } ],
+      services: ["Estrategia e Investigación SEO", "Optimización On-Page", "SEO Técnico", "SEO Local", "Investigación de Palabras Clave", "Optimización de Contenido", "Link Building", "Seguimiento de Rendimiento", "Análisis de la Competencia"],
+      gallery: [{ src: "/assets/images/services/seo/1.webp", alt: "Estrategia SEO" }, { src: "/assets/images/services/seo/2.webp", alt: "Resultados SEO" }],
+    },
+    problemSection: { title: "¿Qué está frenando tu sitio web?", description: "Muchas empresas luchan con el SEO porque:", painPoints: ["Su sitio web no está optimizado para los motores de búsqueda", "Los competidores dominan los resultados de Google", "El tráfico es inconsistente o irrelevante", "Los clientes locales no pueden encontrarlos en línea"] },
+    approachSection: {
+      sectionHeader: { subtitle: "Nuestro Enfoque", title: "Nuestro Enfoque para el SEO" }, video: { src: "/assets/images/services/seo/3.webp", type: "video/mp4" },
+      content: { title: "SEO basado en datos que atrae a clientes listos para actuar", paragraphs: ["Utilizamos un enfoque estratégico y basado en datos para mejorar tu visibilidad y atraer clientes.", "Todo lo que hacemos está construido para un crecimiento sostenible con un seguimiento claro y optimización continua."] },
+    },
+    whatsIncluded: {
+      title: "Qué Incluye",
+      categories: [
+        { title: "Estrategia e Investigación SEO", items: ["Investigación de palabras clave basada en la intención", "Análisis de la competencia", "Mapeo de oportunidades SEO"] },
+        { title: "Optimización On-Page", items: ["Títulos de página y meta descripciones", "Optimización de encabezados y contenido", "Mejoras de enlaces internos"] },
+        { title: "SEO Técnico", items: ["Optimización de la velocidad del sitio", "Correcciones de rendimiento móvil", "Mejoras de indexación"] },
+        { title: "SEO Local", items: ["Optimización del Perfil de Empresa de Google", "Segmentación de palabras clave locales", "Visibilidad mejorada en mapas"] },
+        { title: "Reportes y Seguimiento", items: ["Seguimiento de clasificación de palabras clave", "Análisis de tráfico", "Actualizaciones claras de rendimiento"] },
+      ],
+    },
+    processSection: {
+      sectionSubtitle: "Nuestro Proceso", sectionTitle: "Cómo Mejoramos tu SEO", ctaText: "Empezar", ctaLink: "/contact",
+      steps: [
+        { id: 1, number: "01", title: "Auditoría", description: "Analizamos tu sitio web, competidores y rendimiento actual.", image: "/assets/imgs/icon/icon1.png" },
+        { id: 2, number: "02", title: "Estrategia", description: "Creamos un plan SEO claro alineado con tus objetivos.", image: "/assets/imgs/icon/icon2.png" },
+        { id: 3, number: "03", title: "Optimización", description: "Implementamos mejoras de SEO on-page, técnicas y locales.", image: "/assets/imgs/icon/icon3.png" },
+        { id: 4, number: "04", title: "Crecimiento", description: "Monitoreamos los resultados y optimizamos continuamente.", image: "/assets/imgs/icon/icon4.png" },
+      ],
+    },
+    whyWorkWithUs: { title: "¿Por Qué Trabajar Con Nosotros?", points: ["SEO basado en estrategia", "Comunicación clara y expectativas realistas", "Diseño y marketing trabajando juntos", "Construido para empresas reales, no para métricas de vanidad"], footer: "Nos enfocamos en un crecimiento medible que respalda tus objetivos a largo plazo." },
+    idealClients: { title: "¿Es Esto Adecuado Para Ti?", description: "Este servicio es ideal si:", points: ["Quieres clientes potenciales orgánicos consistentes", "Sirves a un mercado local o regional", "Tienes un sitio web pero baja visibilidad", "Buscas un crecimiento sostenible"] },
+    faqsData: {
+      faqs: [{ question: "¿Cuánto tiempo toma el SEO?", answer: "El SEO es una inversión a largo plazo. La mayoría ve progreso en unos pocos meses." }, { question: "¿Ofrecen solo SEO local?", answer: "Ofrecemos estrategias de SEO tanto locales como más amplias según tus necesidades." }, { question: "¿Es mejor el SEO que los anuncios pagados?", answer: "El SEO construye visibilidad a largo plazo, mientras que los anuncios proporcionan tráfico inmediato. Juntos funcionan mejor." }],
+      image: { src: "/assets/images/services/seo/3.webp", alt: "Estrategia SEO" },
+    },
+    finalCTA: { title: "Mejoremos tu Visibilidad de Búsqueda", description: "Convierte tu sitio web en una fuente confiable de clientes potenciales calificados.", buttonText: "Obtén una consulta gratuita" },
+  },
+  {
+    slug: "social-media",
+    name: "Gestión de Redes Sociales",
+    heroSection: {
+      subtitle: "Gestión de Redes Sociales", title: "Construye una Marca Sólida y Convierte Seguidores en Clientes",
+      description: "Tu audiencia ya está en las redes sociales. Te ayudamos a aparecer de manera consistente, comunicarte claramente y convertir la atención en resultados comerciales reales.",
+      buttons: [ { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" }, { href: "/contact", style: "t-btn t-btn-primary", label: "Obtén una consulta gratuita" }, { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" } ],
+      services: ["Estrategia y Planificación", "Creación de Contenido", "Publicación y Gestión", "Interacción con la Comunidad", "Rendimiento y Reportes", "Diseños de Publicaciones de Marca", "Calendario de Contenido", "Optimización de Plataformas", "Analítica"],
+      gallery: [{ src: "/assets/images/services/social-media/1.webp", alt: "Contenido de Redes Sociales" }, { src: "/assets/images/services/social-media/2.webp", alt: "Estrategia de Redes Sociales" }],
+    },
+    problemSection: { title: "¿Qué está frenando tus redes sociales?", description: "Muchas empresas luchan con las redes sociales porque:", painPoints: ["La publicación es inconsistente o aleatoria", "El contenido parece genérico", "El compromiso es bajo a pesar de publicar regularmente", "No hay una estrategia clara detrás del contenido", "Las redes sociales no generan tráfico ni ventas"] },
+    approachSection: {
+      sectionHeader: { subtitle: "Nuestro Enfoque", title: "Nuestro Enfoque para Redes Sociales" }, video: { src: "/assets/images/services/social-media/3.webp", type: "video/mp4" },
+      content: { title: "Tratamos las redes sociales como una herramienta comercial", paragraphs: ["Todo lo que hacemos está construido alrededor de tu marca, audiencia y objetivos.", "Sin tendencias por el simple hecho de ser tendencias, solo lo que funciona para tu marca."] },
+    },
+    whatsIncluded: {
+      title: "Qué Incluye",
+      categories: [
+        { title: "Estrategia y Planificación", items: ["Auditoría y análisis de la competencia", "Selección de plataformas", "Pilares de contenido", "Calendario mensual"] },
+        { title: "Creación de Contenido", items: ["Diseños de publicaciones de marca", "Textos alineados con tu voz", "Investigación de hashtags", "Dirección de Reels / videos cortos"] },
+        { title: "Publicación y Gestión", items: ["Publicación programada", "Monitoreo y soporte de participación", "Consistencia de marca en todas las plataformas"] },
+        { title: "Rendimiento y Reportes", items: ["Reportes de rendimiento mensuales", "Optimización de contenido", "Ajustes de estrategia continuos"] },
+      ],
+    },
+    processSection: {
+      sectionSubtitle: "Nuestro Proceso", sectionTitle: "Cómo Hacemos Crecer tus Redes", ctaText: "Empezar", ctaLink: "/contact",
+      steps: [
+        { id: 1, number: "01", title: "Auditoría y Descubrimiento", description: "Revisamos tu presencia actual y competidores.", image: "/assets/imgs/icon/icon1.png" },
+        { id: 2, number: "02", title: "Estrategia y Planificación", description: "Definimos los pilares de contenido y las plataformas.", image: "/assets/imgs/icon/icon2.png" },
+        { id: 3, number: "03", title: "Creación de Contenido", description: "Diseñamos, escribimos y programamos el contenido.", image: "/assets/imgs/icon/icon3.png" },
+        { id: 4, number: "04", title: "Optimizar y Crecer", description: "Rastreamos el rendimiento y refinamos la estrategia.", image: "/assets/imgs/icon/icon4.png" },
+      ],
+    },
+    whyWorkWithUs: { title: "¿Por Qué Trabajar Con Nosotros?", points: ["Redes sociales basadas en estrategia", "Fuerte marca visual respaldada por pensamiento de marketing", "Comunicación clara", "Contenido diseñado para el compromiso real", "Enfocados en resultados, no en métricas de vanidad"], footer: "Ayudamos a las marcas a construir autoridad, no solo seguidores." },
+    idealClients: { title: "¿Es Esto Adecuado Para Ti?", description: "Este servicio es ideal si:", points: ["Quieres una presencia consistente y profesional", "Necesitas contenido que refleje adecuadamente tu marca", "Luchas con el compromiso o la dirección", "Quieres que las redes apoyen el crecimiento real"] },
+    faqsData: {
+      faqs: [{ question: "¿Con qué frecuencia publican?", answer: "La frecuencia de publicación depende de tus objetivos, típicamente de 3 a 5 veces por semana." }, { question: "¿Crean tanto los diseños como los textos?", answer: "Sí. Manejamos visuales, textos y estrategia juntos." }, { question: "¿Pueden las redes sociales realmente generar ventas?", answer: "Sí, cuando se hacen estratégicamente apoyan el conocimiento, la confianza y las conversiones." }],
+      image: { src: "/assets/images/services/social-media/3.webp", alt: "Gestión de Redes Sociales" },
+    },
+    finalCTA: { title: "Hagamos Crecer tu Presencia Social", description: "Convierte tus redes sociales en un canal poderoso de marca y crecimiento.", buttonText: "Obtén una consulta gratuita" },
+  },
+  {
+    slug: "ppc",
+    name: "Publicidad PPC",
+    heroSection: {
+      subtitle: "Publicidad de Pago Por Clic (PPC)", title: "Llega a los Clientes Adecuados — Exactamente Cuando Están Listos para Comprar",
+      description: "La publicidad PPC pone tu empresa en la cima de los resultados de búsqueda al instante. Creamos y gestionamos campañas basadas en datos que atraen tráfico calificado y convierten clics en ingresos reales.",
+      buttons: [ { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" }, { href: "/contact", style: "t-btn t-btn-primary", label: "Obtén una consulta gratuita" }, { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" } ],
+      services: ["Estrategia y Configuración", "Creación de Anuncios", "Gestión de Campañas", "Reportes y Optimización", "Investigación de Palabras Clave", "Segmentación de Audiencia", "Pruebas A/B", "Seguimiento de Conversiones", "Análisis de ROI"],
+      gallery: [{ src: "/assets/images/services/ppc/1.webp", alt: "Campañas PPC" }, { src: "/assets/images/services/ppc/2.webp", alt: "Rendimiento de Anuncios" }],
+    },
+    problemSection: { title: "¿Qué está frenando tus anuncios?", description: "Muchas empresas luchan con los anuncios pagados porque:", painPoints: ["El gasto publicitario es alto pero los resultados son bajos", "El tráfico no se convierte en ventas", "La segmentación es demasiado amplia", "Los anuncios carecen de mensajes claros", "No hay un seguimiento claro del rendimiento"] },
+    approachSection: {
+      sectionHeader: { subtitle: "Nuestro Enfoque", title: "Nuestro Enfoque para la Publicidad PPC" }, video: { src: "/assets/images/services/ppc/3.webp", type: "video/mp4" },
+      content: { title: "No adivinamos, y no 'promocionamos por promocionar'", paragraphs: ["Cada campaña que ejecutamos se construye en torno a datos, intención y conversión.", "El objetivo no son los clics, son resultados con seguimiento claro y visibilidad del ROI."] },
+    },
+    whatsIncluded: {
+      title: "Qué Incluye",
+      categories: [
+        { title: "Estrategia y Configuración", items: ["Auditoría de cuenta o configuración nueva", "Investigación de audiencia y palabras clave", "Selección de plataformas", "Configuración de seguimiento de conversiones"] },
+        { title: "Creación de Anuncios", items: ["Textos de anuncios de búsqueda y sociales", "Dirección creativa para visuales", "Múltiples variaciones para pruebas", "Llamadas a la acción fuertes"] },
+        { title: "Gestión de Campañas", items: ["Optimización de ofertas y presupuesto", "Pruebas A/B", "Monitoreo continuo del rendimiento", "Mejoras en el nivel de calidad"] },
+        { title: "Reportes y Optimización", items: ["Reportes de rendimiento claros", "Análisis de costo por conversión", "Estrategias de escalado"] },
+      ],
+    },
+    processSection: {
+      sectionSubtitle: "Nuestro Proceso", sectionTitle: "Cómo Convertimos Clics en Clientes", ctaText: "Empezar", ctaLink: "/contact",
+      steps: [
+        { id: 1, number: "01", title: "Auditoría y Descubrimiento", description: "Analizamos tu empresa, audiencia y competidores.", image: "/assets/imgs/icon/icon1.png" },
+        { id: 2, number: "02", title: "Estrategia y Configuración", description: "Estructuramos las campañas y la segmentación.", image: "/assets/imgs/icon/icon2.png" },
+        { id: 3, number: "03", title: "Lanzamiento y Optimización", description: "Lanzamos los anuncios, probamos y optimizamos.", image: "/assets/imgs/icon/icon3.png" },
+        { id: 4, number: "04", title: "Escalar y Mejorar", description: "Duplicamos lo que funciona y eliminamos el desperdicio.", image: "/assets/imgs/icon/icon4.png" },
+      ],
+    },
+    whyWorkWithUs: { title: "¿Por Qué Trabajar Con Nosotros?", points: ["Estrategias PPC impulsadas por el rendimiento", "Informes claros y total transparencia", "Creatividad + estrategia bajo un mismo techo", "Enfoque en el ROI, no en métricas de vanidad", "Construido para un crecimiento escalable"], footer: "Tu presupuesto publicitario merece más que conjeturas." },
+    idealClients: { title: "¿Es Esto Adecuado Para Ti?", description: "Este servicio es ideal si:", points: ["Quieres visibilidad y tráfico inmediatos", "Necesitas prospectos o ventas predecibles", "Has probado anuncios antes con malos resultados", "Quieres datos claros y resultados medibles"] },
+    faqsData: {
+      faqs: [{ question: "¿Qué tan rápido puedo ver resultados del PPC?", answer: "Puedes comenzar a ver tráfico de inmediato, con resultados significativos típicamente dentro de las primeras 2 a 4 semanas." }, { question: "¿También gestionan la inversión publicitaria?", answer: "Sí. Gestionamos presupuestos y optimización, mientras tú pagas el gasto publicitario directamente a las plataformas." }, { question: "¿Es mejor el PPC que el SEO?", answer: "El PPC ofrece resultados inmediatos. El SEO construye un crecimiento a largo plazo. Juntos, funcionan mejor." }],
+      image: { src: "/assets/images/services/ppc/3.webp", alt: "Publicidad PPC" },
+    },
+    finalCTA: { title: "Convirtamos Clics en Clientes", description: "Deja de desperdiciar tu inversión publicitaria y comienza a ejecutar campañas diseñadas para convertir.", buttonText: "Obtén una consulta gratuita" },
+  },
+  {
+    slug: "review-marketing",
+    name: "Marketing de Reseñas",
+    heroSection: {
+      subtitle: "Marketing de Reseñas", title: "Construye Confianza, Aumenta la Visibilidad y Gana Más Clientes",
+      description: "Las reseñas en línea influyen directamente en las decisiones de compra. Te ayudamos a recopilar, gestionar y aprovechar las reseñas de los clientes para fortalecer tu reputación, mejorar la visibilidad local e impulsar más conversiones.",
+      buttons: [ { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" }, { href: "/contact", style: "t-btn t-btn-primary", label: "Obtén una consulta gratuita" }, { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" } ],
+      services: ["Estrategia y Configuración", "Gestión de Reseñas", "Amplificación de Reseñas", "Reportes e Insights", "Monitoreo de Reputación", "Estrategias de Respuesta", "Marketing de Prueba Social", "Optimización de Plataformas", "Análisis de Sentimiento"],
+      gallery: [{ src: "/assets/images/services/review-marketing/1.webp", alt: "Reseñas de Clientes" }, { src: "/assets/images/services/review-marketing/2.webp", alt: "Gestión de Reseñas" }],
+    },
+    problemSection: { title: "¿Qué está frenando tu reputación?", description: "Muchas empresas luchan con el marketing de reseñas porque:", painPoints: ["No piden reseñas a los clientes de forma constante", "Las reseñas están dispersas en múltiples plataformas", "Las reseñas negativas no se gestionan o no se responden", "Las reseñas positivas no se utilizan en el marketing", "El bajo volumen de reseñas perjudica la confianza"] },
+    approachSection: {
+      sectionHeader: { subtitle: "Nuestro Enfoque", title: "Nuestro Enfoque para el Marketing de Reseñas" }, video: { src: "/videos/Business_People.mp4", type: "video/mp4" },
+      content: { title: "Convertimos las reseñas en un activo de crecimiento estratégico", paragraphs: ["Nuestro proceso se centra en aumentar el volumen de reseñas, mejorar las calificaciones y utilizar la prueba social donde más importa.", "La confianza no es opcional, lo es todo. Te ayudamos a ganártela y usarla sabiamente."] },
+    },
+    whatsIncluded: {
+      title: "Qué Incluye",
+      categories: [
+        { title: "Estrategia y Configuración", items: ["Auditoría de reputación en plataformas", "Priorización de plataformas", "Estrategia de solicitud de reseñas", "Configuración de automatización (correo/SMS)"] },
+        { title: "Gestión de Reseñas", items: ["Monitoreo y alertas", "Pautas de respuesta a reseñas", "Estrategia de manejo de reseñas negativas", "Comunicación segura para la marca"] },
+        { title: "Amplificación de Reseñas", items: ["Uso de reseñas en el sitio web", "Prueba social para anuncios y redes", "Destacados de testimonios"] },
+        { title: "Reportes e Insights", items: ["Seguimiento de crecimiento de reseñas", "Análisis de calificación", "Información procesable para mejoras"] },
+      ],
+    },
+    processSection: {
+      sectionSubtitle: "Nuestro Proceso", sectionTitle: "Cómo Construimos tu Reputación", ctaText: "Empezar", ctaLink: "/contact",
+      steps: [
+        { id: 1, number: "01", title: "Auditoría y Descubrimiento", description: "Revisamos tus calificaciones actuales y el viaje del cliente.", image: "/assets/imgs/icon/icon1.png" },
+        { id: 2, number: "02", title: "Estrategia y Configuración", description: "Construimos un sistema para generar y gestionar reseñas.", image: "/assets/imgs/icon/icon2.png" },
+        { id: 3, number: "03", title: "Lanzamiento y Monitoreo", description: "Comenzamos a recopilar reseñas y gestionar respuestas.", image: "/assets/imgs/icon/icon3.png" },
+        { id: 4, number: "04", title: "Optimizar y Aprovechar", description: "Refinamos el proceso y usamos las reseñas para impulsar el crecimiento.", image: "/assets/imgs/icon/icon4.png" },
+      ],
+    },
+    whyWorkWithUs: { title: "¿Por Qué Trabajar Con Nosotros?", points: ["Estrategias de reseñas éticas y conformes a las políticas", "Enfoque en calidad y autenticidad", "Sistemas claros, sin seguimientos manuales incómodos", "Reseñas integradas en tu embudo de marketing", "Construido para mejorar la confianza y las conversiones"], footer: "Te ayudamos a ganar confianza — y usarla sabiamente." },
+    idealClients: { title: "¿Es Esto Adecuado Para Ti?", description: "Este servicio es ideal si:", points: ["Dependes de la confianza y la reputación para ganar clientes", "Quieres más reseñas sin seguimientos incómodos", "Sirves a un mercado local o de servicios", "Quieres una mejor visibilidad en la búsqueda local"] },
+    faqsData: {
+      faqs: [{ question: "¿El marketing de reseñas está permitido por Google?", answer: "Sí, cuando se hace éticamente. Seguimos todas las políticas de la plataforma." }, { question: "¿Pueden eliminar reseñas negativas?", answer: "No podemos eliminar reseñas legítimas, pero ayudamos a gestionar las respuestas y mejorar el sentimiento general." }, { question: "¿Las reseñas ayudan al SEO?", answer: "Absolutamente. Las reseñas influyen fuertemente en las clasificaciones locales y las tasas de clics." }],
+      image: { src: "/assets/images/services/review-marketing/3.webp", alt: "Marketing de Reseñas" },
+    },
+    finalCTA: { title: "Convierte las Reseñas en una Ventaja Competitiva", description: "Construye confianza, mejora la visibilidad y convierte más clientes con una sólida reputación en línea.", buttonText: "Obtén una consulta gratuita" },
+  },
+  {
+    slug: "graphic-design",
+    name: "Diseño Gráfico",
+    heroSection: {
+      subtitle: "Diseño Gráfico", title: "Diseño que Comunica, Conecta y Convierte",
+      description: "Un diseño sólido hace que tu marca sea reconocible, creíble y memorable. Creamos elementos visuales que se comunican claramente, respaldan tu mensaje y ayudan a que tu negocio se destaque en todas partes.",
+      buttons: [ { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" }, { href: "/contact", style: "t-btn t-btn-primary", label: "Obtén una consulta gratuita" }, { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" } ],
+      services: ["Estrategia Visual", "Diseño de Marketing y Digital", "Diseño de Impresión", "Gráficos para Redes Sociales", "Creatividades Publicitarias", "Infografías", "Diseño de Presentaciones", "Diseño de Empaques", "Directrices de Marca"],
+      gallery: [{ src: "/assets/images/services/graphic-design/1.webp", alt: "Trabajo de Diseño Gráfico" }, { src: "/assets/images/services/graphic-design/2.webp", alt: "Ejemplos de Diseño" }],
+    },
+    problemSection: { title: "¿Qué está frenando tus visuales?", description: "Muchas empresas luchan con el diseño gráfico porque:", painPoints: ["Los diseños se sienten inconsistentes o fuera de marca", "Los visuales se ven genéricos o desactualizados", "Los materiales de marketing no comunican claramente", "El diseño no respalda los objetivos de marketing"] },
+    approachSection: {
+      sectionHeader: { subtitle: "Nuestro Enfoque", title: "Nuestro Enfoque para el Diseño Gráfico" }, video: { src: "/images/services/graphic-design/3.webp", type: "video/mp4" },
+      content: { title: "Diseñamos con un propósito — no solo decoración", paragraphs: ["Cada visual que creamos respalda tu identidad de marca, mensajes y objetivos comerciales.", "El diseño debe trabajar tan duro como tu empresa con pensamiento creativo respaldado por estrategia de marketing."] },
+    },
+    whatsIncluded: {
+      title: "Qué Incluye",
+      categories: [
+        { title: "Estrategia Visual", items: ["Alineación de estilo de marca", "Dirección de color y tipografía", "Directrices de consistencia visual"] },
+        { title: "Diseño de Marketing y Digital", items: ["Diseños para redes sociales", "Creatividades de anuncios", "Visuales para sitios web y páginas de aterrizaje"] },
+        { title: "Diseño de Impresión", items: ["Tarjetas de presentación y papelería", "Folletos y catálogos", "Empaques y etiquetas"] },
+        { title: "Entrega y Soporte", items: ["Archivos listos para imprimir y digitales", "Entrega organizada de activos", "Soporte de diseño continuo cuando sea necesario"] },
+      ],
+    },
+    processSection: {
+      sectionSubtitle: "Nuestro Proceso", sectionTitle: "Cómo Creamos tus Diseños", ctaText: "Empezar", ctaLink: "/contact",
+      steps: [
+        { id: 1, number: "01", title: "Descubrimiento", description: "Entendemos tu marca, objetivos y casos de uso.", image: "/assets/imgs/icon/icon1.png" },
+        { id: 2, number: "02", title: "Concepto y Dirección", description: "Desarrollamos conceptos visuales y dirección creativa.", image: "/assets/imgs/icon/icon2.png" },
+        { id: 3, number: "03", title: "Diseño y Refinamiento", description: "Diseñamos, revisamos y finalizamos los activos.", image: "/assets/imgs/icon/icon3.png" },
+        { id: 4, number: "04", title: "Entrega y Uso", description: "Entregamos archivos listos para usar en todas las plataformas.", image: "/assets/imgs/icon/icon4.png" },
+      ],
+    },
+    whyWorkWithUs: { title: "¿Por Qué Trabajar Con Nosotros?", points: ["Diseño liderado por estrategia, no solo visuales", "Fuerte comprensión de marca y marketing", "Consistencia en todas las plataformas", "Diseño que apoya el crecimiento y el reconocimiento", "Plazos confiables y comunicación clara"], footer: "Diseñamos marcas que la gente recuerda." },
+    idealClients: { title: "¿Es Esto Adecuado Para Ti?", description: "Este servicio es ideal si:", points: ["Necesitas activos de diseño consistentes y profesionales", "Quieres visuales que reflejen adecuadamente tu marca", "Usas marketing tanto digital como impreso", "Quieres que el diseño apoye los objetivos comerciales"] },
+    faqsData: {
+      faqs: [{ question: "¿Trabajan con directrices de marca existentes?", answer: "Sí. Podemos seguirlas, refinarlas o ayudar a construirlas si es necesario." }, { question: "¿Ofrecen soporte de diseño continuo?", answer: "Sí. Ofrecemos servicios de diseño basados en proyectos y continuos." }, { question: "¿Es importante el diseño gráfico si ya tengo un logotipo?", answer: "Absolutamente. La consistencia del diseño en todos los puntos de contacto genera confianza y reconocimiento." }],
+      image: { src: "/assets/images/services/graphic-design/3.webp", alt: "Diseño Gráfico" },
+    },
+    finalCTA: { title: "Diseñemos tu Marca de la Manera Correcta", description: "Convierte tus visuales en un activo poderoso de la marca.", buttonText: "Obtén una consulta gratuita" },
+  },
+  {
+    slug: "branding",
+    name: "Identidad de Marca (Branding)",
+    heroSection: {
+      subtitle: "Branding", title: "Construye una Marca que la Gente Reconozca, Confíe y Recuerde",
+      description: "Tu marca es más que un logotipo. Es cómo tu empresa se ve, suena y se siente en cada punto de contacto. Te ayudamos a construir una marca clara y consistente que conecta con la audiencia adecuada y respalda el crecimiento a largo plazo.",
+      buttons: [ { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" }, { href: "/contact", style: "t-btn t-btn-primary", label: "Obtén una consulta gratuita" }, { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" } ],
+      services: ["Estrategia de Marca", "Identidad Visual", "Activos de Marca", "Directrices de Marca", "Diseño de Logotipo", "Posicionamiento de Marca", "Marco de Mensajes", "Color y Tipografía", "Documentación de Marca"],
+      gallery: [{ src: "/assets/images/services/branding/1.webp", alt: "Trabajo de Branding" }, { src: "/assets/images/services/branding/2.webp", alt: "Identidad de Marca" }],
+    },
+    problemSection: { title: "¿Qué está frenando tu marca?", description: "Muchas empresas luchan con el branding porque:", painPoints: ["Su marca carece de claridad o dirección", "Los visuales y los mensajes se sienten inconsistentes", "La marca no se destaca de los competidores", "Los clientes no entienden claramente el valor", "El marketing se siente desconectado en todos los canales"] },
+    approachSection: {
+      sectionHeader: { subtitle: "Nuestro Enfoque", title: "Nuestro Enfoque para el Branding" }, video: { src: "/assets/images/services/branding/3.webp", type: "video/mp4" },
+      content: { title: "Construimos marcas con un propósito, no tendencias", paragraphs: ["Cada decisión de branding está arraigada en la estrategia, el posicionamiento y los objetivos comerciales reales.", "Una marca fuerte hace que cada esfuerzo de marketing sea más efectivo con consistencia a través de medios digitales e impresos."] },
+    },
+    whatsIncluded: {
+      title: "Qué Incluye",
+      categories: [
+        { title: "Estrategia de Marca", items: ["Descubrimiento de marca e investigación", "Análisis de audiencia y competencia", "Posicionamiento de marca y propuesta de valor", "Marco de mensajes de la marca"] },
+        { title: "Identidad Visual", items: ["Diseño o refinamiento de logotipo", "Paleta de colores y tipografía", "Sistema visual y elementos de diseño", "Directrices de uso de la marca"] },
+        { title: "Activos de Marca", items: ["Tarjetas de presentación y papelería", "Plantillas de branding para redes sociales", "Elementos de marca digital y sitio web", "Materiales impresos y de marketing"] },
+        { title: "Directrices de Marca", items: ["Reglas de uso del logotipo", "Estándares de tipografía y color", "Consistencia visual y tono de voz", "Documentación de la marca para el crecimiento futuro"] },
+      ],
+    },
+    processSection: {
+      sectionSubtitle: "Nuestro Proceso", sectionTitle: "Cómo Construimos tu Marca", ctaText: "Empezar", ctaLink: "/contact",
+      steps: [
+        { id: 1, number: "01", title: "Descubrimiento e Investigación", description: "Entendemos tu negocio, audiencia y mercado.", image: "/assets/imgs/icon/icon1.png" },
+        { id: 2, number: "02", title: "Estrategia y Posicionamiento", description: "Definimos la dirección y los mensajes de tu marca.", image: "/assets/imgs/icon/icon2.png" },
+        { id: 3, number: "03", title: "Diseño de Identidad", description: "Diseñamos el sistema de marca visual y verbal.", image: "/assets/imgs/icon/icon3.png" },
+        { id: 4, number: "04", title: "Lanzamiento y Alineación", description: "Aplicamos la marca y aseguramos la consistencia en todos los canales.", image: "/assets/imgs/icon/icon4.png" },
+      ],
+    },
+    whyWorkWithUs: { title: "¿Por Qué Trabajar Con Nosotros?", points: ["Branding liderado por estrategia, no solo diseño de logotipos", "Posicionamiento claro que diferencia tu negocio", "Profunda comprensión del diseño y el marketing", "Sistemas de marca construidos para escalar", "Branding práctico para negocios reales"], footer: "No solo diseñamos marcas, construimos bases." },
+    idealClients: { title: "¿Es Esto Adecuado Para Ti?", description: "Este servicio es ideal si:", points: ["Estás lanzando un nuevo negocio o haciendo un rebranding", "Sientes que tu marca ya no representa a tu empresa", "Quieres destacar en un mercado abarrotado", "Necesitas consistencia en todos los puntos de contacto"] },
+    faqsData: {
+      faqs: [{ question: "¿Solo diseñan logotipos?", answer: "No. Los logotipos son solo una parte de un sistema de marca completo." }, { question: "¿Pueden cambiar la marca de un negocio existente?", answer: "Sí. Manejamos tanto rebrandings completos como actualizaciones de marca." }, { question: "¿Cuánto tiempo toma el branding?", answer: "La mayoría de los proyectos de branding toman de 4 a 8 semanas dependiendo del alcance." }],
+      image: { src: "/assets/images/services/branding/3.webp", alt: "Servicios de Branding" },
+    },
+    finalCTA: { title: "Construyamos una Marca Que Perdure", description: "Crea una marca que refleje quién eres y hacia dónde se dirige tu negocio.", buttonText: "Obtén una consulta gratuita" },
+  },
+  {
+    slug: "email-marketing",
+    name: "Email Marketing",
+    heroSection: {
+      subtitle: "Email Marketing", title: "Convierte a los Suscriptores en Clientes Leales",
+      description: "El marketing por correo electrónico mantiene a tu marca en la mente de los clientes y genera resultados consistentes. Creamos campañas estratégicas de correo que nutren a los prospectos, aumentan las conversiones y construyen relaciones a largo plazo.",
+      buttons: [ { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" }, { href: "/contact", style: "t-btn t-btn-primary", label: "Obtén una consulta gratuita" }, { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" } ],
+      services: ["Estrategia y Planificación", "Creación de Campañas", "Automatización y Flujos", "Rendimiento y Optimización", "Redacción de Correos", "Diseño Visual", "Segmentación de Listas", "Pruebas A/B", "Analítica"],
+      gallery: [{ src: "/assets/images/services/email-marketing/1.webp", alt: "Campañas de Correo" }, { src: "/assets/images/services/email-marketing/2.webp", alt: "Email Marketing" }],
+    },
+    problemSection: { title: "¿Qué está frenando tu marketing por correo?", description: "Muchas empresas luchan con el email marketing porque:", painPoints: ["Los correos se envían irregularmente o sin estrategia", "Las tasas de apertura y clics son bajas", "Los mensajes parecen genéricos o fuera de marca", "No hay segmentación clara o automatización", "Los correos no generan acciones significativas"] },
+    approachSection: {
+      sectionHeader: { subtitle: "Nuestro Enfoque", title: "Nuestro Enfoque para el Email Marketing" }, video: { src: "/assets/images/services/email-marketing/3.webp", type: "video/mp4" },
+      content: { title: "Tratamos el correo como un canal de construcción de relaciones", paragraphs: ["Cada campaña está diseñada para entregar el mensaje correcto en el momento adecuado. Nuestro enfoque se centra en la segmentación y personalización de la audiencia.", "El correo electrónico funciona mejor cuando se siente humano e intencional con una marca y un tono de voz consistentes."] },
+    },
+    whatsIncluded: {
+      title: "Qué Incluye",
+      categories: [
+        { title: "Estrategia y Planificación", items: ["Auditoría de marketing por correo", "Segmentación de listas", "Planificación de automatización", "Calendario de contenido"] },
+        { title: "Creación de Campañas", items: ["Redacción de correos", "Diseño visual y formato", "Fuertes llamadas a la acción", "Correos optimizados para móviles"] },
+        { title: "Automatización y Flujos", items: ["Secuencias de bienvenida", "Campañas de nutrición de prospectos", "Correos de carritos abandonados", "Flujos de reactivación"] },
+        { title: "Rendimiento y Optimización", items: ["Seguimiento de apertura y clics", "Análisis de conversiones", "Pruebas A/B", "Mejoras continuas"] },
+      ],
+    },
+    processSection: {
+      sectionSubtitle: "Nuestro Proceso", sectionTitle: "Cómo Hacemos que el Correo Funcione", ctaText: "Empezar", ctaLink: "/contact",
+      steps: [
+        { id: 1, number: "01", title: "Auditoría y Descubrimiento", description: "Revisamos tu lista, contenido y objetivos.", image: "/assets/imgs/icon/icon1.png" },
+        { id: 2, number: "02", title: "Estrategia y Configuración", description: "Definimos la segmentación y los mensajes.", image: "/assets/imgs/icon/icon2.png" },
+        { id: 3, number: "03", title: "Crear y Lanzar", description: "Diseñamos, escribimos y enviamos campañas.", image: "/assets/imgs/icon/icon3.png" },
+        { id: 4, number: "04", title: "Optimizar y Escalar", description: "Analizamos el rendimiento y refinamos para obtener mejores resultados.", image: "/assets/imgs/icon/icon4.png" },
+      ],
+    },
+    whyWorkWithUs: { title: "¿Por Qué Trabajar Con Nosotros?", points: ["Email marketing impulsado por estrategia", "Fuerte redacción y diseño trabajando juntos", "Automatización que ahorra tiempo y aumenta el ROI", "Reportes claros", "Construido para el crecimiento a largo plazo"], footer: "Nos enfocamos en resultados, no en ruido en la bandeja de entrada." },
+    idealClients: { title: "¿Es Esto Adecuado Para Ti?", description: "Este servicio es ideal si:", points: ["Quieres un mejor compromiso de tu lista de correo", "Necesitas seguimientos automatizados", "Vendes productos o servicios en línea o fuera de línea", "Quieres resultados predecibles"] },
+    faqsData: {
+      faqs: [{ question: "¿Con qué frecuencia se deben enviar correos?", answer: "Depende de tu audiencia y objetivos, pero la consistencia importa más que el volumen." }, { question: "¿Trabajan con plataformas como Mailchimp o Klaviyo?", answer: "Sí. Trabajamos con las principales plataformas y herramientas de marketing por correo electrónico." }, { question: "¿Sigue siendo efectivo el email marketing?", answer: "Absolutamente. El correo electrónico ofrece constantemente uno de los retornos de inversión más altos." }],
+      image: { src: "/assets/images/services/email-marketing/3.webp", alt: "Email Marketing" },
+    },
+    finalCTA: { title: "Hagamos que el Correo Funcione para tu Empresa", description: "Convierte tu lista de correos en un poderoso canal de ingresos y relaciones.", buttonText: "Obtén una consulta gratuita" },
+  },
+  {
+    slug: "restaurant-platform",
+    name: "Plataforma para Restaurantes",
+    heroSection: {
+      subtitle: "Plataforma todo en uno", title: "Plataforma Todo en Uno para Restaurantes: Cero Comisiones",
+      description: "Un sistema completo para administrar tu restaurante, hacer crecer tu marca y mantener tus ganancias. Desde pedidos en línea hasta la gestión de entregas—sin comisiones, solo resultados.",
+      buttons: [ { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" }, { href: "/contact", style: "t-btn t-btn-primary", label: "Prueba Gratuita" }, { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" } ],
+      services: ["Pedidos en Línea", "Creador de Sitios Web", "App Móvil", "Herramientas de Marketing", "Programa de Lealtad", "Menú con Código QR", "Gestión de Entregas", "Agrupación de Pedidos"],
+      gallery: [{ src: "/assets/images/services/restaurant-platform/1.webp", alt: "Panel de Plataforma de Restaurante" }, { src: "/assets/images/services/restaurant-platform/2.webp", alt: "App de Pedidos Móviles" }],
+    },
+    problemSection: { title: "Deja de Perder Dinero con Aplicaciones de Terceros", description: "Los restaurantes hoy enfrentan altos costos y pérdida de control:", painPoints: ["Altas comisiones (hasta 30%) en cada pedido", "Ninguna propiedad de los datos del cliente", "Dependencia de repartidores externos", "Dificultad para manejar múltiples tabletas y sistemas"] },
+    approachSection: {
+      sectionHeader: { subtitle: "Sobre Nosotros", title: "Apoyando a los Restaurantes a Crecer" }, video: { src: "/assets/images/services/restaurant-platform/3.webp", type: "video/mp4" },
+      content: { title: "Empoderamos a los restauradores con las herramientas que necesitan para tener éxito", paragraphs: ["Desde la incorporación hasta la asistencia continua, brindamos herramientas flexibles y estrategias adaptadas para alcanzar los objetivos únicos de cada restaurante.", "Nuestra plataforma ha aumentado consistentemente los valores de los pedidos y la retención de clientes devolviéndote el poder."] },
+    },
+    whatsIncluded: {
+      title: "Nuestra Oferta",
+      categories: [
+        { title: "Sistema de Pedidos en Línea", items: ["Ahorra hasta un 90% en comisiones de terceros", "Vende directamente sin intermediarios", "Gestiona menú, pedidos y entrega sin problemas", "Intégrate con tu POS y servicios de entrega"] },
+        { title: "Sitio Web y App para Restaurantes", items: ["Creador de sitios web profesional (sin necesidad de código)", "App móvil con tu marca (iOS y Android)", "Pedidos y reservas integrados", "Soporte para múltiples sucursales"] },
+        { title: "Marketing y Lealtad", items: ["Crea promociones y descuentos", "Programas de lealtad automatizados", "Campañas por SMS, Correo Electrónico y Push", "Informes detallados para decisiones informadas"] },
+        { title: "Operaciones y Entrega", items: ["Menú con Código QR", "Gestión de entregas (rastrea conductores en tiempo real)", "Rutas optimizadas", "Despacho de entrega sin tener flota propia"] },
+      ],
+    },
+    processSection: {
+      sectionSubtitle: "Comenzar", sectionTitle: "3 Pasos hacia la Libertad", ctaText: "Empezar", ctaLink: "/contact",
+      steps: [
+        { id: 1, number: "01", title: "Configuración", description: "Te ayudamos a configurar tu menú, sitio web y aplicación de marca.", image: "/assets/images/Pricing/5.png" },
+        { id: 2, number: "02", title: "Lanzamiento", description: "Inicia con tu propio sistema de pedidos y comienza a hacer marketing.", image: "/assets/images/Pricing/0.png" },
+        { id: 3, number: "03", title: "Crecer", description: "Retén a los clientes con programas de lealtad y mantén tus ganancias.", image: "/assets/images/Pricing/1.png" },
+      ],
+    },
+    whyWorkWithUs: { title: "¿Por Qué Elegir Nuestra Plataforma?", points: ["0% de Comisiones en los pedidos", "Control total sobre los datos de tus clientes", "Solución todo en uno (Pedidos, Marketing, Entrega)", "Soporte dedicado para ayudarte a crecer"], footer: "Recupera el control del futuro de tu restaurante." },
+    idealClients: { title: "Perfecto Para", description: "Nuestra plataforma está diseñada para:", points: ["Restaurantes Independientes", "Cadenas con múltiples ubicaciones", "Cocinas Fantasma (Ghost Kitchens)", "Cafeterías y Bares"] },
+    faqsData: {
+      faqs: [{ question: "¿Realmente no hay comisión?", answer: "Sí, cobramos una tarifa mensual plana. Te quedas con el 100% de tus ingresos por ventas." }, { question: "¿Puedo usar mis propios repartidores?", answer: "Absolutamente. Nuestro sistema de gestión te permite rastrear a tus propios conductores o conectarte con mensajeros externos." }, { question: "¿Necesito un desarrollador?", answer: "No. Nuestro creador de sitios web y proceso de configuración no requieren código en absoluto." }],
+      image: { src: "/assets/images/services/restaurant-platform/3.webp", alt: "Plataforma para Restaurantes" },
+    },
+    finalCTA: { title: "¿Listo para Escalar tu Restaurante?", description: "Únete a miles de restaurantes que ahorran dinero y crecen más rápido.", buttonText: "Comienza tu Prueba Gratuita" },
+    pricingSection: {
+      title: "Precios",
+      plans: [
+        { name: "Estándar", price: "$139", period: "/mes", subtitle: "por 1 ubicación", features: ["210 pedidos", "Sitio web del restaurante", "Servicio de configuración gratuito", "Pedidos desde la mesa", "Reserva de mesas", "Múltiples ubicaciones", "Pagos en línea", "Marketing por correo y SMS", "Cupones y códigos promocionales"] },
+        { name: "Premium", price: "$189", period: "/mes", subtitle: "por 1 ubicación", features: ["Todo en Estándar más:", "Pedidos ilimitados", "Automatización de marketing", "Tarjetas de regalo", "Recomendaciones de artículos", "Múltiples menús"] },
+      ],
+    },
+    addonsSection: {
+      title: "Complementos (Addons)",
+      items: [
+        { title: "Aplicación Móvil", price: "$55", period: "/mes", description: "Tu propia aplicación móvil de marca para pedidos." },
+        { title: "Programa de Lealtad", price: "$25", period: "/mes", description: "Convierte a los clientes ocasionales en clientes habituales." },
+        { title: "Despachador de Entregas", price: "$40", period: "/mes", description: "Comienza a ofrecer entregas con servicios de terceros—sin necesidad de flota propia." },
+        { title: "App para Conductores", price: "$14", period: "/mes", description: "Gestiona tus entregas y conductores con una aplicación de mensajería." },
+        { title: "Agrupación de Pedidos", price: "$40", period: "/mes", description: "Gestiona todos los pedidos de cada canal en un solo lugar — no más múltiples tabletas." },
+        { title: "Integraciones POS", price: "$0", period: "/mes", description: "Integra y sincroniza todos tus pedidos en línea con tu sistema POS." },
+      ],
+    },
+  },
+];
+// 5. الدالة السحرية اللي بتختار الداتا بناءً على اللغة
 const localizedServices: Record<string, ServicePageData[]> = {
   en: enServices,
   ar: arServices,
   fr: frServices,
+  es: esServices, // 👈 التعديل أهو
 };
-
 // 👇 تعديل دالة الاستدعاء عشان تقبل اللغة (locale) 👇
 export const getServiceBySlug = (slug: string, locale: string = "en"): ServicePageData | undefined => {
   const targetServices = localizedServices[locale] || localizedServices["en"];
