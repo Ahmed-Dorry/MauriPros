@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 
 // إعدادات اللغات الأساسية (العربي هو الأساسي لباقي العالم)
 const intlMiddleware = createMiddleware({
-  locales: ['en', 'ar', 'fr'],
+  locales: ['en', 'ar', 'fr', 'es'], // 👈 ضفنا الإسباني هنا
   defaultLocale: 'ar', 
 });
 
@@ -23,9 +23,9 @@ export default function middleware(req: NextRequest) {
     response = NextResponse.redirect(newUrl);
   }
   // 3. فحص الزوار من أمريكا (حظر أي لغة غير الإنجليزي)
-  else if (isUS && (pathname.startsWith('/ar') || pathname.startsWith('/fr'))) {
+  else if (isUS && (pathname.startsWith('/ar') || pathname.startsWith('/fr') || pathname.startsWith('/es'))) { // 👈 ضفنا الإسباني هنا كمان
     const newUrl = req.nextUrl.clone();
-    newUrl.pathname = pathname.replace(/^\/(ar|fr)/, '/en');
+    newUrl.pathname = pathname.replace(/^\/(ar|fr|es)/, '/en');
     response = NextResponse.redirect(newUrl);
   } 
   // 4. لو مش من أمريكا وبيدخل على صفحات داخلية، شغل نظام اللغات الطبيعي
@@ -43,7 +43,7 @@ export const config = {
   // دمجنا الـ Matcher عشان نضمن إنه يشتغل على المسار الرئيسي (/) وكل اللغات
   matcher: [
     '/', 
-    '/(ar|en|fr)/:path*', 
+    '/(ar|en|fr|es)/:path*', // 👈 ضفنا الإسباني في الماتشر هنا
     '/((?!api|_next|_vercel|.*\\..*).*)'
   ]
 };

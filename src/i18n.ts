@@ -1,12 +1,13 @@
 import { getRequestConfig } from 'next-intl/server';
 
-const locales = ['en', 'ar', 'fr'];
+// 👈 ضفنا الإسباني (es) هنا عشان البوابة تفتحله
+const locales = ['en', 'ar', 'fr', 'es'];
 
 export default getRequestConfig(async (params) => {
   // بنحاول نلقط اللغة بأكتر من طريقة عشان نتفادى سرعة السيرفر
   let locale = (params as any).locale || await params.requestLocale;
 
-  // 👈 التعديل هنا: لو السيرفر اتلخبط، هيرجع للعربي (ar) غصب عنه مش إنجليزي!
+  // 👈 لو السيرفر اتلخبط، هيرجع للعربي (ar) غصب عنه مش إنجليزي!
   if (!locale || !locales.includes(locale as any)) {
     locale = 'ar';
   }

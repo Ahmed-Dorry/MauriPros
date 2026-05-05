@@ -12,6 +12,7 @@ const languages = [
   { code: "ar", label: "العربية" },
   { code: "en", label: "English" },
   { code: "fr", label: "Français" },
+  { code: "es", label: "Español" }, // 👈 الإسباني أهو
 ];
 
 export default function LanguageSwitcher({ variant = "default" }: LanguageSwitcherProps) {
@@ -48,7 +49,7 @@ export default function LanguageSwitcher({ variant = "default" }: LanguageSwitch
   }, []);
 
   const changeLanguage = (code: string) => {
-    const currentPath = pathname?.replace(/^\/(ar|en|fr)/, "") || "";
+    const currentPath = pathname?.replace(/^\/(ar|en|fr|es)/, "") || ""; // 👈 زودنا es هنا عشان يحول الرابط صح
     router.push(`/${code}${currentPath}`);
     setIsOpen(false);
   };
