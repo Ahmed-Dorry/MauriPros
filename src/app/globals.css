@@ -22,6 +22,10 @@ html[dir="rtl"] span,
 html[dir="rtl"] a,
 html[dir="rtl"] div {
     font-family: 'Cairo', sans-serif !important;
+}
+
+/* 🔥 الضربة القاضية لمشكلة تقطيع الحروف العربية في كل مكان (بما فيها تأثير الكتابة) 🔥 */
+html[dir="rtl"] * {
     letter-spacing: 0 !important;
 }
 
