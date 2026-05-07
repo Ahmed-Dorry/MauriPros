@@ -473,3 +473,23 @@ html[dir="rtl"] h1 {
     letter-spacing: normal !important;
     direction: rtl !important;
 }
+/* =========================================
+   الستايل البديل للعنوان الرئيسي للهروب من سكريبت التقطيع
+   ========================================= */
+.safe-hero-title {
+    font-size: 65px;
+    font-weight: 700;
+    color: #ffffff; /* لون الكلمة أبيض زي ما كان */
+    margin-bottom: 0;
+    line-height: 1.5;
+    letter-spacing: normal !important;
+    text-transform: none !important;
+    font-variant-ligatures: normal !important;
+}
+
+/* تصغير الكلمة للموبايل عشان متطلعش بره الشاشة */
+@media (max-width: 768px) {
+    .safe-hero-title {
+        font-size: 40px !important;
+    }
+}

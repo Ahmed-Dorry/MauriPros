@@ -71,7 +71,7 @@ const VideoSection = ({ data: videoData }: VideoProps) => {
                 {/* 👇 التعديل السحري هنا: شيلنا كلاسات الأنيميشن اللي بتقطع الحروف 👇 */}
                 <div className="title-wrapper">
                   <h1
-                    className="section-title"
+                    className="safe-hero-title"
                     suppressHydrationWarning={true}
                     style={{ direction: "inherit" }}
                   >
