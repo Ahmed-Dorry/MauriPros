@@ -24,11 +24,18 @@ html[dir="rtl"] div {
     font-family: 'Cairo', sans-serif !important;
 }
 
-/* 🔥 الضربة القاضية لمشكلة تقطيع الحروف العربية في كل مكان (بما فيها تأثير الكتابة) 🔥 */
+/* 🔥 الضربة القاضية لمشكلة تقطيع الحروف العربية في كل مكان (بما فيها تأثير الكتابة للآيفون) 🔥 */
 html[dir="rtl"] * {
-    letter-spacing: 0 !important;
+    letter-spacing: normal !important;
 }
 
+html[dir="rtl"] .video-area .section-title,
+html[dir="rtl"] .Typewriter__wrapper {
+    font-size: 65px !important; 
+    line-height: 1.5 !important;
+    padding-bottom: 15px !important;
+    letter-spacing: normal !important; /* تأكيد إضافي عشان مكتبة الكتابة */
+}
 /* تصغير كل العناوين في الموقع للنسخة العربية عشان تبقى أنيقة ومقروءة */
 html[dir="rtl"] .section-title {
     font-size: 40px !important;
