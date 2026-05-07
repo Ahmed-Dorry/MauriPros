@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { IVideoData } from "@/constant/DigitalAgency/About/video";
 import Typewriter from "typewriter-effect";
 import heroData from "@/constant/DigitalAgency/hero";
 import Header from "@/components/DigitalAgency/Header";
 import Link from "@/components/CustomLink";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl"; // 👈 ضفنا useLocale هنا
 
 import heroBg from "@/assets/images/hero/hero-bg2.jpg";
 
@@ -17,9 +17,28 @@ interface VideoProps {
 const VideoSection = ({ data: videoData }: VideoProps) => {
   const { videoUrl } = videoData;
   const t = useTranslations("VideoSection");
-  const typewriterStrings = t.raw("typewriterStrings");
+  const typewriterStrings = t.raw("typewriterStrings") as string[];
+  const locale = useLocale(); // 👈 عشان نعرف إحنا في أي لغة
+  const isArabic = locale === "ar";
 
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  // 👇 نظام تبديل الكلمات الأنيق للغة العربية للهروب من بج سفاري 👇
+  const [arWordIndex, setArWordIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    if (!isArabic) return; // لو مش عربي متعملش حاجة
+    const interval = setInterval(() => {
+      setFade(false); // خفي الكلمة
+      setTimeout(() => {
+        setArWordIndex((prev) => (prev + 1) % typewriterStrings.length); // هات الكلمة اللي بعدها
+        setFade(true); // اظهرها تاني
+      }, 500); // سرعة الاختفاء (نص ثانية)
+    }, 2500); // مدة بقاء الكلمة على الشاشة (ثانيتين ونص)
+
+    return () => clearInterval(interval);
+  }, [isArabic, typewriterStrings.length]);
 
   useEffect(() => {
     if (videoRef.current) {
@@ -68,23 +87,35 @@ const VideoSection = ({ data: videoData }: VideoProps) => {
                   </span>
                 </div>
 
-                {/* 👇 التعديل السحري هنا: شيلنا كلاسات الأنيميشن اللي بتقطع الحروف 👇 */}
                 <div className="title-wrapper">
                   <h1
                     className="safe-hero-title"
                     suppressHydrationWarning={true}
-                    style={{ direction: "inherit" }}
+                    style={{ direction: "inherit", minHeight: "100px" }} // ثبتنا الارتفاع عشان ميرعش
                   >
-                    <Typewriter
-                      options={{
-                        strings: typewriterStrings,
-                        autoStart: true,
-                        loop: true,
-                        delay: 100,
-                        deleteSpeed: 50,
-                        cursorClassName: "opacity-0 w-1 d-inline-block",
-                      }}
-                    />
+                    {/* 👇 لو عربي، شغل التبديل السلس، لو لغة تانية شغل الكتابة العادية 👇 */}
+                    {isArabic ? (
+                      <span 
+                        style={{
+                          opacity: fade ? 1 : 0,
+                          transition: "opacity 0.5s ease-in-out",
+                          display: "inline-block"
+                        }}
+                      >
+                        {typewriterStrings[arWordIndex]}
+                      </span>
+                    ) : (
+                      <Typewriter
+                        options={{
+                          strings: typewriterStrings,
+                          autoStart: true,
+                          loop: true,
+                          delay: 100,
+                          deleteSpeed: 50,
+                          cursorClassName: "opacity-0 w-1 d-inline-block",
+                        }}
+                      />
+                    )}
                   </h1>
                 </div>
               </div>
