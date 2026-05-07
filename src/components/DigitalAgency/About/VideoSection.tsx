@@ -6,7 +6,7 @@ import Typewriter from "typewriter-effect";
 import heroData from "@/constant/DigitalAgency/hero";
 import Header from "@/components/DigitalAgency/Header";
 import Link from "@/components/CustomLink";
-import { useTranslations, useLocale } from "next-intl"; // 👈 ضفنا useLocale هنا
+import { useTranslations, useLocale } from "next-intl";
 
 import heroBg from "@/assets/images/hero/hero-bg2.jpg";
 
@@ -18,26 +18,41 @@ const VideoSection = ({ data: videoData }: VideoProps) => {
   const { videoUrl } = videoData;
   const t = useTranslations("VideoSection");
   const typewriterStrings = t.raw("typewriterStrings") as string[];
-  const locale = useLocale(); // 👈 عشان نعرف إحنا في أي لغة
+  const locale = useLocale();
   const isArabic = locale === "ar";
 
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // 👇 نظام تبديل الكلمات الأنيق للغة العربية للهروب من بج سفاري 👇
+  // 👇 كود معرفة هل المستخدم فاتح من موبايل ولا لأ 👇
+  const [isMobile, setIsMobile] = useState(false);
   const [arWordIndex, setArWordIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
   useEffect(() => {
-    if (!isArabic) return; // لو مش عربي متعملش حاجة
-    const interval = setInterval(() => {
-      setFade(false); // خفي الكلمة
-      setTimeout(() => {
-        setArWordIndex((prev) => (prev + 1) % typewriterStrings.length); // هات الكلمة اللي بعدها
-        setFade(true); // اظهرها تاني
-      }, 500); // سرعة الاختفاء (نص ثانية)
-    }, 2500); // مدة بقاء الكلمة على الشاشة (ثانيتين ونص)
+    // تشغيل الحساس عند تحميل الصفحة وتغيير حجم الشاشة
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    handleResize(); // فحص أولي
+    window.addEventListener("resize", handleResize);
+    
+    // نظام تبديل الكلمات للـ (عربي + موبايل) فقط
+    let interval: NodeJS.Timeout;
+    if (isArabic && window.innerWidth <= 768) {
+      interval = setInterval(() => {
+        setFade(false);
+        setTimeout(() => {
+          setArWordIndex((prev) => (prev + 1) % typewriterStrings.length);
+          setFade(true);
+        }, 500);
+      }, 2500);
+    }
 
-    return () => clearInterval(interval);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      if (interval) clearInterval(interval);
+    };
   }, [isArabic, typewriterStrings.length]);
 
   useEffect(() => {
@@ -91,10 +106,11 @@ const VideoSection = ({ data: videoData }: VideoProps) => {
                   <h1
                     className="safe-hero-title"
                     suppressHydrationWarning={true}
-                    style={{ direction: "inherit", minHeight: "100px" }} // ثبتنا الارتفاع عشان ميرعش
+                    style={{ direction: "inherit", minHeight: "100px" }}
                   >
-                    {/* 👇 لو عربي، شغل التبديل السلس، لو لغة تانية شغل الكتابة العادية 👇 */}
-                    {isArabic ? (
+                    {/* 🚀 الحركة السحرية هنا 🚀 */}
+                    {isArabic && isMobile ? (
+                      // لو عربي وموبايل: شغل الـ Fade عشان الحروف متتقطعش
                       <span 
                         style={{
                           opacity: fade ? 1 : 0,
@@ -105,6 +121,7 @@ const VideoSection = ({ data: videoData }: VideoProps) => {
                         {typewriterStrings[arWordIndex]}
                       </span>
                     ) : (
+                      // لو PC (حتى لو عربي) أو أي لغة تانية: شغل الـ Typewriter الأصلي
                       <Typewriter
                         options={{
                           strings: typewriterStrings,
