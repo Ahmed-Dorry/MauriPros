@@ -458,3 +458,18 @@ html[dir="rtl"] .mega-menu-cta .cta-button svg {
 html[dir="rtl"] .mega-menu-cta {
     margin-left: 30px !important; /* 🔥 دي اللي بتزقه لجوه من ناحية الشمال 🔥 */
 }
+
+/* =========================================
+   🔥 الحل النهائي لمشكلة تقطيع الحروف العربية في العناوين (تأثير الآيفون) 🔥
+   ========================================= */
+html[dir="rtl"] .section-title,
+html[dir="rtl"] .typed-out,
+html[dir="rtl"] .Typewriter__wrapper,
+html[dir="rtl"] .Typewriter,
+html[dir="rtl"] h1 {
+    text-transform: none !important; /* دي الضربة القاضية اللي هتحل المشكلة */
+    font-variant-ligatures: normal !important; /* إجبار المتصفح يربط الحروف */
+    font-feature-settings: "liga" 1, "calt" 1 !important;
+    letter-spacing: normal !important;
+    direction: rtl !important;
+}
