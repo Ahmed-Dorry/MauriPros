@@ -36,7 +36,6 @@ const VideoSection = ({ data: videoData }: VideoProps) => {
       <Header />
 
       <div className="area-bg">
-        {/* 👇 شيلنا كلمة defaultMuted من هنا عشان رياكت ميزعلش 👇 */}
         <video 
           ref={videoRef}
           loop 
@@ -69,13 +68,12 @@ const VideoSection = ({ data: videoData }: VideoProps) => {
                   </span>
                 </div>
 
-                <div className="title-wrapper type-out-wrapper">
+                {/* 👇 التعديل السحري هنا: شيلنا كلاسات الأنيميشن اللي بتقطع الحروف 👇 */}
+                <div className="title-wrapper">
                   <h1
-                    className="section-title typed-out fade-anim"
-                    data-direction="left"
-                    data-delay="0.30"
-                    data-offset="100"
+                    className="section-title"
                     suppressHydrationWarning={true}
+                    style={{ direction: "inherit" }}
                   >
                     <Typewriter
                       options={{
