@@ -474,22 +474,34 @@ html[dir="rtl"] h1 {
     direction: rtl !important;
 }
 /* =========================================
-   الستايل البديل للعنوان الرئيسي للهروب من سكريبت التقطيع
+   🔥 الضربة القاضية لمشكلة تقطيع الحروف في الآيفون (Safari WebKit) 🔥
    ========================================= */
-.safe-hero-title {
+.safe-hero-title,
+.safe-hero-title *,
+.Typewriter__wrapper,
+.Typewriter__cursor {
     font-size: 65px;
     font-weight: 700;
-    color: #ffffff; /* لون الكلمة أبيض زي ما كان */
-    margin-bottom: 0;
+    color: #ffffff;
     line-height: 1.5;
+    
+    /* إلغاء أي تباعد أو تحويل حروف إجباري في سفاري */
     letter-spacing: normal !important;
     text-transform: none !important;
+    -webkit-text-transform: none !important; /* قفل التحويل في الآيفون */
+    
+    /* إجبار سفاري على ربط الحروف العربية */
     font-variant-ligatures: normal !important;
+    -webkit-font-variant-ligatures: normal !important; /* ربط الحروف للآيفون */
+    text-rendering: optimizeLegibility !important;
+    font-feature-settings: "liga" 1, "calt" 1 !important;
 }
 
-/* تصغير الكلمة للموبايل عشان متطلعش بره الشاشة */
+/* تصغير الكلمة للموبايل */
 @media (max-width: 768px) {
-    .safe-hero-title {
+    .safe-hero-title,
+    .Typewriter__wrapper,
+    .Typewriter__cursor {
         font-size: 40px !important;
     }
 }
