@@ -474,16 +474,16 @@ html[dir="rtl"] h1 {
     direction: rtl !important;
 }
 /* =========================================
-   🔥 النسخة المصغرة والأنيقة مع الحفاظ على ربط الحروف على الآيفون 🔥
+   🔥 تظبيط حجم خط العنوان الرئيسي (PC & Mobile) 🔥
    ========================================= */
 .safe-hero-title,
 .safe-hero-title *,
 .Typewriter__wrapper,
 .Typewriter__cursor {
-    font-size: 55px; /* <--- صغرنا الخط هنا من 65px لـ 55px */
+    font-size: 75px !important; /* 👈 تكبير خط الكمبيوتر هنا */
     font-weight: 700;
     color: #ffffff;
-    line-height: 1.5;
+    line-height: 1.4; /* قللنا الارتفاع شوية عشان الخط كبر */
     
     /* الحفاظ على أكواد الهروب من عيب سفاري */
     letter-spacing: normal !important;
@@ -499,8 +499,10 @@ html[dir="rtl"] h1 {
 /* تصغير الخط للموبايل بأسلوب أنيق ومقروء */
 @media (max-width: 768px) {
     .safe-hero-title,
+    .safe-hero-title *,
     .Typewriter__wrapper,
     .Typewriter__cursor {
-        font-size: 32px !important; /* <--- صغرنا الخط للموبايل هنا من 40px لـ 32px */
+        font-size: 26px !important; /* 👈 تصغير خط الموبايل هنا */
+        line-height: 1.5 !important;
     }
 }
