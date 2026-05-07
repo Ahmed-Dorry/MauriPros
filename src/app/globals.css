@@ -474,34 +474,33 @@ html[dir="rtl"] h1 {
     direction: rtl !important;
 }
 /* =========================================
-   🔥 الضربة القاضية لمشكلة تقطيع الحروف في الآيفون (Safari WebKit) 🔥
+   🔥 النسخة المصغرة والأنيقة مع الحفاظ على ربط الحروف على الآيفون 🔥
    ========================================= */
 .safe-hero-title,
 .safe-hero-title *,
 .Typewriter__wrapper,
 .Typewriter__cursor {
-    font-size: 65px;
+    font-size: 55px; /* <--- صغرنا الخط هنا من 65px لـ 55px */
     font-weight: 700;
     color: #ffffff;
     line-height: 1.5;
     
-    /* إلغاء أي تباعد أو تحويل حروف إجباري في سفاري */
+    /* الحفاظ على أكواد الهروب من عيب سفاري */
     letter-spacing: normal !important;
     text-transform: none !important;
-    -webkit-text-transform: none !important; /* قفل التحويل في الآيفون */
+    -webkit-text-transform: none !important;
     
-    /* إجبار سفاري على ربط الحروف العربية */
     font-variant-ligatures: normal !important;
-    -webkit-font-variant-ligatures: normal !important; /* ربط الحروف للآيفون */
+    -webkit-font-variant-ligatures: normal !important;
     text-rendering: optimizeLegibility !important;
     font-feature-settings: "liga" 1, "calt" 1 !important;
 }
 
-/* تصغير الكلمة للموبايل */
+/* تصغير الخط للموبايل بأسلوب أنيق ومقروء */
 @media (max-width: 768px) {
     .safe-hero-title,
     .Typewriter__wrapper,
     .Typewriter__cursor {
-        font-size: 40px !important;
+        font-size: 32px !important; /* <--- صغرنا الخط للموبايل هنا من 40px لـ 32px */
     }
 }
