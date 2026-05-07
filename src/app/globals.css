@@ -502,7 +502,7 @@ html[dir="rtl"] h1 {
     .safe-hero-title *,
     .Typewriter__wrapper,
     .Typewriter__cursor {
-        font-size: 26px !important; /* 👈 تصغير خط الموبايل هنا */
+        font-size: 75px !important; /* 👈 تصغير خط الموبايل هنا */
         line-height: 1.5 !important;
     }
 }
