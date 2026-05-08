@@ -1328,10 +1328,19 @@ const arServices: ServicePageData[] = [
         { href: "/contact", style: "t-btn t-btn-primary", label: "ابدأ تجربتك المجانية" },
         { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" },
       ],
-      services: [
-        "الطلب عبر الإنترنت", "منشئ المواقع", "تطبيق الموبايل",
-        "أدوات التسويق", "برنامج الولاء", "منيو QR",
-        "إدارة التوصيل", "تجميع الطلبات",
+     services: [
+        "طلبات غير محدودة",
+        "الطلب والدفع عبر الإنترنت",
+        "موقع إلكتروني وتطبيق موبايل",
+        "خدمة إعداد وتجهيز مجانية",
+        "توفير حتى 90% من العمولات",
+        "الطلب من الطاولة والحجوزات",
+        "منيو باركود (QR) وقوائم متعددة",
+        "إدارة التوصيل وتحسين المسارات",
+        "تجميع الطلبات في شاشة واحدة",
+        "أتمتة التسويق (إيميل ورسائل SMS)",
+        "برنامج الولاء وبطاقات الهدايا",
+        "دعم الفروع المتعددة"
       ],
       gallery: [
         { src: "/assets/images/services/restaurant-platform/1.webp", alt: "لوحة تحكم منصة المطاعم" },
@@ -1403,7 +1412,6 @@ const arServices: ServicePageData[] = [
       faqs: [
         { question: "هل حقاً لا توجد عمولة؟", answer: "نعم، نحن نفرض رسوماً شهرية ثابتة. أنت تحتفظ بـ 100% من إيرادات مبيعاتك." },
         { question: "هل يمكنني استخدام السائقين الخاصين بي؟", answer: "بالتأكيد. يتيح لك نظامنا تتبع سائقيك أو الربط مع شركات التوصيل." },
-        { question: "هل أحتاج إلى مبرمج؟", answer: "لا. منصة بناء المواقع وعملية الإعداد لا تتطلب أي كتابة أكواد." },
       ],
       image: { src: "/assets/images/services/restaurant-platform/3.webp", alt: "منصة المطاعم" },
     },
@@ -1412,13 +1420,7 @@ const arServices: ServicePageData[] = [
       description: "انضم إلى آلاف المطاعم التي توفر المال وتنمو بشكل أسرع.",
       buttonText: "ابدأ تجربتك المجانية",
     },
-    pricingSection: {
-      title: "الأسعار",
-      plans: [
-        { name: "الأساسي", price: "$139", period: "/شهرياً", subtitle: "لكل فرع", features: ["210 طلب", "موقع للمطعم", "خدمة إعداد مجانية", "الطلب من الطاولة", "حجز الطاولات", "فروع متعددة", "دفع إلكتروني", "تسويق (SMS وإيميل)", "كوبونات وأكواد خصم"] },
-        { name: "الاحترافي", price: "$189", period: "/شهرياً", subtitle: "لكل فرع", features: ["كل مميزات الأساسي بالإضافة لـ:", "طلبات غير محدودة", "أتمتة التسويق", "بطاقات الهدايا", "اقتراحات الأصناف", "قوائم طعام متعددة"] },
-      ],
-    },
+    
 addonsSection: {
       title: "الإضافات",
       items: [
@@ -2235,13 +2237,22 @@ const frServices: ServicePageData[] = [
         { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" },
       ],
       services: [
-        "Commande en ligne", "Créateur de site", "Application mobile",
-        "Outils marketing", "Programme de fidélité", "Menu QR Code",
-        "Gestion de livraison", "Agrégation de commandes",
+        "Commandes illimitées",
+        "Commande et paiements en ligne",
+        "Site Web et application mobile",
+        "Service de configuration gratuit",
+        "Économisez jusqu'à 90 % sur les commissions",
+        "Commande à table et réservations",
+        "Menu QR Code et menus multiples",
+        "Gestion des livraisons et optimisation des itinéraires",
+        "Agrégation des commandes",
+        "Automatisation du marketing (E-mail et SMS)",
+        "Programme de fidélité et cartes-cadeaux",
+        "Prise en charge multi-sites"
       ],
-      gallery: [
-        { src: "/assets/images/services/restaurant-platform/1.webp", alt: "Tableau de bord" },
-        { src: "/assets/images/services/restaurant-platform/2.webp", alt: "Application mobile" },
+        gallery: [
+        { src: "/assets/images/services/restaurant-platform/1.webp", alt: "لوحة تحكم منصة المطاعم" },
+        { src: "/assets/images/services/restaurant-platform/2.webp", alt: "تطبيق الطلب عبر الهاتف" },
       ],
     },
     problemSection: {
@@ -2312,13 +2323,7 @@ const frServices: ServicePageData[] = [
       description: "Rejoignez des milliers de restaurants qui économisent de l'argent.",
       buttonText: "Essai Gratuit",
     },
-    pricingSection: {
-      title: "Tarifs",
-      plans: [
-        { name: "Standard", price: "139 $", period: "/mois", subtitle: "par 1 emplacement", features: ["210 commandes", "Site web", "Réservations de tables", "Paiements en ligne"] },
-        { name: "Premium", price: "189 $", period: "/mois", subtitle: "par 1 emplacement", features: ["Commandes illimitées", "Cartes cadeaux", "Menus multiples"] },
-      ],
-    },
+ 
     addonsSection: {
       title: "Modules Complémentaires",
       items: [
@@ -2674,8 +2679,20 @@ const esServices: ServicePageData[] = [
       subtitle: "Plataforma todo en uno", title: "Plataforma Todo en Uno para Restaurantes: Cero Comisiones",
       description: "Un sistema completo para administrar tu restaurante, hacer crecer tu marca y mantener tus ganancias. Desde pedidos en línea hasta la gestión de entregas—sin comisiones, solo resultados.",
       buttons: [ { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" }, { href: "/contact", style: "t-btn t-btn-primary", label: "Prueba Gratuita" }, { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" } ],
-      services: ["Pedidos en Línea", "Creador de Sitios Web", "App Móvil", "Herramientas de Marketing", "Programa de Lealtad", "Menú con Código QR", "Gestión de Entregas", "Agrupación de Pedidos"],
-      gallery: [{ src: "/assets/images/services/restaurant-platform/1.webp", alt: "Panel de Plataforma de Restaurante" }, { src: "/assets/images/services/restaurant-platform/2.webp", alt: "App de Pedidos Móviles" }],
+      services: [
+        "Pedidos ilimitados",
+        "Pedidos y pagos en línea",
+        "Sitio web y aplicación móvil",
+        "Servicio de configuración gratuito",
+        "Ahorre hasta un 90% en comisiones",
+        "Pedidos en la mesa y reservas",
+        "Menú con código QR y menús múltiples",
+        "Gestión de entregas y optimización de rutas",
+        "Agregación de pedidos",
+        "Automatización de marketing (Email y SMS)",
+        "Programa de fidelización y tarjetas de regalo",
+        "Soporte para múltiples ubicaciones"
+      ],      gallery: [{ src: "/assets/images/services/restaurant-platform/1.webp", alt: "Panel de Plataforma de Restaurante" }, { src: "/assets/images/services/restaurant-platform/2.webp", alt: "App de Pedidos Móviles" }],
     },
     problemSection: { title: "Deja de Perder Dinero con Aplicaciones de Terceros", description: "Los restaurantes hoy enfrentan altos costos y pérdida de control:", painPoints: ["Altas comisiones (hasta 30%) en cada pedido", "Ninguna propiedad de los datos del cliente", "Dependencia de repartidores externos", "Dificultad para manejar múltiples tabletas y sistemas"] },
     approachSection: {
@@ -2702,18 +2719,12 @@ const esServices: ServicePageData[] = [
     whyWorkWithUs: { title: "¿Por Qué Elegir Nuestra Plataforma?", points: ["0% de Comisiones en los pedidos", "Control total sobre los datos de tus clientes", "Solución todo en uno (Pedidos, Marketing, Entrega)", "Soporte dedicado para ayudarte a crecer"], footer: "Recupera el control del futuro de tu restaurante." },
     idealClients: { title: "Perfecto Para", description: "Nuestra plataforma está diseñada para:", points: ["Restaurantes Independientes", "Cadenas con múltiples ubicaciones", "Cocinas Fantasma (Ghost Kitchens)", "Cafeterías y Bares"] },
     faqsData: {
-      faqs: [{ question: "¿Realmente no hay comisión?", answer: "Sí, cobramos una tarifa mensual plana. Te quedas con el 100% de tus ingresos por ventas." }, { question: "¿Puedo usar mis propios repartidores?", answer: "Absolutamente. Nuestro sistema de gestión te permite rastrear a tus propios conductores o conectarte con mensajeros externos." }, { question: "¿Necesito un desarrollador?", answer: "No. Nuestro creador de sitios web y proceso de configuración no requieren código en absoluto." }],
+      faqs: [{ question: "¿Realmente no hay comisión?", answer: "Sí, cobramos una tarifa mensual plana. Te quedas con el 100% de tus ingresos por ventas." }, { question: "¿Puedo usar mis propios repartidores?", answer: "Absolutamente. Nuestro sistema de gestión te permite rastrear a tus propios conductores o conectarte con mensajeros externos." }],
       image: { src: "/assets/images/services/restaurant-platform/3.webp", alt: "Plataforma para Restaurantes" },
     },
     finalCTA: { title: "¿Listo para Escalar tu Restaurante?", description: "Únete a miles de restaurantes que ahorran dinero y crecen más rápido.", buttonText: "Comienza tu Prueba Gratuita" },
-    pricingSection: {
-      title: "Precios",
-      plans: [
-        { name: "Estándar", price: "$139", period: "/mes", subtitle: "por 1 ubicación", features: ["210 pedidos", "Sitio web del restaurante", "Servicio de configuración gratuito", "Pedidos desde la mesa", "Reserva de mesas", "Múltiples ubicaciones", "Pagos en línea", "Marketing por correo y SMS", "Cupones y códigos promocionales"] },
-        { name: "Premium", price: "$189", period: "/mes", subtitle: "por 1 ubicación", features: ["Todo en Estándar más:", "Pedidos ilimitados", "Automatización de marketing", "Tarjetas de regalo", "Recomendaciones de artículos", "Múltiples menús"] },
-      ],
-    },
-addonsSection: {
+    
+    addonsSection: {
       title: "Complementos (Addons)",
       items: [
         { title: "Aplicación Móvil", price: "$55", period: "/mes", description: "Tu propia aplicación móvil de marca para pedidos.", icon: "/assets/imgs/icon/mobile-app.svg" },
