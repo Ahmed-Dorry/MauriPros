@@ -506,3 +506,18 @@ html[dir="rtl"] h1 {
         line-height: 1.5 !important;
     }
 }
+/* =========================================
+   🔥 إصلاح تقطيع الحروف في عناوين الصفحات الداخلية 🔥
+   ========================================= */
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] .page-title,
+html[dir="rtl"] .breadcrumb-title {
+    text-transform: none !important;
+    -webkit-text-transform: none !important;
+    letter-spacing: normal !important;
+    font-variant-ligatures: normal !important;
+    -webkit-font-variant-ligatures: normal !important;
+    font-style: normal !important; /* لضمان عدم ميلان الحروف */
+}

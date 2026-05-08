@@ -53,7 +53,7 @@ export default function LanguageSwitcher({ variant = "default" }: LanguageSwitch
           borderRadius: isIcon ? "50%" : "30px",
           border: isIcon ? "none" : "2px solid #3bb54a",
           backgroundColor: "transparent",
-          color: "#ffffff",
+          color: "#3bb54a",
           cursor: "pointer",
           outline: "none",
           fontWeight: "600",
