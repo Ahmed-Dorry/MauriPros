@@ -53,12 +53,11 @@ const Header = () => {
   }, []);
 
   const headerData = {
-    // 🔥 قسمنا اللوجو لنسختين (أبيض وألوان) 🔥
     logo: {
       href: "/",
       srcWhite: "/assets/imgs/logo/logo-colors-white.svg",
-      // 👇 حط هنا مسار اللوجو الغامق بتاعك عشان يظهر لما الخلفية تبقى بيضا 👇
-      srcDark: "/assets/imgs/logo/logo-icon-green.svg", 
+      // 👇 اللوجو اللي هيظهر لما تنزل بالصفحة والهيدر يبقى أبيض 👇
+      srcDark: "/assets/imgs/logo/logo-colors-black.svg", 
       alt: "MauriPros Logo",
     },
     menuItems: [
@@ -127,9 +126,7 @@ const Header = () => {
       },
       { title: t("contacts"), href: "/contact" },
     ],
-    // 🔥 قسمنا أيقونة القائمة (Hamburger Menu) عشان تتغير مع السكرول كمان 🔥
     offcanvasIconSrcWhite: "/assets/imgs/icon/icon-4-white.png",
-    // حط هنا صورة القائمة السودة لو عندك، أو هنسيبها أبيض والـ CSS اللي ضفناه هيسودها
     offcanvasIconSrcDark: "/assets/imgs/icon/icon-4-white.png", 
   };
 
@@ -215,7 +212,7 @@ const Header = () => {
               <div className="header-logo">
                 <Link href={headerData.logo.href}>
                   <img
-                    // 🔥 الحركة السحرية هنا: لو نازلين لتحت، اعرض اللوجو الغامق، غير كده اعرض الأبيض 🔥
+                    // 🔥 الحركة السحرية هنا: التبديل بين اللوجو الأبيض والأسود 🔥
                     src={isScrolled ? headerData.logo.srcDark : headerData.logo.srcWhite}
                     alt={headerData.logo.alt}
                     className="normal-logo"
@@ -230,7 +227,7 @@ const Header = () => {
                 </nav>
               </div>
 
-              {/* 💡 زرار اللغات - الديسكتوب (الشكل الكامل - يختفي لأمريكا) 💡 */}
+              {/* 💡 زرار اللغات - الديسكتوب 💡 */}
               {!isUSUser && (
                 <div className="d-none d-xl-inline-flex align-items-center">
                   <LanguageSwitcher />
@@ -249,13 +246,11 @@ const Header = () => {
                 </Link>
               </div>
 
-              {/* 💡 قسم الموبايل (أيقونة القائمة + أيقونة اللغات الصغيرة) 💡 */}
+              {/* 💡 قسم الموبايل (أيقونة القائمة + أيقونة اللغات) 💡 */}
               <div className="header-offcanvas d-flex align-items-center gap-3">
                 
-                {/* 💡 أيقونة اللغات للموبايل - نمرر variant="icon" لتغيير الشكل 💡 */}
                 {!isUSUser && (
                   <div className="d-xl-none text-white mobile-lang-icon">
-                    {/* 👇 السر هنا: بنطلب منه يعرض نسخة الأيقونة بس 👇 */}
                     <LanguageSwitcher variant="icon" />
                   </div>
                 )}
@@ -266,10 +261,8 @@ const Header = () => {
                   aria-label="Toggle Sidebar"
                 >
                   <img 
-                    // 🔥 تغيير أيقونة الهامبرجر مع السكرول برضه 🔥
                     src={isScrolled ? headerData.offcanvasIconSrcDark : headerData.offcanvasIconSrcWhite} 
                     alt="Menu Icon" 
-                    // لو معندكش صورة أيقونة غامقة، خليك معتمد على كود الـ CSS اللي ادهولك في الرسالة اللي فاتت هيعمل الواجب
                   />
                 </button>
               </div>
