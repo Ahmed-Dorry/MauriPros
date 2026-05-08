@@ -1,5 +1,6 @@
 import React from "react";
-import {BreadcrumbContent, BreadcrumbProps} from "@/types/common/breadcrumb";
+import { BreadcrumbContent, BreadcrumbProps } from "@/types/common/breadcrumb";
+import { useLocale } from "next-intl"; // 👈 1. استدعينا مكتبة اللغات
 
 export const breadcrumbContent: BreadcrumbContent = {
   // backgroundImage: breadcrumbServicesImage,
@@ -11,6 +12,9 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
   // backgroundImage = breadcrumbContent.backgroundImage,
   classNameCustom,
 }) => {
+  const locale = useLocale(); // 👈 2. جبنا اللغة الحالية
+  const isArabic = locale === 'ar'; // 👈 3. عملنا شرط للعربي
+
   return (
     <div
       // style={{
@@ -23,9 +27,15 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
       <div className="container">
         <div className="row">
           <div className="col-12">
+            {/* 👇 4. التعديل السحري هنا: تبديل الكلاسات وإلغاء الميلان 👇 */}
             <h1
-              className="h1 breadcrumb-area__title fade_up_anim"
+              className={`h1 breadcrumb-area__title ${isArabic ? 'fade-anim' : 'fade_up_anim'}`}
               data-delay=".2"
+              style={
+                isArabic 
+                  ? { fontStyle: "normal", textTransform: "none" } 
+                  : {}
+              }
             >
               {title}
             </h1>

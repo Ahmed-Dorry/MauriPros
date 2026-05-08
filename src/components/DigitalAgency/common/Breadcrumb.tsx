@@ -1,6 +1,6 @@
 import Link from "@/components/CustomLink";
 import React from "react";
-import { useTranslations } from "next-intl"; // 👈 استدعاء الترجمة
+import { useTranslations, useLocale } from "next-intl"; // 👈 استدعينا useLocale هنا
 
 interface BreadcrumbProps {
   title: string;
@@ -11,10 +11,21 @@ interface BreadcrumbProps {
 const Breadcrumb:React.FC<BreadcrumbProps> = ({ title, subTitle, pageName }) => {
   // 👈 بنسحب الترجمة من بلوك Breadcrumb اللي في ملفات JSON
   const t = useTranslations("Breadcrumb");
+  
+  const locale = useLocale(); // 👈 عرفنا اللغة
+  const isArabic = locale === "ar";
 
   const finalTitle = title?.trim() || "TITLE";
   const finalSubTitle = subTitle?.trim() || "Sub Title";
   const finalPageName = pageName?.trim() || "Page Name";
+
+  // 👇 ستايل إجباري للعربي عشان نلغي الميلان ونربط الحروف 👇
+  const arabicStyles = isArabic ? {
+    fontStyle: "normal",
+    textTransform: "none" as const,
+    letterSpacing: "normal",
+    fontVariantLigatures: "normal"
+  } : {};
 
   return (
     <section className="page-title-area">
@@ -29,14 +40,20 @@ const Breadcrumb:React.FC<BreadcrumbProps> = ({ title, subTitle, pageName }) => 
             <div className="section-content">
               <div className="section-title-wrapper">
                 <div className="title-wrapper">
-                  <h1 className="section-title char-anim">
+                  {/* 👇 التعديل هنا على العنوان (الخدمات) 👇 */}
+                  <h1 
+                    className={`section-title ${isArabic ? 'fade-anim' : 'char-anim'}`}
+                    style={arabicStyles}
+                  >
                     {finalTitle}
                   </h1>
                 </div>
                 <div className="subtitle-wrapper">
+                  {/* 👇 التعديل هنا على العنوان الفرعي (ماذا نقدم) 👇 */}
                   <span
-                    className="section-subtitle char-anim"
+                    className={`section-subtitle ${isArabic ? 'fade-anim' : 'char-anim'}`}
                     data-delay="0.75"
+                    style={arabicStyles}
                   >
                     {finalSubTitle}
                   </span>

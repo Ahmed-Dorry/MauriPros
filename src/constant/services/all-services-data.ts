@@ -60,6 +60,8 @@ export interface ServicePageData {
       price: string;
       period: string;
       description: string;
+      icon?: string;
+      
     }[];
   };
 }
@@ -402,65 +404,120 @@ const enServices: ServicePageData[] = [
     },
     finalCTA: { title: "Let's Make Email Work for Your Business", description: "Turn your email list into a powerful revenue and relationship channel.", buttonText: "Get a free consultation" },
   },
-  {
-    slug: "restaurant-platform",
-    name: "Restaurant Platform",
-    heroSection: {
-      subtitle: "All-in-one restaurant platform", title: "All-in-One Restaurant Platform: Zero Commissions",
-      description: "A complete system to run your restaurant, grow your brand, and keep your profits. From online ordering to delivery management—no commissions, just results.",
-      buttons: [ { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" }, { href: "/contact", style: "t-btn t-btn-primary", label: "Start Free Trial" }, { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" } ],
-      services: ["Online Ordering", "Website Builder", "Mobile App", "Marketing Tools", "Loyalty Program", "QR Code Menu", "Delivery Management", "Order Aggregation"],
-      gallery: [{ src: "/assets/images/services/restaurant-platform/1.webp", alt: "Restaurant Platform Dashboard" }, { src: "/assets/images/services/restaurant-platform/2.webp", alt: "Mobile Ordering App" }],
-    },
-    problemSection: { title: "Stop Losing Money to Third-Party Apps", description: "Restaurants today face high costs and loss of control:", painPoints: ["High commissions (up to 30%) on every order", "No ownership of customer data", "Reliance on third-party delivery drivers", "Difficulty managing multiple tablets and systems"] },
-    approachSection: {
-      sectionHeader: { subtitle: "About Us", title: "Supporting Restaurants to Grow" }, video: { src: "/assets/images/services/restaurant-platform/3.webp", type: "video/mp4" },
-      content: { title: "We empower restaurateurs with the tools they need to succeed", paragraphs: ["From onboarding to ongoing assistance, we provide flexible tools and strategies tailored to meet the unique goals of each restaurant.", "Our platform has consistently increased order values and customer retention for our clients by putting the power back in your hands."] },
-    },
-    whatsIncluded: {
-      title: "Our Offer",
-      categories: [
-        { title: "Online Ordering System", items: ["Save up to 90% on third-party commissions", "Sell directly without a middleman", "Seamlessly manage menu, orders, and delivery", "Integrate with your POS and delivery services"] },
-        { title: "Restaurant Website & App", items: ["Professional website builder (no coding needed)", "Branded mobile app (iOS & Android)", "Built-in online ordering & reservations", "Supports multi-location restaurants"] },
-        { title: "Marketing & Loyalty", items: ["Creates promotions and discounts", "Automated loyalty programs (retention on auto-pilot)", "SMS, Email, and Push campaigns", "Detailed reports for informed decisions"] },
-        { title: "Operations & Delivery", items: ["QR Code Menu & tableside ordering", "Delivery management (track drivers in real-time)", "Optimized routes to save fuel and time", "Delivery dispatching without owning a fleet"] },
-      ],
-    },
-    processSection: {
-      sectionSubtitle: "Get Started", sectionTitle: "3 Steps to Freedom", ctaText: "Get Started", ctaLink: "/contact",
-      steps: [
-        { id: 1, number: "01", title: "Setup", description: "We help you set up your menu, website, and branded app.", image: "/assets/images/Pricing/5.png" },
-        { id: 2, number: "02", title: "Launch", description: "Go live with your own ordering system and start marketing.", image: "/assets/images/Pricing/0.png" },
-        { id: 3, number: "03", title: "Grow", description: "Retain customers with loyalty programs and keep your profits.", image: "/assets/images/Pricing/1.png" },
-      ],
-    },
-    whyWorkWithUs: { title: "Why Choose Our Platform?", points: ["0% Commissions on orders", "Full control over your customer data", "All-in-one solution (Ordering, Marketing, Delivery)", "Dedicated support to help you grow"], footer: "Take back control of your restaurant's future." },
-    idealClients: { title: "Perfect For", description: "Our platform is built for:", points: ["Independent Restaurants", "Multi-location Chains", "Ghost Kitchens", "Cafes & Bars"] },
-    faqsData: {
-      faqs: [{ question: "Is there really no commission?", answer: "Yes, we charge a flat monthly fee. You keep 100% of your sales revenue." }, { question: "Can I use my own drivers?", answer: "Absolutely. Our delivery management system lets you track your own drivers or connect with third-party couriers." }, { question: "Do I need a developer?", answer: "No. Our website builder and setup process are completely code-free." }],
-      image: { src: "/assets/images/services/restaurant-platform/3.webp", alt: "Restaurant Platform" },
-    },
-    finalCTA: { title: "Ready to Scale Your Restaurant?", description: "Join thousands of restaurants saving money and growing faster.", buttonText: "Start Free Trial" },
-    pricingSection: {
-      title: "Pricing",
-      plans: [
-        { name: "Standard", price: "$139", period: "/month", subtitle: "per 1 location", features: ["210 orders", "Restaurant website", "Free setup service", "Tableside Ordering", "Table Reservations", "Multi Location", "Online Payments", "Email & SMS marketing", "Coupons & Promo Codes"] },
-        { name: "Premium", price: "$189", period: "/month", subtitle: "per 1 location", features: ["All in Standard plus:", "Unlimited orders", "Marketing Automation", "Gift Cards", "Item Recommendations", "Multiple Menus"] },
-      ],
-    },
-    addonsSection: {
-      title: "Addons",
-      items: [
-        { title: "Mobile App", price: "$55", period: "/month", description: "Your own branded mobile app for restaurant ordering." },
-        { title: "Loyalty Program", price: "$25", period: "/month", description: "Turn your one-time restaurant clients into regular customers." },
-        { title: "Delivery Dispatcher", price: "$40", period: "/month", description: "Start offering deliveries with third-party services—no own fleet needed." },
-        { title: "Driver app", price: "$14", period: "/month", description: "Manage your deliveries & drivers with courier app." },
-        { title: "Order Aggregation", price: "$40", period: "/month", description: "Manage all orders from every channel in one place — no more multiple tablets." },
-        { title: "POS Integrations", price: "$0", period: "/month", description: "Integrate and sync all of your online orders with your POS system." },
-      ],
+ {
+  slug: "restaurant-platform",
+  name: "Restaurant Platform",
+  heroSection: {
+    subtitle: "All-in-one restaurant platform", 
+    title: "All-in-One Restaurant Platform: Zero Commissions",
+    description: "A complete system to run your restaurant, grow your brand, and keep your profits. From online ordering to delivery management—no commissions, just results.",
+    buttons: [ 
+      { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" }, 
+      { href: "/contact", style: "t-btn t-btn-primary", label: "Start Free Trial" }, 
+      { href: "/contact", style: "t-btn t-btn-circle", icon: "fa-solid fa-arrow-right" } 
+    ],
+    // 👇 جمعنا كل الفيتشرز هنا عشان تظهر في أول الصفحة بشياكة 👇
+    services: [
+      "Unlimited orders",
+      "Online Ordering & Payments",
+      "Restaurant Website & Mobile App",
+      "Free Setup Service",
+      "Save up to 90% on commissions",
+      "Tableside Ordering & Reservations",
+      "QR Code Menu & Multiple Menus",
+      "Delivery Management & Route Optimization",
+      "Order Aggregation",
+      "Marketing Automation (Email & SMS)",
+      "Loyalty Program & Gift Cards",
+      "Multi Location Support"
+    ],
+    gallery: [
+      { src: "/assets/images/services/restaurant-platform/1.webp", alt: "Restaurant Platform Dashboard" }, 
+      { src: "/assets/images/services/restaurant-platform/2.webp", alt: "Mobile Ordering App" }
+    ],
+  },
+  problemSection: { 
+    title: "Stop Losing Money to Third-Party Apps", 
+    description: "Restaurants today face high costs and loss of control:", 
+    painPoints: ["High commissions (up to 30%) on every order", "No ownership of customer data", "Reliance on third-party delivery drivers", "Difficulty managing multiple tablets and systems"] 
+  },
+  approachSection: {
+    sectionHeader: { subtitle: "About Us", title: "Supporting Restaurants to Grow" }, 
+    video: { src: "/assets/images/services/restaurant-platform/3.webp", type: "video/mp4" },
+    content: { 
+      title: "We empower restaurateurs with the tools they need to succeed", 
+      paragraphs: [
+        "From onboarding to ongoing assistance, we provide flexible tools and strategies tailored to meet the unique goals of each restaurant.", 
+        "Our platform has consistently increased order values and customer retention for our clients by putting the power back in your hands."
+      ] 
     },
   },
+  whatsIncluded: {
+    title: "Everything You Need in One Platform",
+    categories: [
+      { 
+        title: "All-in-One Features", 
+        items: [
+          "Unlimited orders",
+          "Restaurant website & Free setup service",
+          "Save up to 90% on commissions",
+          "Tableside Ordering & Table Reservations",
+          "Multi Location Support",
+          "Online Payments Integration",
+          "Email & SMS marketing",
+          "Marketing Automation & Gift Cards",
+          "Delivery management & Route optimization",
+          "QR Code Menu & Multiple Menus"
+        ] 
+      }
+    ],
+  },
+  processSection: {
+    sectionSubtitle: "Get Started", sectionTitle: "3 Steps to Freedom", ctaText: "Get Started", ctaLink: "/contact",
+    steps: [
+      { id: 1, number: "01", title: "Setup", description: "We help you set up your menu, website, and branded app.", image: "/assets/images/Pricing/5.png" },
+      { id: 2, number: "02", title: "Launch", description: "Go live with your own ordering system and start marketing.", image: "/assets/images/Pricing/0.png" },
+      { id: 3, number: "03", title: "Grow", description: "Retain customers with loyalty programs and keep your profits.", image: "/assets/images/Pricing/1.png" },
+    ],
+  },
+  whyWorkWithUs: { 
+    title: "Why Choose Our Platform?", 
+    points: ["0% Commissions on orders", "Full control over your customer data", "All-in-one solution", "Dedicated support"], 
+    footer: "Take back control of your restaurant's future." 
+  },
+  idealClients: { 
+    title: "Perfect For", 
+    description: "Our platform is built for:", 
+    points: ["Independent Restaurants", "Multi-location Chains", "Ghost Kitchens", "Cafes & Bars"] 
+  },
+  faqsData: {
+    faqs: [
+      { question: "Is there really no commission?", answer: "Yes, we charge a flat monthly fee. You keep 100% of your sales revenue." }, 
+      { question: "Can I use my own drivers?", answer: "Absolutely. Our delivery management system lets you track your own drivers or connect with third-party couriers." }
+      // 👈 تم حذف سؤال المبرمج بنجاح
+    ],
+    image: { src: "/assets/images/services/restaurant-platform/3.webp", alt: "Restaurant Platform" },
+  },
+  finalCTA: { 
+    title: "Ready to Scale Your Restaurant?", 
+    description: "Join thousands of restaurants saving money and growing faster.", 
+    buttonText: "Start Free Trial" 
+  },
+  // 👇 تم إضافة الأيقونات لكل الإضافات 👇
+  addonsSection: {
+    title: "Addons",
+    items: [
+      { title: "Mobile App", price: "$55", period: "/month", description: "Your own branded mobile app for restaurant ordering.", icon: "/assets/imgs/icon/mobile-app.svg" },
+      { title: "Loyalty Program", price: "$25", period: "/month", description: "Turn your one-time restaurant clients into regular customers.", icon: "/assets/imgs/icon/loyalty.svg" },
+      { title: "Delivery Dispatcher", price: "$40", period: "/month", description: "Start offering deliveries with third-party services.", icon: "/assets/imgs/icon/delivery.svg" },
+      { title: "Driver app", price: "$14", period: "/month", description: "Manage your deliveries & drivers with courier app.", icon: "/assets/imgs/icon/driver.svg" },
+      { title: "Order Aggregation", price: "$40", period: "/month", description: "Manage all orders from every channel in one place.", icon: "/assets/imgs/icon/aggregation.svg" },
+      { title: "POS Integrations", price: "$0", period: "/month", description: "Integrate and sync all of your online orders with your POS system.", icon: "/assets/imgs/icon/pos.svg" },
+    ],
+  },
+}
 ];
+
   // 👈 ضيف باقي الخدمات الإنجليزي بتاعتك هنا (SEO, Social Media, etc...)
 
 // 2. الداتا العربي (مترجمة بالكامل لخدمة تصميم المواقع كمثال)
@@ -1362,15 +1419,15 @@ const arServices: ServicePageData[] = [
         { name: "الاحترافي", price: "$189", period: "/شهرياً", subtitle: "لكل فرع", features: ["كل مميزات الأساسي بالإضافة لـ:", "طلبات غير محدودة", "أتمتة التسويق", "بطاقات الهدايا", "اقتراحات الأصناف", "قوائم طعام متعددة"] },
       ],
     },
-    addonsSection: {
+addonsSection: {
       title: "الإضافات",
       items: [
-        { title: "تطبيق موبايل", price: "$55", period: "/شهرياً", description: "تطبيق خاص بمطعمك بهويتك البصرية." },
-        { title: "برنامج الولاء", price: "$25", period: "/شهرياً", description: "حول الزوار العابرين إلى عملاء دائمين." },
-        { title: "موزع التوصيل", price: "$40", period: "/شهرياً", description: "قدم خدمة التوصيل عبر أطراف ثالثة دون الحاجة لأسطولك الخاص." },
-        { title: "تطبيق السائقين", price: "$14", period: "/شهرياً", description: "إدارة سائقيك وتتبعهم عبر تطبيق مخصص." },
-        { title: "تجميع الطلبات", price: "$40", period: "/شهرياً", description: "إدارة كل الطلبات من مكان واحد — وداعاً للأجهزة اللوحية المتعددة." },
-        { title: "الربط مع POS", price: "$0", period: "/شهرياً", description: "مزامنة طلبات الأونلاين مع نظام نقاط البيع لديك." },
+        { title: "تطبيق موبايل", price: "$55", period: "/شهرياً", description: "تطبيق خاص بمطعمك بهويتك البصرية.", icon: "/assets/imgs/icon/mobile-app.svg" },
+        { title: "برنامج الولاء", price: "$25", period: "/شهرياً", description: "حول الزوار العابرين إلى عملاء دائمين.", icon: "/assets/imgs/icon/loyalty.svg" },
+        { title: "موزع التوصيل", price: "$40", period: "/شهرياً", description: "قدم خدمة التوصيل عبر أطراف ثالثة دون الحاجة لأسطولك الخاص.", icon: "/assets/imgs/icon/delivery.svg" },
+        { title: "تطبيق السائقين", price: "$14", period: "/شهرياً", description: "إدارة سائقيك وتتبعهم عبر تطبيق مخصص.", icon: "/assets/imgs/icon/driver.svg" },
+        { title: "تجميع الطلبات", price: "$40", period: "/شهرياً", description: "إدارة كل الطلبات من مكان واحد — وداعاً للأجهزة اللوحية المتعددة.", icon: "/assets/imgs/icon/aggregation.svg" },
+        { title: "الربط مع POS", price: "$0", period: "/شهرياً", description: "مزامنة طلبات الأونلاين مع نظام نقاط البيع لديك.", icon: "/assets/imgs/icon/pos.svg" },
       ],
     },
   },
@@ -2265,9 +2322,9 @@ const frServices: ServicePageData[] = [
     addonsSection: {
       title: "Modules Complémentaires",
       items: [
-        { title: "Application Mobile", price: "55 $", period: "/mois", description: "Votre propre application mobile." },
-        { title: "Programme de fidélité", price: "25 $", period: "/mois", description: "Transformez vos clients." },
-        { title: "Dispatch de livraison", price: "40 $", period: "/mois", description: "Proposez des livraisons tierces." },
+        { title: "Application Mobile", price: "55 $", period: "/mois", description: "Votre propre application mobile.", icon: "/assets/imgs/icon/mobile-app.svg" },
+        { title: "Programme de fidélité", price: "25 $", period: "/mois", description: "Transformez vos clients.", icon: "/assets/imgs/icon/loyalty.svg" },
+        { title: "Dispatch de livraison", price: "40 $", period: "/mois", description: "Proposez des livraisons tierces.", icon: "/assets/imgs/icon/delivery.svg" },
       ],
     },
   },
@@ -2656,15 +2713,15 @@ const esServices: ServicePageData[] = [
         { name: "Premium", price: "$189", period: "/mes", subtitle: "por 1 ubicación", features: ["Todo en Estándar más:", "Pedidos ilimitados", "Automatización de marketing", "Tarjetas de regalo", "Recomendaciones de artículos", "Múltiples menús"] },
       ],
     },
-    addonsSection: {
+addonsSection: {
       title: "Complementos (Addons)",
       items: [
-        { title: "Aplicación Móvil", price: "$55", period: "/mes", description: "Tu propia aplicación móvil de marca para pedidos." },
-        { title: "Programa de Lealtad", price: "$25", period: "/mes", description: "Convierte a los clientes ocasionales en clientes habituales." },
-        { title: "Despachador de Entregas", price: "$40", period: "/mes", description: "Comienza a ofrecer entregas con servicios de terceros—sin necesidad de flota propia." },
-        { title: "App para Conductores", price: "$14", period: "/mes", description: "Gestiona tus entregas y conductores con una aplicación de mensajería." },
-        { title: "Agrupación de Pedidos", price: "$40", period: "/mes", description: "Gestiona todos los pedidos de cada canal en un solo lugar — no más múltiples tabletas." },
-        { title: "Integraciones POS", price: "$0", period: "/mes", description: "Integra y sincroniza todos tus pedidos en línea con tu sistema POS." },
+        { title: "Aplicación Móvil", price: "$55", period: "/mes", description: "Tu propia aplicación móvil de marca para pedidos.", icon: "/assets/imgs/icon/mobile-app.svg" },
+        { title: "Programa de Lealtad", price: "$25", period: "/mes", description: "Convierte a los clientes ocasionales en clientes habituales.", icon: "/assets/imgs/icon/loyalty.svg" },
+        { title: "Despachador de Entregas", price: "$40", period: "/mes", description: "Comienza a ofrecer entregas con servicios de terceros—sin necesidad de flota propia.", icon: "/assets/imgs/icon/delivery.svg" },
+        { title: "App para Conductores", price: "$14", period: "/mes", description: "Gestiona tus entregas y conductores con una aplicación de mensajería.", icon: "/assets/imgs/icon/driver.svg" },
+        { title: "Agrupación de Pedidos", price: "$40", period: "/mes", description: "Gestiona todos los pedidos de cada canal en un solo lugar — no más múltiples tabletas.", icon: "/assets/imgs/icon/aggregation.svg" },
+        { title: "Integraciones POS", price: "$0", period: "/mes", description: "Integra y sincroniza todos tus pedidos en línea con tu sistema POS.", icon: "/assets/imgs/icon/pos.svg" },
       ],
     },
   },

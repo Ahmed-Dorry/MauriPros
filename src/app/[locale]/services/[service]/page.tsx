@@ -92,9 +92,6 @@ export default async function ServicePage({ params }: ServicePageProps): Promise
             <ProblemSection data={serviceData.problemSection} />
           </NoSSR>
           
-          <NoSSR>
-            <WhatsIncludedSection data={serviceData.whatsIncluded} />
-          </NoSSR>
           
           <NoSSR>
             <ProcessSection className="page-services" data={serviceData.processSection} />

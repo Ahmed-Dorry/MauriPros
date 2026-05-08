@@ -6,6 +6,7 @@ interface AddonItem {
     price: string;
     period: string;
     description: string;
+    icon?: string; // 👈 1. ضفنا المتغير بتاع الأيقونة هنا
 }
 
 interface AddonsSectionProps {
@@ -27,12 +28,21 @@ const AddonsSection: React.FC<AddonsSectionProps> = ({ data }) => {
                 <div className="row g-4">
                     {data.items.map((item, index) => (
                         <div key={index} className="col-lg-4 col-md-6 fade_up_anim" data-delay={`${0.1 * (index + 1)}`}>
-                            <div className="addon-card h-100 p-4 bg-white rounded-3 shadow-sm">
-                                <h3 className="h5 fw-bold mb-2">{item.title}</h3>
-                                {/*<div className="d-flex align-items-baseline mb-3">*/}
-                                {/*    <span className="h4 fw-bold text-success mb-0">{item.price}</span>*/}
-                                {/*    <span className="text-muted ms-2 small">{item.period}</span>*/}
-                                {/*</div>*/}
+                            {/* 👇 ضفنا text-center عشان الأيقونة والكلام يبقوا متناسقين 👇 */}
+                            <div className="addon-card h-100 p-4 bg-white rounded-3 shadow-sm text-center">
+                                
+                                {/* 👇 2. كود عرض الأيقونة لو موجودة في الداتا 👇 */}
+                                {item.icon && (
+                                    <div className="icon-wrapper mb-4 d-flex justify-content-center">
+                                        <img 
+                                            src={item.icon} 
+                                            alt={item.title} 
+                                            style={{ width: "64px", height: "64px", objectFit: "contain" }} 
+                                        />
+                                    </div>
+                                )}
+
+                                <h3 className="h5 fw-bold mb-3">{item.title}</h3>
                                 <p className="text-muted mb-0 small">{item.description}</p>
                             </div>
                         </div>

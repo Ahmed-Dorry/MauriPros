@@ -480,7 +480,7 @@ html[dir="rtl"] h1 {
 .safe-hero-title *,
 .Typewriter__wrapper,
 .Typewriter__cursor {
-    font-size: 150px !important; /* 👈 تكبير خط الكمبيوتر هنا */
+    font-size: 100px !important; /* 👈 تكبير خط الكمبيوتر هنا */
     font-weight: 700;
     color: #ffffff;
     line-height: 1.4; /* قللنا الارتفاع شوية عشان الخط كبر */
