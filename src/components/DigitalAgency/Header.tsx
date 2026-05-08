@@ -1,7 +1,7 @@
 "use client";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import Link from "@/components/CustomLink";
-import React, { useState, useEffect } from "react"; // 👈 ضفنا useEffect هنا
+import React, { useState, useEffect } from "react"; 
 import Sidebar from "@/components/DigitalAgency/SideBar/SideBar";
 import useStickyHeader from "@/Hook/useStickyHeader";
 import { useTranslations } from "next-intl";
@@ -23,6 +23,9 @@ const Header = () => {
 
   // 💡 State لمعرفة هل اليوزر من أمريكا ولا لأ (عشان نخفي اللغات)
   const [isUSUser, setIsUSUser] = useState<boolean>(false);
+  
+  // 🔥 State جديد عشان نراقب النزول بالصفحة ونغير اللوجو بناءً عليه 🔥
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const t = useTranslations("Header");
 
@@ -34,10 +37,28 @@ const Header = () => {
     }
   }, []);
 
+  // 🔥 إضافة مراقب حركة الشاشة (Scroll Listener) عشان تغيير اللوجو 🔥
+  useEffect(() => {
+    const handleScroll = () => {
+      // لو نزلنا أكتر من 50 بيكسل، الهيدر هيقلب أبيض فبنخلي المتغير true
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const headerData = {
+    // 🔥 قسمنا اللوجو لنسختين (أبيض وألوان) 🔥
     logo: {
       href: "/",
-      src: "/assets/imgs/logo/logo-colors-white.svg",
+      srcWhite: "/assets/imgs/logo/logo-colors-white.svg",
+      // 👇 حط هنا مسار اللوجو الغامق بتاعك عشان يظهر لما الخلفية تبقى بيضا 👇
+      srcDark: "/assets/imgs/logo/logo-icon-green.svg", 
       alt: "MauriPros Logo",
     },
     menuItems: [
@@ -106,7 +127,10 @@ const Header = () => {
       },
       { title: t("contacts"), href: "/contact" },
     ],
-    offcanvasIconSrc: "/assets/imgs/icon/icon-4-white.png",
+    // 🔥 قسمنا أيقونة القائمة (Hamburger Menu) عشان تتغير مع السكرول كمان 🔥
+    offcanvasIconSrcWhite: "/assets/imgs/icon/icon-4-white.png",
+    // حط هنا صورة القائمة السودة لو عندك، أو هنسيبها أبيض والـ CSS اللي ضفناه هيسودها
+    offcanvasIconSrcDark: "/assets/imgs/icon/icon-4-white.png", 
   };
 
   const renderMenu = (items: MenuItem[]) => {
@@ -191,7 +215,8 @@ const Header = () => {
               <div className="header-logo">
                 <Link href={headerData.logo.href}>
                   <img
-                    src={headerData.logo.src}
+                    // 🔥 الحركة السحرية هنا: لو نازلين لتحت، اعرض اللوجو الغامق، غير كده اعرض الأبيض 🔥
+                    src={isScrolled ? headerData.logo.srcDark : headerData.logo.srcWhite}
                     alt={headerData.logo.alt}
                     className="normal-logo"
                   />
@@ -240,7 +265,12 @@ const Header = () => {
                   onClick={handleSidebar}
                   aria-label="Toggle Sidebar"
                 >
-                  <img src={headerData?.offcanvasIconSrc} alt="Menu Icon" />
+                  <img 
+                    // 🔥 تغيير أيقونة الهامبرجر مع السكرول برضه 🔥
+                    src={isScrolled ? headerData.offcanvasIconSrcDark : headerData.offcanvasIconSrcWhite} 
+                    alt="Menu Icon" 
+                    // لو معندكش صورة أيقونة غامقة، خليك معتمد على كود الـ CSS اللي ادهولك في الرسالة اللي فاتت هيعمل الواجب
+                  />
                 </button>
               </div>
 

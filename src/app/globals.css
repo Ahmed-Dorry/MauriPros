@@ -521,3 +521,18 @@ html[dir="rtl"] .breadcrumb-title {
     -webkit-font-variant-ligatures: normal !important;
     font-style: normal !important; /* لضمان عدم ميلان الحروف */
 }
+/* =========================================
+   🔥 إصلاح أيقونة القائمة في الهيدر الأبيض (Sticky Header) 🔥
+   ========================================= */
+header.sticky .offcanvas-btn span,
+header.is-sticky .offcanvas-btn span,
+header.sticky-active .offcanvas-btn span,
+header[class*="sticky"] .offcanvas-btn span,
+header[class*="sticky"] .menu-toggle span {
+    background-color: #333333 !important; /* بيخلي الخطوط سودة */
+}
+
+header[class*="sticky"] .offcanvas-btn i,
+header[class*="sticky"] .menu-toggle i {
+    color: #333333 !important; /* لو كانت الأيقونة عبارة عن أيقونة خطية */
+}
