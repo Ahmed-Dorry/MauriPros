@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useLocale } from "next-intl"; // 👈 استدعينا مكتبة اللغات
 
 export interface OurStoryVideoData {
     subtitle?: string;
@@ -12,6 +13,9 @@ interface OurStoryVideoSectionProps {
 }
 
 const OurStoryVideoSection: React.FC<OurStoryVideoSectionProps> = ({ data }) => {
+    const locale = useLocale(); // 👈 عرفنا اللغة
+    const isArabic = locale === "ar";
+
     return (
         <section className="story-area fade-anim">
             <div className="area-bg">
@@ -36,7 +40,11 @@ const OurStoryVideoSection: React.FC<OurStoryVideoSectionProps> = ({ data }) => 
                         {data.subtitle && (
                             <div className="section-title-wrapper justify-content-center mb-4">
                                 <div className="subtitle-wrapper fade-anim">
-                                    <span className="section-subtitle bg-transparent text-white border-white">
+                                    {/* 👇 لغينا الميلان من "قصتنا" في العربي 👇 */}
+                                    <span 
+                                        className="section-subtitle bg-transparent text-white border-white"
+                                        style={isArabic ? { fontStyle: "normal", letterSpacing: "normal" } : {}}
+                                    >
                                         {data.subtitle}
                                     </span>
                                 </div>
@@ -45,13 +53,17 @@ const OurStoryVideoSection: React.FC<OurStoryVideoSectionProps> = ({ data }) => 
 
                         <div className="hero-content justify-content-center">
                             <div className="text-wrapper" style={{ maxWidth: '900px', margin: '0 auto' }}>
+                                {/* 👇 هنا لغينا word-anim في العربي، ولغينا الـ italic الافتراضي 👇 */}
                                 <p
-                                    className="text word-anim text-white"
+                                    className={`text text-white ${isArabic ? 'fade-anim' : 'word-anim'}`}
                                     style={{
                                         fontSize: 'clamp(1.25rem, 2vw, 1.75rem)',
                                         lineHeight: '1.6',
                                         fontWeight: '300',
-                                        fontStyle: 'italic'
+                                        // لو عربي هنخليه عادي، لو إنجليزي هنخليه مايل زي ما كان
+                                        fontStyle: isArabic ? 'normal' : 'italic',
+                                        letterSpacing: isArabic ? 'normal' : 'inherit',
+                                        fontVariantLigatures: isArabic ? 'normal' : 'inherit'
                                     }}
                                     suppressHydrationWarning={true}
                                 >
