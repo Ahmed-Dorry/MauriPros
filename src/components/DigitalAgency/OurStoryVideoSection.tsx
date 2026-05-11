@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useLocale } from "next-intl"; // 👈 استدعينا مكتبة اللغات
+import { useLocale } from "next-intl"; 
 
 export interface OurStoryVideoData {
     subtitle?: string;
@@ -13,7 +13,7 @@ interface OurStoryVideoSectionProps {
 }
 
 const OurStoryVideoSection: React.FC<OurStoryVideoSectionProps> = ({ data }) => {
-    const locale = useLocale(); // 👈 عرفنا اللغة
+    const locale = useLocale(); 
     const isArabic = locale === "ar";
 
     return (
@@ -26,7 +26,7 @@ const OurStoryVideoSection: React.FC<OurStoryVideoSectionProps> = ({ data }) => 
                         left: 0,
                         width: '100%',
                         height: '100%',
-                        backgroundColor: 'rgba(0, 0, 0, 0.5)', // Dark overlay for readability
+                        backgroundColor: 'rgba(0, 0, 0, 0.5)', 
                         zIndex: 1
                     }}
                 ></div>
@@ -40,10 +40,9 @@ const OurStoryVideoSection: React.FC<OurStoryVideoSectionProps> = ({ data }) => 
                         {data.subtitle && (
                             <div className="section-title-wrapper justify-content-center mb-4">
                                 <div className="subtitle-wrapper fade-anim">
-                                    {/* 👇 لغينا الميلان من "قصتنا" في العربي 👇 */}
                                     <span 
                                         className="section-subtitle bg-transparent text-white border-white"
-                                        style={isArabic ? { fontStyle: "normal", letterSpacing: "normal" } : {}}
+                                        style={isArabic ? { fontStyle: "normal", letterSpacing: "0px" } : {}}
                                     >
                                         {data.subtitle}
                                     </span>
@@ -53,22 +52,35 @@ const OurStoryVideoSection: React.FC<OurStoryVideoSectionProps> = ({ data }) => 
 
                         <div className="hero-content justify-content-center">
                             <div className="text-wrapper" style={{ maxWidth: '900px', margin: '0 auto' }}>
-                                {/* 👇 هنا لغينا word-anim في العربي، ولغينا الـ italic الافتراضي 👇 */}
-                                <p
-                                    className={`text text-white ${isArabic ? 'fade-anim' : 'word-anim'}`}
-                                    style={{
-                                        fontSize: 'clamp(1.25rem, 2vw, 1.75rem)',
-                                        lineHeight: '1.6',
-                                        fontWeight: '300',
-                                        // لو عربي هنخليه عادي، لو إنجليزي هنخليه مايل زي ما كان
-                                        fontStyle: isArabic ? 'normal' : 'italic',
-                                        letterSpacing: isArabic ? 'normal' : 'inherit',
-                                        fontVariantLigatures: isArabic ? 'normal' : 'inherit'
-                                    }}
-                                    suppressHydrationWarning={true}
-                                >
-                                    {data.text}
-                                </p>
+                                {/* 👇 الضربة القاضية: فصلنا العربي عن الإنجليزي عشان السكريبت ميعرفش يمسك العربي 👇 */}
+                                {isArabic ? (
+                                    <p
+                                        className="text-white fade-anim" // شيلنا كلاس text و word-anim خالص
+                                        style={{
+                                            fontSize: 'clamp(1.25rem, 2vw, 1.75rem)',
+                                            lineHeight: '1.6',
+                                            fontWeight: '300',
+                                            fontStyle: 'normal', // إجبار إنه ميكونش مايل
+                                            letterSpacing: '0px',
+                                            fontVariantLigatures: 'normal'
+                                        }}
+                                    >
+                                        {data.text}
+                                    </p>
+                                ) : (
+                                    <p
+                                        className="text word-anim text-white"
+                                        style={{
+                                            fontSize: 'clamp(1.25rem, 2vw, 1.75rem)',
+                                            lineHeight: '1.6',
+                                            fontWeight: '300',
+                                            fontStyle: 'italic'
+                                        }}
+                                        suppressHydrationWarning={true}
+                                    >
+                                        {data.text}
+                                    </p>
+                                )}
                             </div>
                         </div>
                     </div>
