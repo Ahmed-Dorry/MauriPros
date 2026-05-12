@@ -6,7 +6,6 @@ import Sidebar from "@/components/DigitalAgency/SideBar/SideBar";
 import useStickyHeader from "@/Hook/useStickyHeader";
 import { useTranslations } from "next-intl";
 
-// --- TYPE DEFINITIONS ---
 interface MenuItem {
   title: string;
   href?: string;
@@ -21,15 +20,11 @@ const Header = () => {
   const handleSidebar = () => setIsOpen((prev) => !prev);
   useStickyHeader();
 
-  // 💡 State لمعرفة هل اليوزر من أمريكا ولا لأ (عشان نخفي اللغات)
   const [isUSUser, setIsUSUser] = useState<boolean>(false);
-  
-  // 🔥 State جديد عشان نراقب النزول بالصفحة ونغير اللوجو بناءً عليه 🔥
   const [isScrolled, setIsScrolled] = useState(false);
 
   const t = useTranslations("Header");
 
-  // 💡 قراءة الكوكيز أول ما الموقع يحمل لكشف IP أمريكا
   useEffect(() => {
     const checkUS = document.cookie.includes('USER_COUNTRY=US');
     if (checkUS) {
@@ -37,17 +32,14 @@ const Header = () => {
     }
   }, []);
 
-  // 🔥 إضافة مراقب حركة الشاشة (Scroll Listener) عشان تغيير اللوجو 🔥
   useEffect(() => {
     const handleScroll = () => {
-      // لو نزلنا أكتر من 50 بيكسل، الهيدر هيقلب أبيض فبنخلي المتغير true
       if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -56,7 +48,6 @@ const Header = () => {
     logo: {
       href: "/",
       srcWhite: "/assets/imgs/logo/logo-colors-white.svg",
-      // 👇 اللوجو اللي هيظهر لما تنزل بالصفحة والهيدر يبقى أبيض 👇
       srcDark: "/assets/imgs/logo/logo-colors-black.svg", 
       alt: "MauriPros Logo",
     },
@@ -132,14 +123,12 @@ const Header = () => {
 
   const renderMenu = (items: MenuItem[]) => {
     return items.map((item, index) => {
-      // Mega Menu Logic
       if (item.isMegaMenu && item.children) {
         return (
             <li key={index} className="menu-item-has-children mega-menu-parent">
               <Link href={item.href || "#"}>{item.title}</Link>
               <div className="mega-menu-container">
                 <div className="mega-menu-wrapper">
-                  {/* Left Side - Menu Items */}
                   <div className="mega-menu-main">
                     <div className="mega-menu-header">{t("servicesOverview")}</div>
                     <ul className="mega-menu-grid">
@@ -158,7 +147,6 @@ const Header = () => {
                             </Link>
                           </li>
                       ))}
-                      {/* View All Services Button */}
                       <div className="mega-menu-footer">
                         <Link href="/services" className="view-all-btn">
                           {t("viewAllServices")}
@@ -170,7 +158,6 @@ const Header = () => {
                     </ul>
                   </div>
 
-                  {/* Right Side - CTA Card */}
                   <div className="mega-menu-cta">
                     <h3>{t("scheduleConsultation")}</h3>
                     <Link href="/contact" className="cta-button">
@@ -186,7 +173,6 @@ const Header = () => {
         );
       }
 
-      // Standard Dropdown
       return (
           <li
               key={index}
@@ -203,16 +189,20 @@ const Header = () => {
 
   return (
     <>
-      <Sidebar isOpen={isOpen} handleSidebar={handleSidebar} />
+      {/* 👇 التعديل السحري: بعتنا المنيو المترجمة للـ Sidebar 👇 */}
+      <Sidebar 
+        isOpen={isOpen} 
+        handleSidebar={handleSidebar} 
+        customMenus={headerData.menuItems} 
+      />
+      
       <header className="header-area">
         <div className="header-main header-sticky">
           <div className="large container">
             <div className="header-area-inner">
-              {/* Logo Section */}
               <div className="header-logo">
                 <Link href={headerData.logo.href}>
                   <img
-                    // 🔥 الحركة السحرية هنا: التبديل بين اللوجو الأبيض والأسود 🔥
                     src={isScrolled ? headerData.logo.srcDark : headerData.logo.srcWhite}
                     alt={headerData.logo.alt}
                     className="normal-logo"
@@ -220,21 +210,18 @@ const Header = () => {
                 </Link>
               </div>
 
-              {/* Nav Menu Section (Centered/Right) */}
               <div className="header-nav d-none d-xl-inline-flex">
                 <nav className="main-menu">
                   <ul>{renderMenu(headerData.menuItems)}</ul>
                 </nav>
               </div>
 
-              {/* 💡 زرار اللغات - الديسكتوب 💡 */}
               {!isUSUser && (
                 <div className="d-none d-xl-inline-flex align-items-center">
                   <LanguageSwitcher />
                 </div>
               )}
 
-              {/* Contact Button - Desktop Only */}
               <div className="header-contact-btn d-none d-xl-inline-flex">
                 <Link href="/contact" className="btn-contact-modern">
                   <span className="btn-icon">
@@ -246,15 +233,12 @@ const Header = () => {
                 </Link>
               </div>
 
-              {/* 💡 قسم الموبايل (أيقونة القائمة + أيقونة اللغات) 💡 */}
               <div className="header-offcanvas d-flex align-items-center gap-3">
-                
                 {!isUSUser && (
                   <div className="d-xl-none text-white mobile-lang-icon">
                     <LanguageSwitcher variant="icon" />
                   </div>
                 )}
-
                 <button
                   className="side-toggle m-0"
                   onClick={handleSidebar}
