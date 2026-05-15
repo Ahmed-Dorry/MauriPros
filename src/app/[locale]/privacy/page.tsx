@@ -4,6 +4,10 @@ import Breadcrumb from "@/components/DigitalAgency/common/Breadcrumb";
 import Header from "@/components/DigitalAgency/common/Header";
 import FooterSection from "@/components/DigitalAgency/FooterSection";
 import SmoothScroll from "@/components/DigitalAgency/Animation/SmoothScroll";
+import Link from "@/components/CustomLink"; // 👈 استدعينا اللينك المخصص بتاعك
+
+// 👇 استدعينا داتا الفوتر (لو المسار عندك مختلف أو اسم المتغير مختلف، عدله زي ما في صفحة الـ Home) 👇
+import { footerData } from "@/constant/DigitalAgency/footer"; 
 
 export const metadata: Metadata = {
   title: "Privacy & Security Policy | MauriPros",
@@ -37,8 +41,8 @@ const PrivacyPolicyPage = (): ReactElement => {
 
             <div className="terms-content">
               <p>
-                MauriPros ("us", "we", or "our") operates the{' '}
-                <a href="https://www.MauriPros.com/">https://www.MauriPros.com/</a> website (the "Service").
+                MauriPros (&quot;us&quot;, &quot;we&quot;, or &quot;our&quot;) operates the{' '}
+                <Link href="/">https://www.MauriPros.com/</Link> website (the &quot;Service&quot;).
               </p>
               <p>
                 This page informs you of our policies regarding the collection, use, and disclosure of personal data 
@@ -48,7 +52,7 @@ const PrivacyPolicyPage = (): ReactElement => {
                 We use your data to provide and improve the Service. By using the Service, you agree to the 
                 collection and use of information in accordance with this policy. Unless otherwise defined in this 
                 Privacy Policy, terms used in this Privacy Policy have the same meanings as in our{' '}
-                <a href="/legal/terms">Terms and Conditions</a>.
+                <Link href="/terms">Terms and Conditions</Link>.
               </p>
 
               <h2><i className="fa-solid fa-book"></i> Definitions</h2>
@@ -154,7 +158,7 @@ const PrivacyPolicyPage = (): ReactElement => {
                 to facilitate and analyze our Service.
               </p>
 
-              <h2><i className="fa-solid fa-children"></i> Children’s Privacy</h2>
+              <h2><i className="fa-solid fa-children"></i> Children&apos;s Privacy</h2>
               <p>Our Service does not target anyone under 18. We do not knowingly collect data from minors.</p>
 
               <h2><i className="fa-solid fa-circle-exclamation"></i> Changes to Policy</h2>
@@ -163,7 +167,6 @@ const PrivacyPolicyPage = (): ReactElement => {
               <h2><i className="fa-solid fa-universal-access"></i> Accessibility</h2>
               <p>We are committed to making this Privacy Policy accessible. Contact us if you encounter difficulties.</p>
 
-              {/* Contact Info Styled Box */}
               <div className="contact-box">
                 <div className="contact-item">
                   <i className="fa-solid fa-envelope"></i>
@@ -186,7 +189,10 @@ const PrivacyPolicyPage = (): ReactElement => {
             </div>
           </div>
         </main>
-        <FooterSection />
+        
+        {/* 👇 السر كله كان هنا! بعتنا الداتا للفوتر 👇 */}
+        <FooterSection data={footerData} /> 
+
       </SmoothScroll>
     </div>
   );

@@ -4,6 +4,10 @@ import Breadcrumb from "@/components/DigitalAgency/common/Breadcrumb";
 import Header from "@/components/DigitalAgency/common/Header";
 import FooterSection from "@/components/DigitalAgency/FooterSection";
 import SmoothScroll from "@/components/DigitalAgency/Animation/SmoothScroll";
+import Link from "@/components/CustomLink"; // 👈 استدعينا الـ Link المخصص
+
+// 👇 استدعينا الداتا بتاعة الفوتر زي ما عملنا في الـ Privacy 👇
+import { footerData } from "@/constant/DigitalAgency/footer";
 
 export const metadata: Metadata = {
   title: "Terms of Service | MauriPros",
@@ -37,8 +41,8 @@ const TermsOfServicePage = (): ReactElement => {
 
             <div className="terms-content">
               <p>
-                Welcome to MauriPros. These Terms of Service ("Terms") govern your use of the{' '}
-                <a href="https://www.MauriPros.com/">https://www.MauriPros.com/</a> website and the services provided by MauriPros ("we", "us", or "our").
+                Welcome to MauriPros. These Terms of Service (&quot;Terms&quot;) govern your use of the{' '}
+                <Link href="/">https://www.MauriPros.com/</Link> website and the services provided by MauriPros (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;).
               </p>
               <p>
                 By accessing or using our website, you agree to be bound by these Terms. If you disagree with any part of the terms, then you may not access the Service.
@@ -47,7 +51,7 @@ const TermsOfServicePage = (): ReactElement => {
               <h2><i className="fa-solid fa-handshake"></i> 1. Agreement to Terms</h2>
               <p>
                 By using our Services, you agree to these Terms of Service and our{' '}
-                <a href="/privacy">Privacy Policy</a>. You must be at least 18 years of age to use our services. By using our services, you represent and warrant that you meet this requirement.
+                <Link href="/privacy">Privacy Policy</Link>. You must be at least 18 years of age to use our services. By using our services, you represent and warrant that you meet this requirement.
               </p>
 
               <h2><i className="fa-solid fa-lightbulb"></i> 2. Intellectual Property Rights</h2>
@@ -108,7 +112,10 @@ const TermsOfServicePage = (): ReactElement => {
             </div>
           </div>
         </main>
-        <FooterSection />
+        
+        {/* 👇 السر كله هنا: بعتنا الداتا للفوتر 👇 */}
+        <FooterSection data={footerData} />
+        
       </SmoothScroll>
     </div>
   );
