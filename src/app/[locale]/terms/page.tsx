@@ -4,10 +4,11 @@ import Breadcrumb from "@/components/DigitalAgency/common/Breadcrumb";
 import Header from "@/components/DigitalAgency/common/Header";
 import FooterSection from "@/components/DigitalAgency/FooterSection";
 import SmoothScroll from "@/components/DigitalAgency/Animation/SmoothScroll";
-import Link from "@/components/CustomLink"; // 👈 استدعينا الـ Link المخصص
+import Link from "@/components/CustomLink"; 
 
-// 👇 استدعينا الداتا بتاعة الفوتر زي ما عملنا في الـ Privacy 👇
-import { footerData } from "@/constant/DigitalAgency/footer";
+// 👇 استدعينا أدوات الترجمة ونوع الفوتر 👇
+import { getTranslations } from 'next-intl/server';
+import { FooterData } from "@/constant/DigitalAgency/footer";
 
 export const metadata: Metadata = {
   title: "Terms of Service | MauriPros",
@@ -22,13 +23,24 @@ export const metadata: Metadata = {
   ],
 };
 
-const TermsOfServicePage = (): ReactElement => {
+// 👇 حولنا الكومبوننت لـ async عشان يسحب الترجمة 👇
+const TermsOfServicePage = async (): Promise<ReactElement> => {
+  
+  // 👇 سحبنا ترجمة الفوتر زي ما عملنا في الرئيسية 👇
+  const tFooter = await getTranslations('FooterSection');
+  const translatedFooterData: FooterData = {
+    bgImage: tFooter('bgImage'),
+    widgets: tFooter.raw('widgets'),
+    preCopyrightText: tFooter('preCopyrightText'),
+    copyrightText: tFooter('copyrightText'),
+    logo: tFooter.raw('logo')
+  };
+
   return (
     <div className="body-wrapper body-inner-page">
       <Header />
       <SmoothScroll>
         <main>
-          {/* Breadcrumb matching your template style */}
           <Breadcrumb
             title="TERMS"
             subTitle="OF SERVICE"
@@ -89,7 +101,6 @@ const TermsOfServicePage = (): ReactElement => {
                 These Terms will be governed by and interpreted in accordance with the laws of the State of Kentucky, and you submit to the non-exclusive jurisdiction of the state and federal courts located in Kentucky for the resolution of any disputes.
               </p>
 
-              {/* Contact Info Styled Box */}
               <div className="contact-box">
                 <div className="contact-item">
                   <i className="fa-solid fa-envelope"></i>
@@ -113,8 +124,8 @@ const TermsOfServicePage = (): ReactElement => {
           </div>
         </main>
         
-        {/* 👇 السر كله هنا: بعتنا الداتا للفوتر 👇 */}
-        <FooterSection data={footerData} />
+        {/* 👇 ادينا الفوتر الداتا المترجمة اللي سحبناها فوق 👇 */}
+        <FooterSection data={translatedFooterData} />
         
       </SmoothScroll>
     </div>

@@ -4,10 +4,11 @@ import Breadcrumb from "@/components/DigitalAgency/common/Breadcrumb";
 import Header from "@/components/DigitalAgency/common/Header";
 import FooterSection from "@/components/DigitalAgency/FooterSection";
 import SmoothScroll from "@/components/DigitalAgency/Animation/SmoothScroll";
-import Link from "@/components/CustomLink"; // 👈 استدعينا اللينك المخصص بتاعك
+import Link from "@/components/CustomLink"; 
 
-// 👇 استدعينا داتا الفوتر (لو المسار عندك مختلف أو اسم المتغير مختلف، عدله زي ما في صفحة الـ Home) 👇
-import { footerData } from "@/constant/DigitalAgency/footer"; 
+// 👇 استدعينا أدوات الترجمة ونوع الفوتر 👇
+import { getTranslations } from 'next-intl/server';
+import { FooterData } from "@/constant/DigitalAgency/footer";
 
 export const metadata: Metadata = {
   title: "Privacy & Security Policy | MauriPros",
@@ -22,13 +23,24 @@ export const metadata: Metadata = {
   ],
 };
 
-const PrivacyPolicyPage = (): ReactElement => {
+// 👇 حولنا الكومبوننت لـ async عشان يسحب الترجمة 👇
+const PrivacyPolicyPage = async (): Promise<ReactElement> => {
+  
+  // 👇 سحبنا ترجمة الفوتر زي ما عملنا في الرئيسية 👇
+  const tFooter = await getTranslations('FooterSection');
+  const translatedFooterData: FooterData = {
+    bgImage: tFooter('bgImage'),
+    widgets: tFooter.raw('widgets'),
+    preCopyrightText: tFooter('preCopyrightText'),
+    copyrightText: tFooter('copyrightText'),
+    logo: tFooter.raw('logo')
+  };
+
   return (
     <div className="body-wrapper body-inner-page">
       <Header />
       <SmoothScroll>
         <main>
-          {/* Breadcrumb added to match your template style */}
           <Breadcrumb
             title="PRIVACY"
             subTitle="Legal & Policies"
@@ -190,8 +202,8 @@ const PrivacyPolicyPage = (): ReactElement => {
           </div>
         </main>
         
-        {/* 👇 السر كله كان هنا! بعتنا الداتا للفوتر 👇 */}
-        <FooterSection data={footerData} /> 
+        {/* 👇 ادينا الفوتر الداتا المترجمة اللي سحبناها فوق 👇 */}
+        <FooterSection data={translatedFooterData} /> 
 
       </SmoothScroll>
     </div>
